@@ -8,38 +8,25 @@ from models import DBExceptionRecord
 T_CURRENT = date(2026, 6, 21)
 
 def normalize_exception_type(t: str) -> str:
-    """
-    Normalizes raw, unstructured exception types into canonical GRC categories
-    using industry-standard SecOps and IAM keyword taxonomies (5 uppercase strings).
-    """
-    if not t:
-        return "DEV_ENV"
-        
+    if not t: return "DEV_ENV"
     t_lower = str(t).lower().strip()
-    
-    # Priority-ordered mapping to the 5 exact uppercase GRC categories
     taxonomy_map = {
-        "ADMIN_ACCESS": ["admin", "sudo", "privilege", "elevated", "sysadmin", "dba", "superuser", "breakglass", "break glass", "sa account", "god mode", "local admin", "root", "owner"],
+        "ADMIN_ACCESS": ["admin", "sudo", "privilege", "elevated", "sysadmin", "dba", "superuser", "breakglass", "root", "owner"],
         "ENCRYPTION_WAIVER": ["encrypt", "crypt", "tls", "ssl", "cipher", "certificate", "cert"],
-        "FIREWALL_RULE": ["firewall", "port", "network", "acl", "sg", "security group", "ingress", "egress", "vpn", "allowlist", "whitelist", "waf", "proxy", "routing", "ips", "ids"],
-        "DATA_ACCESS": ["data", "export", "pii", "phi", "dlp", "download", "query", "read-only", "sql access"],
-        "DEV_ENV": ["dev", "staging", "sandbox", "test", "testing", "uat", "qa", "non-prod", "nonprod", "poc", "local", "experimental", "compliance", "policy waiver", "mfa", "2fa", "otp", "pci", "soc2", "gdpr", "ccpa", "hipaa", "auth bypass", "cleartext", "vendor access", "vendor", "third party"]
+        "FIREWALL_RULE": ["firewall", "port", "network", "acl", "sg", "security group", "ingress", "egress", "vpn", "allowlist", "whitelist"],
+        "DATA_ACCESS": ["data", "export", "pii", "phi", "dlp", "download", "query", "read-only"],
+        "DEV_ENV": ["dev", "staging", "sandbox", "test", "testing", "uat", "qa", "non-prod", "compliance", "waiver", "vendor"]
     }
-    
     for canonical_type, keywords in taxonomy_map.items():
         if any(keyword in t_lower for keyword in keywords):
             return canonical_type
-            
     return "DEV_ENV"
 
 def normalize_status(s: str) -> str:
-    if not s:
-        return "ACTIVE"
+    if not s: return "ACTIVE"
     s_upper = s.upper().strip()
-    if "PENDING" in s_upper:
-        return "PENDING"
-    if s_upper in ["ACTIVE", "EXPIRED", "REVOKED"]:
-        return s_upper
+    if "PENDING" in s_upper: return "PENDING"
+    if s_upper in ["ACTIVE", "EXPIRED", "REVOKED"]: return s_upper
     return "ACTIVE"
 
 TICKET_REGEX = re.compile(r"([A-Z]{2,}-\d{2,}|INC\d{5,}|CHG\d{5,}|REQ\d{5,})", re.IGNORECASE)
@@ -48,26 +35,15 @@ VAGUE_KEYWORDS = [
     "business need", "emergency", "legacy issue", "temporary issue",
     "need access", "asap", "tbd", "n/a", "na", "test", "testing", 
     "fix", "broken", "urgent", "quick fix", "pls", "please", "temp",
-    "per request", "as requested", "management request", "client need", 
-    "customer request", "vendor requirement", "audit finding",
-    "troubleshooting", "maintenance", "support", "update", "patching", 
-    "dev work", "configuration", "deployment", "migration"
+    "troubleshooting", "maintenance", "support", "update", "patching"
 ]
 
 def check_vague_justification(justification_str: str) -> (bool, str):
-    """
-    Checks if a justification is vague based on length and keywords, 
-    exempting tickets. Returns (is_vague, reason_message).
-    """
     just = (justification_str or "").strip()
-    # Strip any leading blockquote indicators (like '>') or extra whitespace
-    while just.startswith('>'):
-        just = just[1:].strip()
-        
+    while just.startswith('>'): just = just[1:].strip()
     just_lower = just.lower()
-    has_ticket = bool(TICKET_REGEX.search(just))
     
-    if has_ticket:
+    if bool(TICKET_REGEX.search(just)):
         return False, ""
         
     found_vague = [kw for kw in VAGUE_KEYWORDS if kw in just_lower]
@@ -84,13 +60,7 @@ class AnomalyDetector:
         self.current_date = current_date or T_CURRENT
 
     def assess(self, db: Session) -> List[Dict]:
-        """
-        Main evaluation loop. Returns a list of grouped anomaly dictionaries 
-        matching the Expected Output schema.
-        """
         records = db.query(DBExceptionRecord).all()
-        
-        # Track active exceptions count per requester to catch risk accumulation
         active_counts_per_requester = {}
         
         for rec in records:
@@ -104,7 +74,6 @@ class AnomalyDetector:
             exception_alerts = []
             max_severity = "LOW"
             
-            # Helper to add alerts and track the highest severity
             def add_alert(alert_type: str, severity: str, desc: str):
                 nonlocal max_severity
                 exception_alerts.append(f"{alert_type}: {desc}")
@@ -116,76 +85,74 @@ class AnomalyDetector:
             status_norm = normalize_status(rec.status)
             stored_risk_level = (rec.risk_level or "LOW").upper().strip()
             
-            # Lifecycle Date Parsing
+            try:
+                renewal_count = int(getattr(rec, 'renewal_count', 0))
+            except (TypeError, ValueError):
+                renewal_count = 0
+            
             start_dt, end_dt = None, None
             is_missing_lifecycle = False
             
             for attr in ['start_date', 'end_date']:
                 val = getattr(rec, attr)
                 try:
-                    if isinstance(val, date):
-                        dt = val
-                    elif val:
-                        dt = datetime.strptime(str(val).strip(), "%Y-%m-%d").date()
-                    else:
-                        dt = None
+                    if isinstance(val, date): dt = val
+                    elif val: dt = datetime.strptime(str(val).strip(), "%Y-%m-%d").date()
+                    else: dt = None
                     if attr == 'start_date': start_dt = dt
                     else: end_dt = dt
                 except Exception:
                     pass
                 
+            # FIXED: Data integrity applies to ALL statuses
             if not start_dt or not end_dt:
                 add_alert("MISSING_LIFECYCLE", "CRITICAL", "Start or end date is missing/malformed.")
                 is_missing_lifecycle = True
 
             days_active = 0
-            is_expired = False
             
             if not is_missing_lifecycle:
+                # FIXED: Data integrity applies to ALL statuses
+                if start_dt > end_dt:
+                    add_alert("INVALID_DATE_RANGE", "CRITICAL", f"Start Date {start_dt} cannot be after End Date {end_dt}.")
+                
                 days_active = (self.current_date - start_dt).days
                 days_since_expiry = (self.current_date - end_dt).days
                 is_expired = days_since_expiry > 0
 
-                # -------------------------------------------------------------
                 # 1. GROUND TRUTH LABELS
-                # -------------------------------------------------------------
                 if is_expired and status_norm == "ACTIVE":
                     add_alert("EXPIRED_ACTIVE_EXCEPTION", "CRITICAL", f"End date {end_dt} passed; still marked active")
 
-                if stored_risk_level == "CRITICAL" or type_norm == "ADMIN_ACCESS":
-                    add_alert("CRITICAL_RISK_EXCEPTION", "HIGH", "Admin/Root access categorized as critical risk, needs re-review")
+                if stored_risk_level == "CRITICAL" and status_norm == "ACTIVE":
+                    add_alert("CRITICAL_RISK_EXCEPTION", "HIGH", "Exception categorized as critical risk, needs re-review")
  
-                if status_norm == "ACTIVE" and days_active > 180:
-                    add_alert("LONG_RUNNING_EXCEPTION", "HIGH", f"Ran >180 days without renewal ({days_active} days)")
+                if status_norm == "ACTIVE" and days_active > 180 and renewal_count == 0 and stored_risk_level in ["HIGH", "CRITICAL"]:
+                    add_alert("LONG_RUNNING_EXCEPTION", "HIGH", f"High/Critical risk ran >180 days without renewal ({days_active} days)")
  
-                if type_norm in ["ADMIN_ACCESS", "ENCRYPTION_WAIVER", "DATA_ACCESS"] and status_norm == "ACTIVE" and days_active > 90:
+                if type_norm in ["ADMIN_ACCESS", "ENCRYPTION_WAIVER", "DATA_ACCESS"] and status_norm == "ACTIVE" and days_active > 90 and renewal_count == 0:
                     add_alert("HIGH_RISK_LONG_EXCEPTION", "MEDIUM", f"High-risk, active >90 days without review ({days_active} days)")
 
                 if status_norm == "PENDING" and days_active > 30:
                     add_alert("STALLED_REVIEW", "MEDIUM", f"Pending review for >30 days ({days_active} days)")
 
-            # -------------------------------------------------------------
-            # 2. ADVANCED HEURISTICS & EDGE CASES
-            # -------------------------------------------------------------
-            justification = rec.justification or ""
-            is_vague, vague_msg = check_vague_justification(justification)
-            if is_vague:
-                add_alert("VAGUE_JUSTIFICATION", "MEDIUM", vague_msg)
+            # 2. ADVANCED HEURISTICS & EDGE CASES (Active/Pending Only)
+            if status_norm in ["ACTIVE", "PENDING"]:
+                justification = rec.justification or ""
+                is_vague, vague_msg = check_vague_justification(justification)
+                if is_vague:
+                    add_alert("VAGUE_JUSTIFICATION", "MEDIUM", vague_msg)
 
-            # Risk Accumulation
-            if rec.requester:
-                req_norm = rec.requester.lower().strip()
-                if active_counts_per_requester.get(req_norm, 0) >= 3:
-                    add_alert("RISK_ACCUMULATION", "HIGH", f"User holds {active_counts_per_requester[req_norm]} active exceptions.")
+                if rec.requester:
+                    req_norm = rec.requester.lower().strip()
+                    if active_counts_per_requester.get(req_norm, 0) >= 3:
+                        add_alert("RISK_ACCUMULATION", "HIGH", f"User holds {active_counts_per_requester[req_norm]} active exceptions.")
 
-            # Separation of Duties (SoD)
-            if rec.requester and rec.approver:
-                if rec.requester.lower().strip() == rec.approver.lower().strip():
-                    add_alert("SOD_CONFLICT", "CRITICAL", "Requester and Approver are the exact same identity.")
+                if rec.requester and rec.approver:
+                    if rec.requester.lower().strip() == rec.approver.lower().strip():
+                        add_alert("SOD_CONFLICT", "CRITICAL", "Requester and Approver are the exact same identity.")
 
-            # -------------------------------------------------------------
             # 3. SCHEMA COMPILATION
-            # -------------------------------------------------------------
             if exception_alerts:
                 recommendation = "Review exception parameters."
                 if "EXPIRED_ACTIVE_EXCEPTION" in str(exception_alerts):
@@ -194,6 +161,7 @@ class AnomalyDetector:
                     recommendation = "IMMEDIATE REVIEW REQUIRED - Critical access risk detected."
                 elif max_severity == "HIGH":
                     recommendation = "REQUEST RENEWAL JUSTIFICATION - Exception has been active too long."
+                
                 assessed_portfolio.append({
                     "exception_id": rec.exception_id,
                     "risk_level": max_severity,
@@ -204,13 +172,7 @@ class AnomalyDetector:
         return assessed_portfolio
 
     def detect(self, db: Session) -> List[Dict]:
-        """
-        Runs assess() and transforms the returned portfolio assessment list
-        into a list of individual anomalies matching the AnomalyResponse schema.
-        """
-        # Fetch requesters mapping
         requester_map = {r.exception_id: r.requester for r in db.query(DBExceptionRecord.exception_id, DBExceptionRecord.requester).all() if r.exception_id}
-        
         anomalies = []
         severity_map = {
             "EXPIRED_ACTIVE_EXCEPTION": "CRITICAL",
@@ -221,7 +183,8 @@ class AnomalyDetector:
             "VAGUE_JUSTIFICATION": "MEDIUM",
             "RISK_ACCUMULATION": "HIGH",
             "SOD_CONFLICT": "CRITICAL",
-            "MISSING_LIFECYCLE": "CRITICAL"
+            "MISSING_LIFECYCLE": "CRITICAL",
+            "INVALID_DATE_RANGE": "CRITICAL"
         }
         
         portfolio = self.assess(db)

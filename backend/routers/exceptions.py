@@ -41,13 +41,9 @@ def create_exception(record: ExceptionBase, db: Session = Depends(get_db)):
     """Ingests or updates an exception record in the database."""
     import re
     # Validate Exception ID format
-    if not re.match(r"^EXC-\d+$", record.exception_id, re.IGNORECASE):
-        raise HTTPException(status_code=400, detail="Exception ID must match 'EXC-XXXX' format (e.g., EXC-1001)")
+    if not re.match(r"^EXC-?\d+$", record.exception_id, re.IGNORECASE):
+        raise HTTPException(status_code=400, detail="Exception ID must match 'EXC-XXXX' or 'EXCXXXX' format (e.g., EXC-1001 or EXC00000)")
         
-    # Validate date range
-    if record.start_date > record.end_date:
-        raise HTTPException(status_code=400, detail="Start Date cannot be after End Date")
-
     # Normalize before saving
     record.requester = normalize_name(record.requester)
     record.approver = normalize_name(record.approver)
@@ -108,7 +104,7 @@ def upload_exceptions_csv(file: UploadFile = File(...), db: Session = Depends(ge
         contents = file.file.read()
         df = pd.read_csv(io.BytesIO(contents))
         
-        required_cols = ['exception_id', 'type', 'requester', 'approver', 'justification', 'start_date', 'end_date']
+        required_cols = ['exception_id', 'exception_type', 'requester_name', 'approver_name', 'justification', 'request_date', 'expiry_date']
         for col in required_cols:
             if col not in df.columns:
                 raise HTTPException(status_code=400, detail=f"Missing required column in CSV: {col}")
@@ -117,25 +113,25 @@ def upload_exceptions_csv(file: UploadFile = File(...), db: Session = Depends(ge
         for _, row in df.iterrows():
             exc_id_str = str(row['exception_id']).strip()
             import re
-            if not re.match(r"^EXC-\d+$", exc_id_str, re.IGNORECASE):
-                raise HTTPException(status_code=400, detail=f"Exception ID '{exc_id_str}' in CSV must match the format 'EXC-XXXX' (e.g., EXC-1001)")
+            if not re.match(r"^EXC-?\d+$", exc_id_str, re.IGNORECASE):
+                raise HTTPException(status_code=400, detail=f"Exception ID '{exc_id_str}' in CSV must match the format 'EXC-XXXX' or 'EXCXXXX' (e.g., EXC-1001 or EXC00000)")
             try:
-                start_dt = pd.to_datetime(row['start_date']).date()
-                end_dt = pd.to_datetime(row['end_date']).date()
+                start_dt = pd.to_datetime(row['request_date']).date()
+                end_dt = pd.to_datetime(row['expiry_date']).date()
             except Exception:
                 raise HTTPException(status_code=400, detail=f"Invalid date format in row with exception_id {exc_id_str}. Use YYYY-MM-DD.")
-            if start_dt > end_dt:
-                raise HTTPException(status_code=400, detail=f"Start Date cannot be after End Date for exception {exc_id_str}")
             
             status_val = str(row['status']).upper().strip() if 'status' in row and pd.notna(row['status']) else 'ACTIVE'
             risk_level_val = str(row['risk_level']).upper().strip() if 'risk_level' in row and pd.notna(row['risk_level']) else 'LOW'
-            renewal_count_val = int(row['renewal_count']) if 'renewal_count' in row and pd.notna(row['renewal_count']) else 0
+            
+            is_renewed_val = str(row['is_renewed']).strip().lower() if 'is_renewed' in row and pd.notna(row['is_renewed']) else 'false'
+            renewal_count_val = 1 if is_renewed_val in ['true', '1'] else 0
             
             record = ExceptionBase(
-                exception_id=str(row['exception_id']),
-                type=str(row['type']),
-                requester=normalize_name(str(row['requester'])),
-                approver=normalize_name(str(row['approver'])),
+                exception_id=exc_id_str,
+                type=str(row['exception_type']),
+                requester=normalize_name(str(row['requester_name'])),
+                approver=normalize_name(str(row['approver_name'])),
                 justification=str(row['justification']),
                 start_date=start_dt,
                 end_date=end_dt,

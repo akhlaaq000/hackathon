@@ -319,6 +319,8 @@ def get_portfolio_insights(db: Session = Depends(get_db)):
         })
     # Sort by total descending
     approver_data.sort(key=lambda x: x["total"], reverse=True)
+    # Filter out anyone with less than 2 exceptions and slice to the Top 5 worst offenders
+    approver_data = [item for item in approver_data if item["total"] >= 2][:5]
     
     heatmap_data = []
     for etype, counts in type_dist.items():

@@ -1,201 +1,601 @@
-exception_id,type,requester,approver,justification,start_date,end_date,status,risk_level,renewal_count
-EXC-1001,ADMIN_ACCESS,alice.smith,ciso.manager,Emergency database rollback,2025-10-01,2025-10-15,ACTIVE,CRITICAL,0
-EXC-1002,FIREWALL_RULE_OPEN,bob.jones,network.lead,Partner API integration,2025-12-01,2026-08-30,ACTIVE,MEDIUM,0
-EXC-1003,ROOT_ACCESS,charlie.dev,eng.manager,Production core debugging,2024-01-15,2024-02-15,ACTIVE,CRITICAL,0
-EXC-1004,DATA_EXPORT,vendor.user,data.manager,Quarterly tax audit export,2026-05-01,2026-07-01,ACTIVE,HIGH,1
-EXC-1005,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Training sandbox setup,2026-06-01,2026-08-01,ACTIVE,LOW,0
-EXC-1006,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Old mainframe compatibility,2022-06-01,2023-06-01,ACTIVE,HIGH,0
-EXC-1007,ADMIN_ACCESS,alice.smith,eng.manager,Secondary server patching,2026-01-10,2026-02-10,ACTIVE,HIGH,0
-EXC-1008,FIREWALL_RULE_OPEN,network.ops,network.lead,Temporary VPN routing,2025-08-01,2025-09-01,ACTIVE,MEDIUM,0
-EXC-1009,ROOT_ACCESS,alice.smith,ciso.manager,Critical vulnerability patch,2026-04-01,2026-04-15,ACTIVE,CRITICAL,0
-EXC-1010,DATA_EXPORT,vendor.user,data.manager,Marketing analytics pull,2026-03-01,2026-04-01,EXPIRED,HIGH,0
-EXC-1011,ADMIN_ACCESS,david.ops,ciso.manager,Cloud migration phase 1,2026-05-15,2026-07-15,ACTIVE,HIGH,0
-EXC-1012,FIREWALL_RULE_OPEN,bob.jones,network.lead,Legacy billing port open,2025-11-01,2026-07-01,ACTIVE,MEDIUM,0
-EXC-1013,ENCRYPTION_WAIVER,app.owner,security.lead,Testing new cipher suite,2026-01-01,2026-03-01,ACTIVE,HIGH,0
-EXC-1014,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Mobile app build server,2026-06-10,2026-12-10,ACTIVE,LOW,0
-EXC-1015,DATA_EXPORT,vendor.user,data.manager,HR compliance reporting,2026-02-15,2026-03-15,ACTIVE,HIGH,0
-EXC-1016,ROOT_ACCESS,bob.jones,ciso.manager,Emergency node restart,2025-05-01,2025-05-02,ACTIVE,CRITICAL,0
-EXC-1017,FIREWALL_RULE_OPEN,network.ops,network.lead,Vendor webhook testing,2026-05-20,2026-07-20,ACTIVE,MEDIUM,0
-EXC-1018,ADMIN_ACCESS,alice.smith,eng.manager,User directory sync,2026-06-15,2026-07-15,ACTIVE,HIGH,0
-EXC-1019,DATA_EXPORT,data.scientist,data.manager,ML model training batch,2026-04-10,2026-05-10,REVOKED,Resolved,0
-EXC-1020,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Database transit waiver,2023-01-01,2024-01-01,ACTIVE,HIGH,0
-EXC-1021,ROOT_ACCESS,charlie.dev,ciso.manager,DB indexing job,2026-01-05,2026-01-10,EXPIRED,CRITICAL,0
-EXC-1022,FIREWALL_RULE_OPEN,bob.jones,network.lead,External monitoring IP,2025-09-15,2026-09-15,ACTIVE,MEDIUM,2
-EXC-1023,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Local docker registry,2026-05-01,2026-08-01,ACTIVE,LOW,0
-EXC-1024,ADMIN_ACCESS,david.ops,eng.manager,DNS configuration,2026-06-01,2026-06-05,EXPIRED,HIGH,0
-EXC-1025,DATA_EXPORT,vendor.user,data.manager,Weekly metric dump,2026-01-01,2026-12-31,ACTIVE,HIGH,0
-EXC-1026,COMPLIANCE_WAIVER,alice.smith,security.lead,Bypass MFA for service account,2024-06-01,2024-12-01,ACTIVE,CRITICAL,0
-EXC-1027,ENCRYPTION_WAIVER,sarah.dev,security.lead,Local dev db unencrypted,2026-02-01,2026-08-01,ACTIVE,MEDIUM,0
-EXC-1028,ADMIN_ACCESS,network.ops,eng.manager,Switch firmware upgrade,2026-03-15,2026-03-20,REVOKED,Resolved,0
-EXC-1029,ROOT_ACCESS,alice.smith,ciso.manager,SSL cert renewal root task,2026-06-19,2026-06-22,ACTIVE,CRITICAL,0
-EXC-1030,FIREWALL_RULE_OPEN,vendor.api,network.lead,Incoming payload testing,2025-10-10,2025-11-10,ACTIVE,MEDIUM,0
-EXC-1031,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Access to staging DB,2026-06-15,2026-09-15,ACTIVE,LOW,0
-EXC-1032,DATA_EXPORT,data.scientist,data.manager,Q1 User behavior export,2026-04-01,2026-04-07,EXPIRED,HIGH,0
-EXC-1033,ADMIN_ACCESS,bob.jones,ciso.manager,AD group restructuring,2026-05-20,2026-06-20,ACTIVE,HIGH,1
-EXC-1034,ENCRYPTION_WAIVER,legacy.app,security.lead,Internal network traffic,2021-01-01,2022-01-01,ACTIVE,HIGH,0
-EXC-1035,ROOT_ACCESS,david.ops,ciso.manager,Kernel panic recovery,2026-02-14,2026-02-15,REVOKED,Resolved,0
-EXC-1036,FIREWALL_RULE_OPEN,network.ops,network.lead,Office IP whitelisting,2026-01-01,2026-12-31,ACTIVE,LOW,0
-EXC-1037,DATA_EXPORT,vendor.api,data.manager,Nightly sync job,2026-06-01,2026-12-01,ACTIVE,MEDIUM,0
-EXC-1038,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Beta environment tests,2026-05-10,2026-07-10,ACTIVE,LOW,0
-EXC-1039,ADMIN_ACCESS,alice.smith,eng.manager,Jira admin plugin install,2026-06-18,2026-06-25,ACTIVE,MEDIUM,0
-EXC-1040,COMPLIANCE_WAIVER,app.owner,security.lead,Password rotation bypass,2025-01-01,2025-06-01,ACTIVE,CRITICAL,0
-EXC-1041,ROOT_ACCESS,charlie.dev,ciso.manager,Log rotation fix,2026-03-01,2026-03-05,EXPIRED,CRITICAL,0
-EXC-1042,FIREWALL_RULE_OPEN,bob.jones,network.lead,Stripe webhook ingress,2026-02-01,2027-02-01,ACTIVE,MEDIUM,1
-EXC-1043,DATA_EXPORT,data.scientist,data.manager,Anomaly detection training,2026-06-05,2026-07-05,ACTIVE,HIGH,0
-EXC-1044,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,QA test pipeline,2026-06-20,2026-08-20,ACTIVE,LOW,0
-EXC-1045,ADMIN_ACCESS,david.ops,eng.manager,IAM role creation,2026-04-10,2026-04-12,REVOKED,Resolved,0
-EXC-1046,ENCRYPTION_WAIVER,vendor.api,security.lead,Legacy SOAP endpoint,2024-05-01,2025-05-01,ACTIVE,HIGH,0
-EXC-1047,FIREWALL_RULE_OPEN,alice.smith,network.lead,New branch office VPN,2026-05-01,2026-11-01,ACTIVE,MEDIUM,0
-EXC-1048,ROOT_ACCESS,network.ops,ciso.manager,Core router diagnostic,2025-11-15,2025-11-16,ACTIVE,CRITICAL,0
-EXC-1049,DATA_EXPORT,vendor.user,data.manager,End of year financial sync,2025-12-20,2025-12-31,EXPIRED,HIGH,0
-EXC-1050,COMPLIANCE_WAIVER,bob.jones,security.lead,Unsigned macro execution,2026-01-10,2026-02-10,ACTIVE,HIGH,0
-EXC-1051,ADMIN_ACCESS,sarah.dev,eng.manager,GitLab runner setup,2026-06-15,2026-07-15,ACTIVE,MEDIUM,0
-EXC-1052,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Frontend mock server,2026-06-01,2026-09-01,ACTIVE,LOW,0
-EXC-1053,FIREWALL_RULE_OPEN,network.ops,network.lead,AWS Direct Connect test,2026-06-10,2026-06-24,ACTIVE,MEDIUM,0
-EXC-1054,ROOT_ACCESS,alice.smith,ciso.manager,Emergency container prune,2026-05-25,2026-05-26,REVOKED,Resolved,0
-EXC-1055,DATA_EXPORT,data.scientist,data.manager,Customer churn dataset,2026-03-15,2026-03-30,EXPIRED,HIGH,0
-EXC-1056,ENCRYPTION_WAIVER,app.owner,security.lead,IoT sensor legacy protocol,2025-08-01,2026-08-01,ACTIVE,MEDIUM,1
-EXC-1057,ADMIN_ACCESS,david.ops,eng.manager,Okta sync troubleshooting,2026-06-19,2026-06-26,ACTIVE,HIGH,0
-EXC-1058,FIREWALL_RULE_OPEN,vendor.api,network.lead,SFTP batch upload port,2025-03-01,2026-03-01,ACTIVE,MEDIUM,0
-EXC-1059,COMPLIANCE_WAIVER,legacy.app,ciso.manager,TLS 1.0 acceptance,2022-01-01,2023-01-01,ACTIVE,CRITICAL,0
-EXC-1060,ROOT_ACCESS,bob.jones,ciso.manager,Database cluster expansion,2026-04-20,2026-04-25,EXPIRED,CRITICAL,0
-EXC-1061,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,UAT deployment rights,2026-06-05,2026-08-05,ACTIVE,LOW,0
-EXC-1062,DATA_EXPORT,vendor.user,data.manager,Partner inventory extract,2026-06-01,2026-09-01,ACTIVE,MEDIUM,0
-EXC-1063,ADMIN_ACCESS,alice.smith,eng.manager,Slack enterprise admin,2026-01-01,2026-12-31,ACTIVE,LOW,0
-EXC-1064,FIREWALL_RULE_OPEN,network.ops,network.lead,Temporary RDP access,2025-12-25,2025-12-26,ACTIVE,HIGH,0
-EXC-1065,ROOT_ACCESS,charlie.dev,ciso.manager,Memory leak dump,2026-05-10,2026-05-11,REVOKED,Resolved,0
-EXC-1066,ENCRYPTION_WAIVER,sarah.dev,security.lead,Debug traffic unencrypted,2026-06-20,2026-06-22,ACTIVE,MEDIUM,0
-EXC-1067,DATA_EXPORT,data.scientist,data.manager,Sales forecast model data,2026-02-01,2026-02-14,EXPIRED,HIGH,0
-EXC-1068,COMPLIANCE_WAIVER,david.ops,security.lead,BYOD device enrollment,2026-05-01,2026-08-01,ACTIVE,MEDIUM,0
-EXC-1069,ADMIN_ACCESS,bob.jones,eng.manager,Zoom admin dashboard,2026-03-01,2026-09-01,ACTIVE,LOW,0
-EXC-1070,FIREWALL_RULE_OPEN,vendor.api,network.lead,Zendesk ticket sync,2026-01-15,2027-01-15,ACTIVE,LOW,0
-EXC-1071,ROOT_ACCESS,alice.smith,ciso.manager,NFS mount fix,2026-01-20,2026-01-21,EXPIRED,CRITICAL,0
-EXC-1072,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Grafana dashboard edit,2026-06-10,2026-09-10,ACTIVE,LOW,0
-EXC-1073,DATA_EXPORT,vendor.user,data.manager,Audit log pull for SOC2,2026-04-15,2026-04-30,EXPIRED,HIGH,0
-EXC-1074,ENCRYPTION_WAIVER,legacy.app,security.lead,Internal cache sync,2024-11-01,2025-11-01,ACTIVE,MEDIUM,0
-EXC-1075,ADMIN_ACCESS,david.ops,eng.manager,GitHub org owner,2026-06-01,2026-12-01,ACTIVE,HIGH,0
-EXC-1076,FIREWALL_RULE_OPEN,network.ops,network.lead,Pingdom monitoring,2026-05-01,2027-05-01,ACTIVE,LOW,0
-EXC-1077,ROOT_ACCESS,charlie.dev,ciso.manager,Crontab emergency edit,2026-06-18,2026-06-19,ACTIVE,CRITICAL,0
-EXC-1078,COMPLIANCE_WAIVER,app.owner,security.lead,Skip static code analysis,2026-06-15,2026-06-29,ACTIVE,HIGH,0
-EXC-1079,DATA_EXPORT,data.scientist,data.manager,NLP training corpus,2026-01-10,2026-02-10,REVOKED,Resolved,0
-EXC-1080,ADMIN_ACCESS,alice.smith,eng.manager,AWS billing access,2026-02-01,2026-08-01,ACTIVE,MEDIUM,1
-EXC-1081,FIREWALL_RULE_OPEN,bob.jones,network.lead,Azure DevOps runner IP,2026-04-01,2026-10-01,ACTIVE,MEDIUM,0
-EXC-1082,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Readonly prod logs,2026-06-01,2026-08-01,ACTIVE,LOW,0
-EXC-1083,ROOT_ACCESS,david.ops,ciso.manager,Elasticsearch heap resize,2026-03-20,2026-03-21,EXPIRED,CRITICAL,0
-EXC-1084,ENCRYPTION_WAIVER,vendor.api,security.lead,FTP legacy drop,2023-06-01,2024-06-01,ACTIVE,HIGH,0
-EXC-1085,DATA_EXPORT,vendor.user,data.manager,Monthly billing CSV,2026-06-01,2026-06-05,EXPIRED,MEDIUM,0
-EXC-1086,ADMIN_ACCESS,sarah.dev,eng.manager,SonarQube admin,2026-05-15,2026-11-15,ACTIVE,LOW,0
-EXC-1087,FIREWALL_RULE_OPEN,network.ops,network.lead,SNMP trap receiver,2025-07-01,2026-07-01,ACTIVE,MEDIUM,2
-EXC-1088,COMPLIANCE_WAIVER,alice.smith,security.lead,Root login over SSH,2025-12-01,2025-12-02,ACTIVE,CRITICAL,0
-EXC-1089,ROOT_ACCESS,bob.jones,ciso.manager,Redis cache flush,2026-06-20,2026-06-21,ACTIVE,CRITICAL,0
-EXC-1090,DATA_EXPORT,data.scientist,data.manager,Graph DB relationship export,2026-05-01,2026-05-15,REVOKED,Resolved,0
-EXC-1091,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,VPN split tunneling,2026-06-10,2026-09-10,ACTIVE,MEDIUM,0
-EXC-1092,ADMIN_ACCESS,david.ops,eng.manager,VMware vCenter access,2026-01-01,2026-07-01,ACTIVE,HIGH,1
-EXC-1093,FIREWALL_RULE_OPEN,vendor.api,network.lead,Mailgun SMTP port,2026-02-15,2027-02-15,ACTIVE,LOW,0
-EXC-1094,ENCRYPTION_WAIVER,legacy.app,security.lead,Telnet switch access,2021-05-01,2022-05-01,ACTIVE,CRITICAL,0
-EXC-1095,ROOT_ACCESS,alice.smith,ciso.manager,Kubelet certificate rotate,2026-04-10,2026-04-11,EXPIRED,CRITICAL,0
-EXC-1096,DATA_EXPORT,vendor.user,data.manager,Support ticket history,2026-06-15,2026-06-22,ACTIVE,MEDIUM,0
-EXC-1097,COMPLIANCE_WAIVER,charlie.dev,security.lead,Disable SELinux temporarily,2026-05-20,2026-05-27,EXPIRED,HIGH,0
-EXC-1098,ADMIN_ACCESS,bob.jones,eng.manager,1Password vault recovery,2026-06-18,2026-06-19,ACTIVE,CRITICAL,0
-EXC-1099,FIREWALL_RULE_OPEN,network.ops,network.lead,NTP server sync,2026-01-01,2026-12-31,ACTIVE,LOW,0
-EXC-1100,ROOT_ACCESS,david.ops,ciso.manager,Postgres vacuum full,2026-06-01,2026-06-02,REVOKED,Resolved,0
-EXC-1101,ADMIN_ACCESS,alice.smith,ciso.manager,Production troubleshooting,2026-05-01,2026-05-15,ACTIVE,CRITICAL,0
-EXC-1102,FIREWALL_RULE_OPEN,bob.jones,network.lead,Partner integration,2025-10-01,2026-04-30,ACTIVE,MEDIUM,0
-EXC-1103,ROOT_ACCESS,charlie.dev,eng.manager,Core debugging,2024-03-15,2024-04-15,ACTIVE,CRITICAL,0
-EXC-1104,DATA_EXPORT,vendor.user,data.manager,Tax audit export,2026-04-01,2026-06-01,ACTIVE,HIGH,1
-EXC-1105,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Sandbox setup,2026-06-05,2026-08-05,ACTIVE,LOW,0
-EXC-1106,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Mainframe compatibility,2022-08-01,2023-08-01,ACTIVE,HIGH,0
-EXC-1107,ADMIN_ACCESS,alice.smith,eng.manager,Server patching,2026-02-10,2026-03-10,ACTIVE,HIGH,0
-EXC-1108,FIREWALL_RULE_OPEN,network.ops,network.lead,VPN routing,2025-09-01,2025-10-01,ACTIVE,MEDIUM,0
-EXC-1109,ROOT_ACCESS,alice.smith,ciso.manager,Vulnerability patch,2026-05-01,2026-05-15,ACTIVE,CRITICAL,0
-EXC-1110,DATA_EXPORT,vendor.user,data.manager,Marketing analytics,2026-04-01,2026-05-01,EXPIRED,HIGH,0
-EXC-1111,ADMIN_ACCESS,david.ops,ciso.manager,Migration phase 1,2026-06-15,2026-08-15,ACTIVE,HIGH,0
-EXC-1112,FIREWALL_RULE_OPEN,bob.jones,network.lead,Billing port open,2025-12-01,2026-08-01,ACTIVE,MEDIUM,0
-EXC-1113,ENCRYPTION_WAIVER,app.owner,security.lead,Cipher suite testing,2026-02-01,2026-04-01,ACTIVE,HIGH,0
-EXC-1114,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Build server,2026-06-15,2026-12-15,ACTIVE,LOW,0
-EXC-1115,DATA_EXPORT,vendor.user,data.manager,Compliance reporting,2026-03-15,2026-04-15,ACTIVE,HIGH,0
-EXC-1116,ROOT_ACCESS,bob.jones,ciso.manager,Node restart,2025-06-01,2025-06-02,ACTIVE,CRITICAL,0
-EXC-1117,FIREWALL_RULE_OPEN,network.ops,network.lead,Webhook testing,2026-06-20,2026-08-20,ACTIVE,MEDIUM,0
-EXC-1118,ADMIN_ACCESS,alice.smith,eng.manager,Directory sync,2026-06-18,2026-07-18,ACTIVE,HIGH,0
-EXC-1119,DATA_EXPORT,data.scientist,data.manager,Model training,2026-05-10,2026-06-10,REVOKED,Resolved,0
-EXC-1120,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Transit waiver,2023-02-01,2024-02-01,ACTIVE,HIGH,0
-EXC-1121,ROOT_ACCESS,charlie.dev,ciso.manager,Indexing job,2026-02-05,2026-02-10,EXPIRED,CRITICAL,0
-EXC-1122,FIREWALL_RULE_OPEN,bob.jones,network.lead,Monitoring IP,2025-10-15,2026-10-15,ACTIVE,MEDIUM,2
-EXC-1123,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Docker registry,2026-06-01,2026-09-01,ACTIVE,LOW,0
-EXC-1124,ADMIN_ACCESS,david.ops,eng.manager,DNS config,2026-06-05,2026-06-10,EXPIRED,HIGH,0
-EXC-1125,DATA_EXPORT,vendor.user,data.manager,Metric dump,2026-02-01,2027-01-31,ACTIVE,HIGH,0
-EXC-1126,COMPLIANCE_WAIVER,alice.smith,security.lead,Bypass MFA,2024-07-01,2025-01-01,ACTIVE,CRITICAL,0
-EXC-1127,ENCRYPTION_WAIVER,sarah.dev,security.lead,Local unencrypted,2026-03-01,2026-09-01,ACTIVE,MEDIUM,0
-EXC-1128,ADMIN_ACCESS,network.ops,eng.manager,Firmware upgrade,2026-04-15,2026-04-20,REVOKED,Resolved,0
-EXC-1129,ROOT_ACCESS,alice.smith,ciso.manager,SSL renewal,2026-06-18,2026-06-21,ACTIVE,CRITICAL,0
-EXC-1130,FIREWALL_RULE_OPEN,vendor.api,network.lead,Payload testing,2025-11-10,2025-12-10,ACTIVE,MEDIUM,0
-EXC-1131,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Staging DB,2026-06-18,2026-09-18,ACTIVE,LOW,0
-EXC-1132,DATA_EXPORT,data.scientist,data.manager,User behavior,2026-05-01,2026-05-07,EXPIRED,HIGH,0
-EXC-1133,ADMIN_ACCESS,bob.jones,ciso.manager,AD restructuring,2026-06-20,2026-07-20,ACTIVE,HIGH,1
-EXC-1134,ENCRYPTION_WAIVER,legacy.app,security.lead,Network traffic,2021-02-01,2022-02-01,ACTIVE,HIGH,0
-EXC-1135,ROOT_ACCESS,david.ops,ciso.manager,Panic recovery,2026-03-14,2026-03-15,REVOKED,Resolved,0
-EXC-1136,FIREWALL_RULE_OPEN,network.ops,network.lead,IP whitelisting,2026-02-01,2027-01-31,ACTIVE,LOW,0
-EXC-1137,DATA_EXPORT,vendor.api,data.manager,Sync job,2026-06-10,2026-12-10,ACTIVE,MEDIUM,0
-EXC-1138,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Beta tests,2026-06-10,2026-08-10,ACTIVE,LOW,0
-EXC-1139,ADMIN_ACCESS,alice.smith,eng.manager,Jira plugin,2026-06-19,2026-06-26,ACTIVE,MEDIUM,0
-EXC-1140,COMPLIANCE_WAIVER,app.owner,security.lead,Password rotation,2025-02-01,2025-07-01,ACTIVE,CRITICAL,0
-EXC-1141,ROOT_ACCESS,charlie.dev,ciso.manager,Log fix,2026-04-01,2026-04-05,EXPIRED,CRITICAL,0
-EXC-1142,FIREWALL_RULE_OPEN,bob.jones,network.lead,Webhook ingress,2026-03-01,2027-03-01,ACTIVE,MEDIUM,1
-EXC-1143,DATA_EXPORT,data.scientist,data.manager,Anomaly training,2026-06-15,2026-07-15,ACTIVE,HIGH,0
-EXC-1144,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,QA pipeline,2026-06-18,2026-08-18,ACTIVE,LOW,0
-EXC-1145,ADMIN_ACCESS,david.ops,eng.manager,IAM creation,2026-05-10,2026-05-12,REVOKED,Resolved,0
-EXC-1146,ENCRYPTION_WAIVER,vendor.api,security.lead,SOAP endpoint,2024-06-01,2025-06-01,ACTIVE,HIGH,0
-EXC-1147,FIREWALL_RULE_OPEN,alice.smith,network.lead,Branch VPN,2026-06-01,2026-12-01,ACTIVE,MEDIUM,0
-EXC-1148,ROOT_ACCESS,network.ops,ciso.manager,Router diagnostic,2025-12-15,2025-12-16,ACTIVE,CRITICAL,0
-EXC-1149,DATA_EXPORT,vendor.user,data.manager,Financial sync,2025-12-25,2025-12-31,EXPIRED,HIGH,0
-EXC-1150,COMPLIANCE_WAIVER,bob.jones,security.lead,Macro execution,2026-02-10,2026-03-10,ACTIVE,HIGH,0
-EXC-1151,ADMIN_ACCESS,sarah.dev,eng.manager,GitLab setup,2026-06-18,2026-07-18,ACTIVE,MEDIUM,0
-EXC-1152,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Mock server,2026-06-10,2026-09-10,ACTIVE,LOW,0
-EXC-1153,FIREWALL_RULE_OPEN,network.ops,network.lead,Direct Connect test,2026-06-15,2026-06-29,ACTIVE,MEDIUM,0
-EXC-1154,ROOT_ACCESS,alice.smith,ciso.manager,Container prune,2026-06-10,2026-06-11,REVOKED,Resolved,0
-EXC-1155,DATA_EXPORT,data.scientist,data.manager,Churn dataset,2026-04-15,2026-04-30,EXPIRED,HIGH,0
-EXC-1156,ENCRYPTION_WAIVER,app.owner,security.lead,IoT legacy,2025-09-01,2026-09-01,ACTIVE,MEDIUM,1
-EXC-1157,ADMIN_ACCESS,david.ops,eng.manager,Okta sync,2026-06-20,2026-06-27,ACTIVE,HIGH,0
-EXC-1158,FIREWALL_RULE_OPEN,vendor.api,network.lead,SFTP batch,2025-04-01,2026-04-01,ACTIVE,MEDIUM,0
-EXC-1159,COMPLIANCE_WAIVER,legacy.app,ciso.manager,TLS 1.0,2022-02-01,2023-02-01,ACTIVE,CRITICAL,0
-EXC-1160,ROOT_ACCESS,bob.jones,ciso.manager,Cluster expansion,2026-05-20,2026-05-25,EXPIRED,CRITICAL,0
-EXC-1161,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,UAT rights,2026-06-10,2026-08-10,ACTIVE,LOW,0
-EXC-1162,DATA_EXPORT,vendor.user,data.manager,Inventory extract,2026-06-15,2026-09-15,ACTIVE,MEDIUM,0
-EXC-1163,ADMIN_ACCESS,alice.smith,eng.manager,Slack admin,2026-02-01,2027-01-31,ACTIVE,LOW,0
-EXC-1164,FIREWALL_RULE_OPEN,network.ops,network.lead,RDP access,2025-12-28,2025-12-29,ACTIVE,HIGH,0
-EXC-1165,ROOT_ACCESS,charlie.dev,ciso.manager,Memory dump,2026-06-10,2026-06-11,REVOKED,Resolved,0
-EXC-1166,ENCRYPTION_WAIVER,sarah.dev,security.lead,Debug traffic,2026-06-21,2026-06-23,ACTIVE,MEDIUM,0
-EXC-1167,DATA_EXPORT,data.scientist,data.manager,Forecast model,2026-03-01,2026-03-14,EXPIRED,HIGH,0
-EXC-1168,COMPLIANCE_WAIVER,david.ops,security.lead,BYOD enrollment,2026-06-01,2026-09-01,ACTIVE,MEDIUM,0
-EXC-1169,ADMIN_ACCESS,bob.jones,eng.manager,Zoom admin,2026-04-01,2026-10-01,ACTIVE,LOW,0
-EXC-1170,FIREWALL_RULE_OPEN,vendor.api,network.lead,Zendesk sync,2026-02-15,2027-02-15,ACTIVE,LOW,0
-EXC-1171,ROOT_ACCESS,alice.smith,ciso.manager,NFS fix,2026-02-20,2026-02-21,EXPIRED,CRITICAL,0
-EXC-1172,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Grafana edit,2026-06-15,2026-09-15,ACTIVE,LOW,0
-EXC-1173,DATA_EXPORT,vendor.user,data.manager,SOC2 pull,2026-05-15,2026-05-30,EXPIRED,HIGH,0
-EXC-1174,ENCRYPTION_WAIVER,legacy.app,security.lead,Cache sync,2024-12-01,2025-12-01,ACTIVE,MEDIUM,0
-EXC-1175,ADMIN_ACCESS,david.ops,eng.manager,GitHub owner,2026-06-15,2026-12-15,ACTIVE,HIGH,0
-EXC-1176,FIREWALL_RULE_OPEN,network.ops,network.lead,Pingdom monitor,2026-06-01,2027-06-01,ACTIVE,LOW,0
-EXC-1177,ROOT_ACCESS,charlie.dev,ciso.manager,Crontab edit,2026-06-19,2026-06-20,ACTIVE,CRITICAL,0
-EXC-1178,COMPLIANCE_WAIVER,app.owner,security.lead,Skip static code,2026-06-18,2026-07-02,ACTIVE,HIGH,0
-EXC-1179,DATA_EXPORT,data.scientist,data.manager,NLP corpus,2026-02-10,2026-03-10,REVOKED,Resolved,0
-EXC-1180,ADMIN_ACCESS,alice.smith,eng.manager,AWS billing,2026-03-01,2026-09-01,ACTIVE,MEDIUM,1
-EXC-1181,FIREWALL_RULE_OPEN,bob.jones,network.lead,Azure DevOps IP,2026-05-01,2026-11-01,ACTIVE,MEDIUM,0
-EXC-1182,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Prod logs,2026-06-10,2026-08-10,ACTIVE,LOW,0
-EXC-1183,ROOT_ACCESS,david.ops,ciso.manager,Elasticsearch resize,2026-04-20,2026-04-21,EXPIRED,CRITICAL,0
-EXC-1184,ENCRYPTION_WAIVER,vendor.api,security.lead,FTP drop,2023-07-01,2024-07-01,ACTIVE,HIGH,0
-EXC-1185,DATA_EXPORT,vendor.user,data.manager,Monthly billing,2026-06-10,2026-06-15,EXPIRED,MEDIUM,0
-EXC-1186,ADMIN_ACCESS,sarah.dev,eng.manager,SonarQube,2026-06-15,2026-12-15,ACTIVE,LOW,0
-EXC-1187,FIREWALL_RULE_OPEN,network.ops,network.lead,SNMP receiver,2025-08-01,2026-08-01,ACTIVE,MEDIUM,2
-EXC-1188,COMPLIANCE_WAIVER,alice.smith,security.lead,SSH Root login,2026-01-01,2026-01-02,ACTIVE,CRITICAL,0
-EXC-1189,ROOT_ACCESS,bob.jones,ciso.manager,Redis flush,2026-06-21,2026-06-22,ACTIVE,CRITICAL,0
-EXC-1190,DATA_EXPORT,data.scientist,data.manager,Graph DB export,2026-06-01,2026-06-15,REVOKED,Resolved,0
-EXC-1191,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,VPN split,2026-06-15,2026-09-15,ACTIVE,MEDIUM,0
-EXC-1192,ADMIN_ACCESS,david.ops,eng.manager,VMware vCenter,2026-02-01,2026-08-01,ACTIVE,HIGH,1
-EXC-1193,FIREWALL_RULE_OPEN,vendor.api,network.lead,Mailgun SMTP,2026-03-15,2027-03-15,ACTIVE,LOW,0
-EXC-1194,ENCRYPTION_WAIVER,legacy.app,security.lead,Telnet access,2021-06-01,2022-06-01,ACTIVE,CRITICAL,0
-EXC-1195,ROOT_ACCESS,alice.smith,ciso.manager,Kubelet rotate,2026-05-10,2026-05-11,EXPIRED,CRITICAL,0
-EXC-1196,DATA_EXPORT,vendor.user,data.manager,Ticket history,2026-06-18,2026-06-25,ACTIVE,MEDIUM,0
-EXC-1197,COMPLIANCE_WAIVER,charlie.dev,security.lead,Disable SELinux,2026-06-15,2026-06-22,ACTIVE,HIGH,0
-EXC-1198,ADMIN_ACCESS,bob.jones,eng.manager,1Password recovery,2026-06-19,2026-06-20,ACTIVE,CRITICAL,0
-EXC-1199,FIREWALL_RULE_OPEN,network.ops,network.lead,NTP sync,2026-02-01,2027-01-31,ACTIVE,LOW,0
-EXC-1200,ROOT_ACCESS,david.ops,ciso.manager,Vacuum full,2026-06-10,2026-06-11,REVOKED,Resolved,0
+exception_id,requester_name,requester_email,department,exception_type,justification,request_date,expiry_date,duration_days,approver_name,status,risk_level,is_renewed
+EXC00000,Steven Brown,steven.brown@company.com,IT,Access_Exception,Business requirement for testing,2026-03-18,2026-06-24,220,Thomas Xu,Expiring_Soon,Medium,False
+EXC00001,Edward Rodriguez,edward.rodriguez@company.com,Operations,Access_Exception,Business requirement for maintenance,2025-10-20,2027-04-05,31,Joshua Patel,Revoked,High,False
+EXC00002,Elena Miller,elena.miller@company.com,Security,Password_Policy_Exception,Business requirement for troubleshooting,2026-03-08,2026-04-01,239,Meera Iyer,Active,Low,True
+EXC00003,Anthony Reilly,anthony.reilly@company.com,Finance,Access_Exception,Business requirement for troubleshooting,2025-06-04,2026-06-27,285,Jacob Lee,Expiring_Soon,Low,True
+EXC00004,Larry Singh,larry.singh@company.com,Finance,Data_Export_Exception,Business requirement for troubleshooting,2025-08-14,2026-08-12,322,Nisha Guo,Revoked,Low,False
+EXC00005,Raja Bernard,raja.bernard@company.com,IT,Password_Policy_Exception,Business requirement for testing,2025-07-19,2026-06-16,283,Timothy Davis,Expiring_Soon,Medium,False
+EXC00006,Stephen White,stephen.white@company.com,Sales,Password_Policy_Exception,Business requirement for troubleshooting,2026-02-03,2026-07-26,174,David Wang,Revoked,Low,False
+EXC00007,Pooja Mishra,pooja.mishra@company.com,IT,Access_Exception,Business requirement for maintenance,2026-03-08,2026-08-03,154,Raja Quinn,Pending_Review,Low,False
+EXC00008,Sophia Colombo,sophia.colombo@company.com,IT,Firewall_Rule_Exception,Business requirement for testing,2026-01-23,2026-05-11,130,Charles Iyer,Expired,Medium,True
+EXC00009,Gary Dubois,gary.dubois@company.com,Sales,Encryption_Waiver,Business requirement for troubleshooting,2026-02-10,2026-06-19,41,Vikram Martin,Revoked,High,True
+EXC00010,Ryan Robinson,ryan.robinson@company.com,Operations,Firewall_Rule_Exception,Business requirement for compliance,2025-10-02,2027-01-29,38,Stephen Jo,Revoked,Low,False
+EXC00011,Jacob Gupta,jacob.gupta@company.com,Finance,Data_Export_Exception,Business requirement for maintenance,2025-10-02,2027-03-29,50,Riya Becker,Active,Medium,False
+EXC00012,Nicholas Kelly,nicholas.kelly@company.com,Finance,Firewall_Rule_Exception,Business requirement for compliance,2025-10-05,2026-05-28,311,Joshua Reilly,Revoked,Low,False
+EXC00013,Mark Choi,mark.choi@company.com,Finance,Access_Exception,Business requirement for testing,2026-03-21,2027-04-04,329,Deepika Park,Expired,Medium,False
+EXC00014,Mark Han,mark.han@company.com,Finance,Encryption_Waiver,Business requirement for development,2026-02-19,2026-06-26,185,Richard Pillai,Active,Medium,False
+EXC00015,Matthew Ramirez,matthew.ramirez@company.com,IT,Encryption_Waiver,Business requirement for troubleshooting,2025-11-18,2026-10-22,284,Christopher Garcia,Active,High,False
+EXC00016,Elena Rizzo,elena.rizzo@company.com,Sales,Access_Exception,Business requirement for compliance,2025-07-01,2026-05-01,184,Ryan Jang,Revoked,High,False
+EXC00017,Brian Taylor,brian.taylor@company.com,IT,MFA_Exemption,Business requirement for troubleshooting,2026-01-04,2026-06-12,19,Raja Becker,Pending_Review,Medium,False
+EXC00018,Maria Park,maria.park@company.com,Operations,Access_Exception,Business requirement for testing,2025-12-25,2027-02-27,164,Paul Murphy,Expired,Medium,False
+EXC00019,Harsh White,harsh.white@company.com,Finance,MFA_Exemption,Business requirement for troubleshooting,2026-01-24,2026-06-04,293,James Bernard,Expiring_Soon,Low,True
+EXC00020,Edward Guo,edward.guo@company.com,Finance,Data_Export_Exception,Business requirement for troubleshooting,2025-07-29,2026-07-13,252,Brian Perez,Pending_Review,High,True
+EXC00021,Joshua Singh,joshua.singh@company.com,Finance,Firewall_Rule_Exception,Business requirement for maintenance,2025-12-19,2026-12-17,359,Amara Dubois,Active,Low,True
+EXC00022,Elena Hoffmann,elena.hoffmann@company.com,Sales,Encryption_Waiver,Business requirement for development,2026-02-08,2026-09-12,353,Karan Jang,Expiring_Soon,Critical,False
+EXC00023,Rajesh Sun,rajesh.sun@company.com,Finance,Access_Exception,Business requirement for maintenance,2025-11-07,2026-04-18,164,Donald Weber,Expired,Medium,False
+EXC00024,Nikhil Xu,nikhil.xu@company.com,Finance,Firewall_Rule_Exception,Business requirement for maintenance,2025-07-24,2026-09-11,47,Jeffrey Rossi,Active,Critical,True
+EXC00025,Daniel Das,daniel.das@company.com,Sales,MFA_Exemption,Business requirement for development,2025-11-10,2026-05-07,36,Stephen Yang,Active,Medium,True
+EXC00026,Matthew Quinn,matthew.quinn@company.com,Finance,Access_Exception,Business requirement for development,2025-09-24,2027-04-16,286,Zainab Verma,Revoked,Medium,False
+EXC00027,William Russo,william.russo@company.com,Security,MFA_Exemption,Business requirement for maintenance,2026-03-22,2027-04-19,266,Joshua Lee,Pending_Review,Low,True
+EXC00028,Thomas Sanchez,thomas.sanchez@company.com,HR,Password_Policy_Exception,Business requirement for testing,2025-11-11,2027-03-01,27,Nikhil Nair,Pending_Review,Medium,False
+EXC00029,Ryan Martin,ryan.martin@company.com,Finance,MFA_Exemption,Business requirement for compliance,2025-05-13,2026-07-18,47,Matthew Connor,Expired,Low,True
+EXC00030,Neha Han,neha.han@company.com,HR,Password_Policy_Exception,Business requirement for maintenance,2026-02-26,2026-07-21,323,Raja Rodriguez,Expired,Medium,False
+EXC00031,Timothy Jones,timothy.jones@company.com,IT,Password_Policy_Exception,Business requirement for compliance,2026-01-15,2026-07-12,222,Matthew Das,Pending_Review,Medium,True
+EXC00032,Shruti Weber,shruti.weber@company.com,Finance,Password_Policy_Exception,Business requirement for troubleshooting,2025-05-19,2026-03-29,170,Aisha Han,Expired,Low,False
+EXC00033,Harsh He,harsh.he@company.com,IT,Password_Policy_Exception,Business requirement for troubleshooting,2026-02-04,2026-08-02,239,Fatima Fischer,Revoked,Medium,False
+EXC00034,Aisha Meyer,aisha.meyer@company.com,HR,Encryption_Waiver,Business requirement for compliance,2026-02-05,2027-01-10,156,Anjali Liu,Revoked,Low,False
+EXC00035,Matthew Han,matthew.han@company.com,IT,Encryption_Waiver,Business requirement for testing,2025-09-14,2026-09-18,98,Matthew Hernandez,Active,Medium,False
+EXC00036,Jeffrey Ramirez,jeffrey.ramirez@company.com,Sales,MFA_Exemption,Business requirement for troubleshooting,2026-04-05,2026-08-26,20,Diya Perez,Pending_Review,High,False
+EXC00037,Anthony Brown,anthony.brown@company.com,IT,Encryption_Waiver,Business requirement for troubleshooting,2025-06-23,2026-07-02,105,Robert Thompson,Pending_Review,Low,False
+EXC00038,Aisha Singh,aisha.singh@company.com,Operations,Password_Policy_Exception,Business requirement for troubleshooting,2026-01-31,2026-07-22,312,Fatima Bhat,Revoked,High,True
+EXC00039,Christopher Rao,christopher.rao@company.com,Operations,MFA_Exemption,Business requirement for testing,2025-06-03,2026-10-16,284,Fatima Ferrari,Expiring_Soon,Low,False
+EXC00040,Donald Choi,donald.choi@company.com,Operations,Data_Export_Exception,Business requirement for maintenance,2025-06-23,2026-10-12,86,Nikhil Park,Active,Low,False
+EXC00041,Thomas Thompson,thomas.thompson@company.com,Finance,Access_Exception,Business requirement for maintenance,2025-05-25,2026-11-18,39,Donald Harris,Active,Medium,False
+EXC00042,Diya Iyer,diya.iyer@company.com,Security,Firewall_Rule_Exception,Business requirement for maintenance,2025-09-05,2026-05-06,61,Nisha Esposito,Expiring_Soon,Medium,False
+EXC00043,Christopher Bianchi,christopher.bianchi@company.com,HR,Access_Exception,Business requirement for maintenance,2026-01-07,2026-11-25,348,Charles Gupta,Expiring_Soon,Low,True
+EXC00044,Joseph Schneider,joseph.schneider@company.com,IT,Firewall_Rule_Exception,Business requirement for maintenance,2025-12-05,2026-04-18,163,Fatima Robinson,Revoked,Low,False
+EXC00045,Riya Wagner,riya.wagner@company.com,Security,Firewall_Rule_Exception,Business requirement for compliance,2025-06-03,2026-11-17,188,Isha Martin,Active,Medium,False
+EXC00046,Deepika Lee,deepika.lee@company.com,Security,MFA_Exemption,Business requirement for compliance,2025-05-17,2026-10-23,308,Vikram Romano,Expired,Low,False
+EXC00047,Timothy Meyer,timothy.meyer@company.com,Security,MFA_Exemption,Business requirement for maintenance,2026-03-24,2027-01-08,31,Rajesh White,Revoked,High,True
+EXC00048,Nikhil Weber,nikhil.weber@company.com,Sales,Password_Policy_Exception,Business requirement for compliance,2025-07-26,2026-08-15,343,George Lee,Revoked,Low,True
+EXC00049,Leila Williams,leila.williams@company.com,Operations,Encryption_Waiver,Business requirement for compliance,2025-11-06,2026-10-22,160,William Rao,Pending_Review,Low,False
+EXC00050,Jeffrey Quinn,jeffrey.quinn@company.com,Finance,Encryption_Waiver,Business requirement for testing,2026-01-20,2027-01-27,193,Gary Mishra,Pending_Review,Medium,False
+EXC00051,Jeffrey Smith,jeffrey.smith@company.com,IT,MFA_Exemption,Business requirement for testing,2026-02-27,2026-10-24,196,Charles Romano,Pending_Review,Medium,False
+EXC00052,Aditya Hernandez,aditya.hernandez@company.com,Operations,MFA_Exemption,Business requirement for compliance,2025-08-30,2027-01-19,176,Charles Thompson,Active,Medium,False
+EXC00053,Leila Singh,leila.singh@company.com,Security,Firewall_Rule_Exception,Business requirement for compliance,2026-03-24,2026-12-21,144,Elena Wilson,Expired,High,False
+EXC00054,Kenneth Martinez,kenneth.martinez@company.com,Security,Data_Export_Exception,Business requirement for compliance,2025-08-22,2026-10-12,35,Yuki Robinson,Expired,Medium,False
+EXC00055,Andrew Han,andrew.han@company.com,Security,Encryption_Waiver,Business requirement for testing,2025-07-12,2026-07-05,343,Harsh Sanchez,Pending_Review,Low,False
+EXC00056,Larry Thomas,larry.thomas@company.com,IT,MFA_Exemption,Business requirement for maintenance,2026-03-09,2027-02-25,253,Riya Reilly,Expiring_Soon,Medium,False
+EXC00057,Stephen Kelly,stephen.kelly@company.com,IT,MFA_Exemption,Business requirement for development,2026-01-09,2027-04-01,232,Zainab Durand,Revoked,High,True
+EXC00058,Christopher Pillai,christopher.pillai@company.com,Finance,Encryption_Waiver,Business requirement for development,2026-02-02,2027-03-20,33,Diya Gupta,Expiring_Soon,Low,False
+EXC00059,Riya Park,riya.park@company.com,IT,Firewall_Rule_Exception,Business requirement for compliance,2026-04-07,2026-06-18,103,Aisha Jones,Pending_Review,Medium,True
+EXC00060,Rohan Gonzalez,rohan.gonzalez@company.com,Sales,Access_Exception,Business requirement for development,2025-10-25,2026-09-27,55,Rohan Gupta,Revoked,High,False
+EXC00061,Vikram Hoffmann,vikram.hoffmann@company.com,Sales,MFA_Exemption,Business requirement for troubleshooting,2026-04-12,2026-03-22,34,Nicholas Hoffmann,Expired,Low,False
+EXC00062,Charles Jackson,charles.jackson@company.com,IT,Data_Export_Exception,Business requirement for testing,2025-12-04,2027-02-19,135,Ronald Martin,Pending_Review,Low,False
+EXC00063,Edward Patel,edward.patel@company.com,Security,Password_Policy_Exception,Business requirement for troubleshooting,2025-07-10,2026-12-29,345,Anjali Sullivan,Pending_Review,Medium,False
+EXC00064,Matthew Reilly,matthew.reilly@company.com,Sales,Firewall_Rule_Exception,Business requirement for maintenance,2025-04-30,2027-02-01,62,Shruti Kumar,Revoked,Medium,True
+EXC00065,Andrew Quinn,andrew.quinn@company.com,IT,Password_Policy_Exception,Business requirement for testing,2025-09-16,2026-08-02,255,Larry Rossi,Revoked,Medium,False
+EXC00066,George Xu,george.xu@company.com,Security,Data_Export_Exception,Business requirement for compliance,2025-07-24,2027-02-11,129,Anjali Bernard,Revoked,Critical,True
+EXC00067,George Meyer,george.meyer@company.com,HR,Password_Policy_Exception,Business requirement for maintenance,2025-12-10,2026-06-24,176,Michael Brown,Expiring_Soon,High,True
+EXC00068,Harsh Rao,harsh.rao@company.com,Sales,Data_Export_Exception,Business requirement for maintenance,2026-03-28,2026-05-09,240,Thomas Sanchez,Revoked,Medium,False
+EXC00069,Sanjana Singh,sanjana.singh@company.com,Finance,Firewall_Rule_Exception,Business requirement for compliance,2025-06-09,2027-03-07,314,Maria Esposito,Expiring_Soon,Medium,False
+EXC00070,Rajesh Becker,rajesh.becker@company.com,Finance,Firewall_Rule_Exception,Business requirement for compliance,2025-10-29,2026-07-18,348,Larry Lim,Expired,Low,False
+EXC00071,George Liu,george.liu@company.com,HR,Encryption_Waiver,Business requirement for troubleshooting,2025-07-31,2026-04-02,133,Jason Weber,Active,High,True
+EXC00072,Pooja Huang,pooja.huang@company.com,Finance,Password_Policy_Exception,Business requirement for development,2025-11-18,2027-01-03,278,Deepika Harris,Active,Medium,False
+EXC00073,Gary Wang,gary.wang@company.com,Security,Encryption_Waiver,Business requirement for testing,2026-02-04,2026-12-10,336,Joshua Rao,Expiring_Soon,Medium,False
+EXC00074,Raja Murphy,raja.murphy@company.com,Sales,Password_Policy_Exception,Business requirement for development,2026-04-10,2026-07-15,307,Eric Wilson,Active,High,False
+EXC00075,Nikhil Connor,nikhil.connor@company.com,Finance,Access_Exception,Business requirement for maintenance,2026-02-14,2026-04-18,144,Riya Harris,Expired,High,True
+EXC00076,Leila Das,leila.das@company.com,HR,MFA_Exemption,Business requirement for testing,2026-02-14,2026-07-25,187,Brian Sharma,Expired,High,False
+EXC00077,Rohan Connor,rohan.connor@company.com,Sales,Password_Policy_Exception,Business requirement for compliance,2025-12-03,2026-07-30,333,Christopher Rizzo,Revoked,Medium,False
+EXC00078,Sophia Murphy,sophia.murphy@company.com,Security,MFA_Exemption,Business requirement for maintenance,2025-07-17,2026-11-21,197,Anjali Williams,Active,Medium,False
+EXC00079,Xiulan Singh,xiulan.singh@company.com,IT,Data_Export_Exception,Business requirement for maintenance,2025-06-15,2027-04-04,276,Thomas Das,Revoked,Low,True
+EXC00080,Shruti Lopez,shruti.lopez@company.com,HR,Encryption_Waiver,Business requirement for compliance,2025-09-12,2027-03-28,113,Brian Hoffmann,Expired,Low,False
+EXC00081,Matthew Patel,matthew.patel@company.com,IT,MFA_Exemption,Business requirement for troubleshooting,2025-11-02,2026-11-20,40,Isha Perez,Expiring_Soon,Low,False
+EXC00082,Fatima Murphy,fatima.murphy@company.com,Sales,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-12-03,2027-01-16,28,Rohan Becker,Expired,Low,False
+EXC00083,David Kelly,david.kelly@company.com,Security,MFA_Exemption,Business requirement for testing,2025-06-02,2027-01-11,62,Larry Patel,Revoked,Low,True
+EXC00084,Jeffrey Muller,jeffrey.muller@company.com,Sales,MFA_Exemption,Business requirement for development,2025-06-24,2026-06-10,277,Fatima Reilly,Active,High,True
+EXC00085,Gary Kelly,gary.kelly@company.com,Sales,Password_Policy_Exception,Business requirement for maintenance,2026-02-01,2027-04-08,168,Robert Durand,Pending_Review,Low,False
+EXC00086,Harsh Wilson,harsh.wilson@company.com,Sales,Password_Policy_Exception,Business requirement for maintenance,2025-12-29,2027-04-16,305,Sophia Hwang,Expired,Low,False
+EXC00087,Kenneth Smith,kenneth.smith@company.com,Security,Encryption_Waiver,Business requirement for testing,2025-12-07,2027-01-10,242,Yuki Rizzo,Active,Medium,False
+EXC00088,Ryan Chen,ryan.chen@company.com,Finance,MFA_Exemption,Business requirement for testing,2025-07-17,2026-09-12,35,Christopher Singh,Expired,Low,True
+EXC00089,Larry Nair,larry.nair@company.com,Operations,Data_Export_Exception,Business requirement for testing,2025-11-14,2026-09-16,86,Timothy Davis,Revoked,High,False
+EXC00090,Amara Ghosh,amara.ghosh@company.com,Sales,Password_Policy_Exception,Business requirement for troubleshooting,2025-08-23,2027-03-04,136,Deepika Martinez,Revoked,Critical,False
+EXC00091,Karan Sun,karan.sun@company.com,Security,Encryption_Waiver,Business requirement for maintenance,2025-09-25,2026-04-14,331,Elena Becker,Expiring_Soon,Low,True
+EXC00092,Sanjana Schulz,sanjana.schulz@company.com,Security,Password_Policy_Exception,Business requirement for development,2026-04-17,2026-06-16,92,Aditya O'Brien,Revoked,Low,False
+EXC00093,Nadia Wilson,nadia.wilson@company.com,HR,Data_Export_Exception,Business requirement for development,2025-06-18,2027-01-20,134,Edward Young,Revoked,Low,False
+EXC00094,Eric Wagner,eric.wagner@company.com,Sales,Access_Exception,Business requirement for testing,2025-11-24,2026-03-29,323,Amitabh Hwang,Revoked,Medium,False
+EXC00095,Pooja Davis,pooja.davis@company.com,Security,Access_Exception,Business requirement for compliance,2025-10-03,2026-10-02,203,Arjun Schneider,Expired,Medium,False
+EXC00096,Anthony Muller,anthony.muller@company.com,Finance,Access_Exception,Business requirement for development,2025-09-15,2026-11-18,259,Raja Reilly,Expiring_Soon,Medium,False
+EXC00097,Pooja Das,pooja.das@company.com,Finance,Access_Exception,Business requirement for maintenance,2025-10-10,2026-08-17,326,Joshua Yang,Revoked,Medium,True
+EXC00098,Anthony Russo,anthony.russo@company.com,Security,Firewall_Rule_Exception,Business requirement for troubleshooting,2026-04-16,2027-02-11,334,Mark Murphy,Active,Low,True
+EXC00099,Anthony Martinez,anthony.martinez@company.com,Finance,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-11-10,2026-05-25,198,Anthony Becker,Pending_Review,Medium,False
+EXC00100,Vikram Mishra,vikram.mishra@company.com,Security,Password_Policy_Exception,Business requirement for development,2026-01-10,2026-12-24,146,Zainab Murphy,Pending_Review,Medium,True
+EXC00101,Eric Young,eric.young@company.com,IT,MFA_Exemption,Business requirement for compliance,2025-10-19,2026-06-01,338,Harsh Nair,Pending_Review,High,True
+EXC00102,Harsh Martinez,harsh.martinez@company.com,Operations,MFA_Exemption,Business requirement for development,2025-10-13,2027-01-11,56,Deepika O'Brien,Active,High,False
+EXC00103,Ronald Das,ronald.das@company.com,HR,Firewall_Rule_Exception,Business requirement for development,2025-12-12,2027-01-29,343,Eric Jang,Revoked,Low,True
+EXC00104,Nadia Kang,nadia.kang@company.com,Operations,Access_Exception,Business requirement for compliance,2026-03-18,2026-11-28,243,Joshua Wang,Pending_Review,Low,False
+EXC00105,Nicholas Ramirez,nicholas.ramirez@company.com,Security,Data_Export_Exception,Business requirement for maintenance,2025-07-20,2027-02-10,255,Ryan Ramirez,Active,High,False
+EXC00106,Zainab Johnson,zainab.johnson@company.com,Sales,MFA_Exemption,Business requirement for troubleshooting,2025-08-27,2027-01-25,136,Eric Yang,Active,Medium,True
+EXC00107,Ryan Iyer,ryan.iyer@company.com,Sales,Password_Policy_Exception,Business requirement for maintenance,2025-07-02,2026-10-13,215,Leila Bernard,Pending_Review,Low,False
+EXC00108,Xiulan Perez,xiulan.perez@company.com,HR,MFA_Exemption,Business requirement for development,2025-09-16,2027-03-15,244,Anthony Xu,Active,Low,True
+EXC00109,Robert Russo,robert.russo@company.com,Security,Password_Policy_Exception,Business requirement for maintenance,2026-04-18,2027-01-17,179,Christopher Quinn,Pending_Review,High,False
+EXC00110,Diya Meyer,diya.meyer@company.com,Sales,Access_Exception,Business requirement for testing,2025-07-12,2026-07-06,320,Varun Reilly,Pending_Review,Low,False
+EXC00111,Matthew Gupta,matthew.gupta@company.com,HR,MFA_Exemption,Business requirement for maintenance,2025-04-24,2026-10-02,31,Ryan Young,Expired,Low,True
+EXC00112,Joseph Kelly,joseph.kelly@company.com,Sales,MFA_Exemption,Business requirement for maintenance,2025-11-18,2026-05-13,246,Maria Lopez,Expired,Medium,False
+EXC00113,Pooja Hernandez,pooja.hernandez@company.com,HR,Access_Exception,Business requirement for maintenance,2026-01-19,2026-03-26,200,Timothy Petit,Expired,Low,False
+EXC00114,Robert Rodriguez,robert.rodriguez@company.com,Finance,Password_Policy_Exception,Business requirement for compliance,2025-06-11,2026-12-22,234,Leila Becker,Active,Medium,True
+EXC00115,Matthew Iyer,matthew.iyer@company.com,Sales,Password_Policy_Exception,Business requirement for compliance,2026-02-11,2026-12-03,170,Riya Rizzo,Expiring_Soon,Medium,False
+EXC00116,Thomas Schmidt,thomas.schmidt@company.com,Security,Data_Export_Exception,Business requirement for maintenance,2025-08-10,2026-05-21,40,Sofia Esposito,Expiring_Soon,Low,False
+EXC00117,Zainab Rizzo,zainab.rizzo@company.com,Security,Access_Exception,Business requirement for maintenance,2025-08-09,2026-12-07,224,Aditya Bhat,Revoked,Low,False
+EXC00118,Nikhil Martin,nikhil.martin@company.com,IT,Access_Exception,Business requirement for troubleshooting,2025-09-08,2027-02-14,261,Xiulan Kim,Revoked,Low,True
+EXC00119,Deepika Rodriguez,deepika.rodriguez@company.com,Finance,Data_Export_Exception,Business requirement for troubleshooting,2025-12-20,2026-10-09,292,Amara Wilson,Pending_Review,High,False
+EXC00120,Jacob Kelly,jacob.kelly@company.com,Operations,Firewall_Rule_Exception,Business requirement for compliance,2025-11-07,2026-05-06,264,Nicholas Gupta,Revoked,Low,False
+EXC00121,Leila Thomas,leila.thomas@company.com,Finance,Firewall_Rule_Exception,Business requirement for development,2025-09-04,2027-01-05,131,Robert Rossi,Active,Medium,False
+EXC00122,Priya Wilson,priya.wilson@company.com,Security,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-12-21,2026-10-18,77,Matthew Thomas,Pending_Review,High,False
+EXC00123,Sanjana Nair,sanjana.nair@company.com,HR,Firewall_Rule_Exception,Business requirement for testing,2026-03-24,2027-03-25,97,Zainab Dubois,Pending_Review,Low,False
+EXC00124,Eric Sullivan,eric.sullivan@company.com,Finance,Access_Exception,Business requirement for maintenance,2025-09-13,2026-06-16,280,Stephen Williams,Revoked,Low,True
+EXC00125,Sofia Reilly,sofia.reilly@company.com,HR,MFA_Exemption,Business requirement for development,2026-01-05,2026-06-28,80,Joshua Jones,Active,Medium,True
+EXC00126,Leila Schneider,leila.schneider@company.com,Operations,Firewall_Rule_Exception,Business requirement for testing,2026-03-20,2027-04-11,233,Leila Muller,Pending_Review,High,False
+EXC00127,Rohan Das,rohan.das@company.com,HR,Password_Policy_Exception,Business requirement for maintenance,2025-09-16,2026-03-21,118,Rajesh Robinson,Expired,Medium,False
+EXC00128,Meera Miller,meera.miller@company.com,Operations,Access_Exception,Business requirement for development,2025-09-15,2027-04-10,194,Aditya Esposito,Pending_Review,Low,False
+EXC00129,Nadia Lewis,nadia.lewis@company.com,IT,Encryption_Waiver,Business requirement for testing,2025-08-12,2026-06-21,362,Daniel Young,Active,High,False
+EXC00130,Brian Kim,brian.kim@company.com,HR,Password_Policy_Exception,Business requirement for development,2025-04-29,2026-06-29,268,Steven Robinson,Expired,Low,False
+EXC00131,Rajesh Yang,rajesh.yang@company.com,Operations,Access_Exception,Business requirement for compliance,2026-03-31,2026-11-03,360,Rohan Huang,Expiring_Soon,Medium,False
+EXC00132,Ronald Harris,ronald.harris@company.com,Operations,MFA_Exemption,Business requirement for maintenance,2025-12-11,2026-04-12,188,William Sullivan,Expired,Critical,True
+EXC00133,Jacob Menon,jacob.menon@company.com,HR,Firewall_Rule_Exception,Business requirement for testing,2025-07-08,2026-05-30,130,Matthew Johnson,Expired,Low,False
+EXC00134,Steven Rao,steven.rao@company.com,Operations,Access_Exception,Business requirement for maintenance,2026-01-18,2026-04-29,79,Daniel Taylor,Expiring_Soon,Low,False
+EXC00135,Rohan Choi,rohan.choi@company.com,Operations,MFA_Exemption,Business requirement for development,2025-07-13,2027-01-11,352,Raja Kang,Expired,Low,False
+EXC00136,Eric Sun,eric.sun@company.com,Sales,Password_Policy_Exception,Business requirement for compliance,2025-06-20,2026-07-10,174,Michael Lopez,Pending_Review,High,True
+EXC00137,Donald Romano,donald.romano@company.com,Security,Data_Export_Exception,Business requirement for troubleshooting,2025-11-28,2026-05-16,354,Aisha Reddy,Active,Low,True
+EXC00138,Jacob Murphy,jacob.murphy@company.com,Operations,Data_Export_Exception,Business requirement for testing,2026-01-04,2026-11-08,18,Neha Kumar,Active,Medium,False
+EXC00139,Isha Choi,isha.choi@company.com,Operations,Password_Policy_Exception,Business requirement for compliance,2025-08-23,2026-05-14,191,Fatima Sharma,Expired,Low,True
+EXC00140,Fatima Ramirez,fatima.ramirez@company.com,IT,Encryption_Waiver,Business requirement for troubleshooting,2025-11-02,2027-03-11,255,Larry Clark,Expiring_Soon,Low,True
+EXC00141,Aisha Choi,aisha.choi@company.com,IT,Access_Exception,Business requirement for troubleshooting,2025-11-01,2026-04-23,322,Ronald Ramirez,Pending_Review,Medium,True
+EXC00142,Isha Iyer,isha.iyer@company.com,Security,Firewall_Rule_Exception,Business requirement for development,2025-10-27,2026-12-26,289,Shruti Reilly,Expired,Low,False
+EXC00143,Richard Young,richard.young@company.com,Security,MFA_Exemption,Business requirement for troubleshooting,2025-06-26,2026-12-12,185,Joshua Fischer,Revoked,High,True
+EXC00144,Michael Pillai,michael.pillai@company.com,Sales,Firewall_Rule_Exception,Business requirement for compliance,2026-04-08,2027-04-16,321,Sophia Sun,Pending_Review,Critical,True
+EXC00145,Meera Guo,meera.guo@company.com,Sales,MFA_Exemption,Business requirement for compliance,2025-07-09,2027-04-06,127,Richard Young,Pending_Review,Low,False
+EXC00146,Jonathan Brown,jonathan.brown@company.com,Operations,MFA_Exemption,Business requirement for maintenance,2025-08-03,2026-08-22,257,Ryan Burke,Revoked,Medium,False
+EXC00147,Harsh Bianchi,harsh.bianchi@company.com,Security,MFA_Exemption,Business requirement for compliance,2025-06-11,2026-11-01,176,Andrew Dubois,Active,Low,False
+EXC00148,Jason White,jason.white@company.com,Finance,Encryption_Waiver,Business requirement for troubleshooting,2025-08-16,2026-06-24,260,Mark Sullivan,Expired,Low,False
+EXC00149,Stephen Colombo,stephen.colombo@company.com,IT,Access_Exception,Business requirement for development,2025-06-11,2026-05-08,241,Michael He,Active,Low,False
+EXC00150,David Huang,david.huang@company.com,Finance,MFA_Exemption,Business requirement for testing,2026-03-03,2027-03-03,252,Robert Schneider,Expiring_Soon,Low,True
+EXC00151,Neha Rossi,neha.rossi@company.com,IT,Data_Export_Exception,Business requirement for testing,2025-09-08,2026-10-11,81,Steven Petit,Expiring_Soon,Medium,False
+EXC00152,Riya Anderson,riya.anderson@company.com,Security,Password_Policy_Exception,Business requirement for compliance,2026-02-22,2026-10-17,321,Nisha Williams,Revoked,Medium,False
+EXC00153,Andrew Perez,andrew.perez@company.com,Security,Firewall_Rule_Exception,Business requirement for maintenance,2026-04-11,2026-10-18,73,Shruti Kelly,Expiring_Soon,Low,True
+EXC00154,Rohan Smith,rohan.smith@company.com,Sales,Encryption_Waiver,Business requirement for troubleshooting,2025-08-25,2026-04-04,344,Sophia Singh,Expired,Low,False
+EXC00155,Zainab Singh,zainab.singh@company.com,Finance,MFA_Exemption,Business requirement for troubleshooting,2025-07-30,2027-01-17,82,Andrew Perez,Pending_Review,Low,False
+EXC00156,Paul Robinson,paul.robinson@company.com,Finance,MFA_Exemption,Business requirement for troubleshooting,2026-03-28,2026-11-04,249,Michael Kelly,Active,Low,False
+EXC00157,David Miller,david.miller@company.com,Finance,Firewall_Rule_Exception,Business requirement for testing,2025-11-08,2026-07-06,68,Rajesh Romano,Revoked,High,False
+EXC00158,Jason Choi,jason.choi@company.com,Security,Firewall_Rule_Exception,Business requirement for maintenance,2025-08-09,2026-03-24,190,Steven Verma,Revoked,Low,False
+EXC00159,Riya Jones,riya.jones@company.com,Finance,Access_Exception,Business requirement for testing,2025-07-16,2026-04-05,351,Matthew Schmidt,Pending_Review,Medium,False
+EXC00160,Arjun Jackson,arjun.jackson@company.com,Sales,Access_Exception,Business requirement for troubleshooting,2025-09-17,2027-01-10,327,David Wang,Revoked,Low,False
+EXC00161,Aisha Jo,aisha.jo@company.com,IT,Access_Exception,Business requirement for testing,2026-02-13,2026-11-26,160,Michael Connor,Expired,Medium,False
+EXC00162,Michael White,michael.white@company.com,Finance,Access_Exception,Business requirement for troubleshooting,2026-03-22,2026-12-08,96,Jason Sharma,Expiring_Soon,Medium,False
+EXC00163,Donald Sullivan,donald.sullivan@company.com,Operations,Password_Policy_Exception,Business requirement for troubleshooting,2025-09-15,2026-10-01,254,Thomas Ramirez,Pending_Review,Medium,True
+EXC00164,Robert Patel,robert.patel@company.com,IT,Password_Policy_Exception,Business requirement for testing,2025-11-07,2026-06-15,155,Amara Li,Expiring_Soon,Medium,False
+EXC00165,Elena Park,elena.park@company.com,Sales,Firewall_Rule_Exception,Business requirement for development,2026-01-08,2026-06-11,272,Ronald Singh,Active,High,False
+EXC00166,Kevin Kumar,kevin.kumar@company.com,Security,Firewall_Rule_Exception,Business requirement for compliance,2025-09-03,2026-06-28,214,Amitabh Martin,Pending_Review,Low,False
+EXC00167,Daniel Martinez,daniel.martinez@company.com,Sales,Firewall_Rule_Exception,Business requirement for troubleshooting,2026-02-24,2026-05-26,118,Amara Durand,Active,Low,False
+EXC00168,Isha Choi,isha.choi@company.com,Sales,MFA_Exemption,Business requirement for testing,2025-10-15,2026-05-13,73,Zainab Guo,Expired,Low,False
+EXC00169,Vikram Sullivan,vikram.sullivan@company.com,IT,MFA_Exemption,Business requirement for testing,2025-07-01,2026-04-06,351,Edward Rao,Expiring_Soon,Low,False
+EXC00170,Jeffrey Hernandez,jeffrey.hernandez@company.com,Security,Access_Exception,Business requirement for development,2025-09-20,2026-04-12,29,Steven Petit,Pending_Review,Low,False
+EXC00171,Yuki Perez,yuki.perez@company.com,IT,MFA_Exemption,Business requirement for troubleshooting,2025-11-08,2026-03-30,262,Steven Clark,Pending_Review,High,False
+EXC00172,Rohan Pillai,rohan.pillai@company.com,Sales,Data_Export_Exception,Business requirement for maintenance,2025-09-23,2027-02-09,44,Jacob White,Expiring_Soon,High,False
+EXC00173,Rajesh Smith,rajesh.smith@company.com,Finance,Firewall_Rule_Exception,Business requirement for compliance,2026-04-06,2026-07-17,103,Raja Rodriguez,Expired,Medium,False
+EXC00174,Andrew Rossi,andrew.rossi@company.com,Security,Data_Export_Exception,Business requirement for compliance,2026-03-27,2026-11-20,287,Ryan Wang,Expiring_Soon,Low,False
+EXC00175,Zainab Sullivan,zainab.sullivan@company.com,Sales,Encryption_Waiver,Business requirement for development,2025-10-27,2026-08-06,272,Donald Das,Pending_Review,Low,False
+EXC00176,Diya Han,diya.han@company.com,Operations,Firewall_Rule_Exception,Business requirement for development,2025-04-25,2026-11-19,317,Deepika Lopez,Expired,Low,False
+EXC00177,Andrew Durand,andrew.durand@company.com,IT,Access_Exception,Business requirement for compliance,2026-02-16,2026-08-20,71,Pooja Hwang,Expired,Low,False
+EXC00178,Sophia Sullivan,sophia.sullivan@company.com,HR,MFA_Exemption,Business requirement for development,2025-07-05,2027-01-17,272,Joseph Pillai,Active,Low,False
+EXC00179,Rohan Gupta,rohan.gupta@company.com,Finance,Firewall_Rule_Exception,Business requirement for compliance,2025-11-05,2027-03-08,58,Shruti O'Brien,Expired,Low,False
+EXC00180,Zainab Lee,zainab.lee@company.com,Security,Encryption_Waiver,Business requirement for testing,2026-03-18,2026-11-01,187,Daniel Kelly,Active,Medium,True
+EXC00181,Pooja Perez,pooja.perez@company.com,Security,Firewall_Rule_Exception,Business requirement for testing,2025-11-18,2026-08-15,325,Richard Singh,Expired,Low,True
+EXC00182,Vikram Martin,vikram.martin@company.com,HR,Firewall_Rule_Exception,Business requirement for compliance,2025-05-11,2026-05-10,149,Mark Reilly,Pending_Review,Low,False
+EXC00183,Deepika Young,deepika.young@company.com,Security,Firewall_Rule_Exception,Business requirement for compliance,2025-10-16,2027-02-07,229,Nicholas Clark,Active,Medium,False
+EXC00184,Joshua Das,joshua.das@company.com,Sales,Firewall_Rule_Exception,Business requirement for testing,2025-06-07,2026-11-21,247,Thomas Anderson,Revoked,Low,False
+EXC00185,Richard Gupta,richard.gupta@company.com,IT,Password_Policy_Exception,Business requirement for compliance,2025-06-09,2026-04-21,138,Zainab Dubois,Expiring_Soon,Medium,True
+EXC00186,Amitabh Rossi,amitabh.rossi@company.com,Sales,Firewall_Rule_Exception,Business requirement for development,2025-05-20,2026-06-08,188,Rohan Chen,Expiring_Soon,High,False
+EXC00187,Michael Verma,michael.verma@company.com,Finance,Encryption_Waiver,Business requirement for testing,2025-04-30,2026-08-22,331,Jason Rao,Active,Low,True
+EXC00188,Thomas Thomas,thomas.thomas@company.com,HR,Password_Policy_Exception,Business requirement for compliance,2026-04-05,2027-01-15,315,Jeffrey Bianchi,Expired,Low,False
+EXC00189,Deepika Murphy,deepika.murphy@company.com,HR,MFA_Exemption,Business requirement for maintenance,2025-12-11,2026-08-11,91,Arjun Schulz,Expired,Low,False
+EXC00190,Leila Das,leila.das@company.com,Security,Password_Policy_Exception,Business requirement for compliance,2026-03-17,2026-04-05,206,Jason Meyer,Expired,Critical,False
+EXC00191,Karan Anderson,karan.anderson@company.com,HR,Access_Exception,Business requirement for development,2025-10-02,2026-10-13,35,Andrew Rodriguez,Revoked,Low,False
+EXC00192,William Williams,william.williams@company.com,Operations,Access_Exception,Business requirement for troubleshooting,2025-06-25,2026-08-28,168,Jeffrey Martin,Expired,High,False
+EXC00193,Akshay Schulz,akshay.schulz@company.com,Operations,Access_Exception,Business requirement for testing,2026-02-27,2026-09-17,363,Rohan Park,Pending_Review,High,True
+EXC00194,Andrew Thomas,andrew.thomas@company.com,IT,Data_Export_Exception,Business requirement for maintenance,2026-03-11,2026-04-03,58,Joshua Menon,Revoked,Medium,False
+EXC00195,Akshay Thompson,akshay.thompson@company.com,Finance,MFA_Exemption,Business requirement for development,2025-10-05,2026-08-14,355,Pooja Jo,Expiring_Soon,High,False
+EXC00196,Isha Patel,isha.patel@company.com,Operations,Firewall_Rule_Exception,Business requirement for testing,2026-01-19,2027-03-24,296,Nikhil Perez,Active,Medium,False
+EXC00197,Amitabh Guo,amitabh.guo@company.com,Sales,MFA_Exemption,Business requirement for troubleshooting,2025-07-11,2026-05-01,180,Shruti Huang,Expiring_Soon,High,False
+EXC00198,Deepika Choi,deepika.choi@company.com,Security,Access_Exception,Business requirement for testing,2026-01-14,2027-03-27,112,Richard Moore,Expired,Low,False
+EXC00199,Pooja Menon,pooja.menon@company.com,Security,Data_Export_Exception,Business requirement for development,2025-11-13,2026-08-01,251,Andrew Nair,Expired,Medium,True
+EXC00200,Pooja Lim,pooja.lim@company.com,HR,Data_Export_Exception,Business requirement for maintenance,2026-03-10,2026-12-11,350,Eric Jones,Pending_Review,Medium,False
+EXC00201,Ryan Jackson,ryan.jackson@company.com,HR,Data_Export_Exception,Business requirement for compliance,2025-08-21,2026-10-13,56,Anthony Liu,Pending_Review,Medium,False
+EXC00202,Nisha Han,nisha.han@company.com,Operations,Data_Export_Exception,Business requirement for maintenance,2025-11-01,2026-05-04,271,Jonathan Nair,Pending_Review,High,False
+EXC00203,Joshua Schneider,joshua.schneider@company.com,IT,Access_Exception,Business requirement for development,2025-05-19,2026-08-26,198,Rajesh Petit,Expired,Medium,True
+EXC00204,Amitabh Lee,amitabh.lee@company.com,HR,Firewall_Rule_Exception,Business requirement for compliance,2025-05-27,2026-06-09,337,Eric Rossi,Pending_Review,Medium,False
+EXC00205,Donald Schmidt,donald.schmidt@company.com,Finance,Password_Policy_Exception,Business requirement for troubleshooting,2025-05-28,2027-04-19,118,Nisha Pillai,Revoked,Critical,False
+EXC00206,Varun Huang,varun.huang@company.com,Finance,Encryption_Waiver,Business requirement for testing,2025-12-09,2026-05-09,306,Pooja Hoffmann,Expiring_Soon,Medium,False
+EXC00207,Jonathan Martin,jonathan.martin@company.com,Sales,Password_Policy_Exception,Business requirement for maintenance,2026-03-30,2026-07-04,271,Charles Rao,Expired,Medium,False
+EXC00208,Ryan Rodriguez,ryan.rodriguez@company.com,Security,Encryption_Waiver,Business requirement for maintenance,2026-04-15,2027-02-19,240,Priya Fischer,Expiring_Soon,High,False
+EXC00209,Sophia Menon,sophia.menon@company.com,HR,Password_Policy_Exception,Business requirement for development,2026-01-16,2027-03-10,214,Neha Gonzalez,Expiring_Soon,Medium,False
+EXC00210,Sanjana Das,sanjana.das@company.com,HR,Access_Exception,Business requirement for compliance,2025-09-10,2026-09-19,340,Ryan Nair,Active,Low,False
+EXC00211,Akshay Jang,akshay.jang@company.com,Security,Data_Export_Exception,Business requirement for compliance,2025-08-17,2026-07-23,189,Rohan Johnson,Expiring_Soon,Medium,False
+EXC00212,Kevin Liu,kevin.liu@company.com,Finance,MFA_Exemption,Business requirement for development,2026-02-23,2027-04-03,118,William Martin,Revoked,Low,False
+EXC00213,Richard Moore,richard.moore@company.com,Security,Data_Export_Exception,Business requirement for compliance,2026-01-06,2026-06-30,209,Kenneth Kelly,Expired,Low,False
+EXC00214,Isha Quinn,isha.quinn@company.com,Finance,MFA_Exemption,Business requirement for development,2025-06-27,2026-07-03,191,Nadia Bhat,Expiring_Soon,High,True
+EXC00215,Akshay Jackson,akshay.jackson@company.com,Finance,Password_Policy_Exception,Business requirement for development,2025-05-19,2026-07-04,313,Deepika Nair,Revoked,High,True
+EXC00216,Isha Lim,isha.lim@company.com,HR,Firewall_Rule_Exception,Business requirement for maintenance,2025-06-08,2027-02-01,69,Daniel Jang,Revoked,Medium,True
+EXC00217,Jonathan Durand,jonathan.durand@company.com,Operations,MFA_Exemption,Business requirement for compliance,2025-05-19,2026-09-22,30,Vikram Harris,Active,Medium,True
+EXC00218,Elena Iyer,elena.iyer@company.com,Security,Encryption_Waiver,Business requirement for development,2026-04-14,2026-11-04,53,Harsh Quinn,Active,Low,False
+EXC00219,Amitabh Burke,amitabh.burke@company.com,HR,Access_Exception,Business requirement for testing,2026-03-17,2026-11-08,303,Anjali Martinez,Revoked,Medium,False
+EXC00220,Michael Martinez,michael.martinez@company.com,IT,Access_Exception,Business requirement for maintenance,2026-03-07,2026-10-18,186,Xiulan Fischer,Pending_Review,Low,False
+EXC00221,Meera Rao,meera.rao@company.com,HR,Password_Policy_Exception,Business requirement for compliance,2026-02-20,2027-03-27,319,Daniel Davis,Pending_Review,Critical,False
+EXC00222,Zainab Clark,zainab.clark@company.com,Finance,Encryption_Waiver,Business requirement for compliance,2026-02-24,2027-02-10,160,Maria Harris,Revoked,Medium,True
+EXC00223,Xiulan Gupta,xiulan.gupta@company.com,Operations,Data_Export_Exception,Business requirement for testing,2025-06-22,2026-06-24,350,Pooja Clark,Expired,Low,False
+EXC00224,Thomas Patel,thomas.patel@company.com,IT,MFA_Exemption,Business requirement for compliance,2026-03-08,2026-10-28,208,David Li,Expiring_Soon,Medium,False
+EXC00225,Aditya Garcia,aditya.garcia@company.com,IT,Firewall_Rule_Exception,Business requirement for development,2025-06-26,2026-08-02,60,Ryan Han,Revoked,Medium,False
+EXC00226,Harsh Robinson,harsh.robinson@company.com,IT,Data_Export_Exception,Business requirement for testing,2025-12-22,2026-05-29,219,Riya Jang,Pending_Review,High,False
+EXC00227,Daniel Verma,daniel.verma@company.com,Finance,Access_Exception,Business requirement for troubleshooting,2026-03-24,2026-05-21,16,Donald Young,Expired,Low,False
+EXC00228,Andrew Schulz,andrew.schulz@company.com,IT,Data_Export_Exception,Business requirement for troubleshooting,2025-05-26,2026-10-22,78,Ryan Huang,Expiring_Soon,Medium,True
+EXC00229,Nicholas Colombo,nicholas.colombo@company.com,Operations,Firewall_Rule_Exception,Business requirement for maintenance,2025-09-18,2026-07-18,118,Robert Wagner,Expiring_Soon,Medium,False
+EXC00230,David Hoffmann,david.hoffmann@company.com,HR,Encryption_Waiver,Business requirement for troubleshooting,2025-08-27,2026-06-16,304,Nikhil Lee,Expiring_Soon,High,False
+EXC00231,Amitabh Harris,amitabh.harris@company.com,Sales,Data_Export_Exception,Business requirement for development,2025-09-08,2026-06-27,177,Donald Weber,Expiring_Soon,Medium,False
+EXC00232,Nadia Ferrari,nadia.ferrari@company.com,HR,MFA_Exemption,Business requirement for compliance,2026-04-13,2027-03-01,352,Paul Schulz,Expired,Low,False
+EXC00233,Akshay Menon,akshay.menon@company.com,HR,Access_Exception,Business requirement for development,2026-01-26,2026-06-03,45,Eric Murphy,Expired,Low,False
+EXC00234,Edward Perez,edward.perez@company.com,Finance,Password_Policy_Exception,Business requirement for troubleshooting,2025-09-01,2026-09-06,254,Fatima Das,Expired,Low,False
+EXC00235,Priya Wang,priya.wang@company.com,Operations,Encryption_Waiver,Business requirement for troubleshooting,2026-03-31,2026-11-04,319,Amitabh Martinez,Pending_Review,Medium,False
+EXC00236,Jonathan Davis,jonathan.davis@company.com,Finance,Data_Export_Exception,Business requirement for testing,2025-07-06,2027-03-14,89,Sanjana Huang,Expired,Low,False
+EXC00237,Larry Rizzo,larry.rizzo@company.com,HR,Password_Policy_Exception,Business requirement for troubleshooting,2026-04-10,2027-03-31,297,David Pillai,Active,High,False
+EXC00238,Stephen Petit,stephen.petit@company.com,Security,Access_Exception,Business requirement for compliance,2026-04-08,2026-07-05,152,Eric Garcia,Expired,Low,False
+EXC00239,Diya Robinson,diya.robinson@company.com,Finance,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-10-02,2026-07-13,133,Nadia Lim,Expired,Low,False
+EXC00240,Larry Rao,larry.rao@company.com,Security,Access_Exception,Business requirement for development,2026-03-18,2026-11-25,295,Matthew Han,Revoked,Low,False
+EXC00241,Brian Sun,brian.sun@company.com,IT,Data_Export_Exception,Business requirement for compliance,2026-04-13,2026-05-23,8,Thomas Bernard,Expiring_Soon,Medium,False
+EXC00242,James Schmidt,james.schmidt@company.com,Security,Access_Exception,Business requirement for testing,2026-04-12,2026-06-13,111,James Jackson,Pending_Review,High,False
+EXC00243,Riya Lim,riya.lim@company.com,Finance,MFA_Exemption,Business requirement for troubleshooting,2026-01-28,2026-06-22,173,Arjun Williams,Expiring_Soon,Medium,False
+EXC00244,Riya Pillai,riya.pillai@company.com,HR,Data_Export_Exception,Business requirement for maintenance,2025-10-02,2026-04-09,322,Nadia Rizzo,Pending_Review,Low,False
+EXC00245,Shruti Ghosh,shruti.ghosh@company.com,Operations,Access_Exception,Business requirement for compliance,2025-11-16,2026-07-06,347,David Lee,Expired,Low,False
+EXC00246,Robert Xu,robert.xu@company.com,IT,Data_Export_Exception,Business requirement for troubleshooting,2026-04-19,2026-10-25,246,Fatima Weber,Active,Low,True
+EXC00247,Stephen Jo,stephen.jo@company.com,Operations,Access_Exception,Business requirement for development,2025-05-09,2027-04-03,174,Ronald Dubois,Expired,High,False
+EXC00248,Jonathan Martin,jonathan.martin@company.com,Finance,Data_Export_Exception,Business requirement for testing,2025-08-23,2026-08-10,186,Nadia Gupta,Expired,Medium,True
+EXC00249,Meera Martin,meera.martin@company.com,IT,Firewall_Rule_Exception,Business requirement for compliance,2025-05-26,2027-03-30,308,Joseph Moore,Active,Low,True
+EXC00250,Shruti Kang,shruti.kang@company.com,HR,MFA_Exemption,Business requirement for troubleshooting,2026-03-15,2026-12-24,319,Paul Hernandez,Active,Medium,True
+EXC00251,Amara Jo,amara.jo@company.com,Operations,Data_Export_Exception,Business requirement for testing,2025-09-03,2026-12-03,255,Donald Perez,Expiring_Soon,High,False
+EXC00252,Amara Menon,amara.menon@company.com,HR,Encryption_Waiver,Business requirement for testing,2026-02-12,2026-06-29,259,Christopher Perez,Expired,Low,False
+EXC00253,Brian Durand,brian.durand@company.com,HR,Firewall_Rule_Exception,Business requirement for maintenance,2025-04-22,2026-05-06,11,Mark Meyer,Active,High,False
+EXC00254,Brian Smith,brian.smith@company.com,Operations,MFA_Exemption,Business requirement for development,2026-02-13,2026-11-27,324,Daniel Durand,Expiring_Soon,Low,False
+EXC00255,Ryan Wang,ryan.wang@company.com,Operations,Data_Export_Exception,Business requirement for maintenance,2025-10-31,2027-03-27,96,Isha He,Expired,Low,False
+EXC00256,Ryan Ferrari,ryan.ferrari@company.com,Operations,Data_Export_Exception,Business requirement for troubleshooting,2026-02-14,2026-09-11,268,David Schulz,Expired,Low,True
+EXC00257,Shruti Wilson,shruti.wilson@company.com,HR,MFA_Exemption,Business requirement for troubleshooting,2025-10-16,2027-03-12,119,Jeffrey Moore,Revoked,Medium,True
+EXC00258,Donald Sanchez,donald.sanchez@company.com,HR,Password_Policy_Exception,Business requirement for maintenance,2026-02-03,2026-10-31,69,Priya Li,Pending_Review,Medium,False
+EXC00259,Matthew Verma,matthew.verma@company.com,Operations,Data_Export_Exception,Business requirement for development,2025-11-18,2026-10-24,203,Meera Pillai,Expiring_Soon,Critical,False
+EXC00260,Mark Li,mark.li@company.com,Security,MFA_Exemption,Business requirement for compliance,2025-07-31,2026-04-24,121,Rajesh O'Brien,Expired,High,False
+EXC00261,Eric White,eric.white@company.com,Operations,Data_Export_Exception,Business requirement for compliance,2025-07-02,2026-08-07,36,Yuki Lee,Pending_Review,Medium,False
+EXC00262,Sanjana Menon,sanjana.menon@company.com,IT,Data_Export_Exception,Business requirement for troubleshooting,2025-12-17,2026-05-23,99,Xiulan Clark,Revoked,Low,True
+EXC00263,Donald Liu,donald.liu@company.com,Finance,Password_Policy_Exception,Business requirement for maintenance,2026-01-23,2027-01-20,56,Ronald Durand,Expiring_Soon,Medium,False
+EXC00264,Rohan Reddy,rohan.reddy@company.com,IT,Encryption_Waiver,Business requirement for troubleshooting,2025-09-16,2026-05-09,27,Karan Anderson,Revoked,Medium,True
+EXC00265,Donald Das,donald.das@company.com,IT,Data_Export_Exception,Business requirement for development,2025-04-21,2026-07-29,162,Ronald Petit,Expiring_Soon,Low,False
+EXC00266,Jonathan Martin,jonathan.martin@company.com,Operations,Password_Policy_Exception,Business requirement for development,2025-09-15,2026-06-05,205,Anjali Petit,Pending_Review,Medium,True
+EXC00267,David Huang,david.huang@company.com,HR,Data_Export_Exception,Business requirement for compliance,2026-02-28,2026-05-16,207,Nikhil Thomas,Active,Low,False
+EXC00268,Deepika Rossi,deepika.rossi@company.com,Finance,Data_Export_Exception,Business requirement for compliance,2025-06-28,2026-08-24,272,Mark Huang,Revoked,Medium,False
+EXC00269,Yuki Kumar,yuki.kumar@company.com,Security,Data_Export_Exception,Business requirement for development,2025-06-25,2026-11-12,324,Donald Gonzalez,Expired,Low,False
+EXC00270,Deepika Davis,deepika.davis@company.com,HR,Firewall_Rule_Exception,Business requirement for compliance,2025-08-08,2026-07-09,175,Joshua Bhat,Active,Low,False
+EXC00271,Riya Lim,riya.lim@company.com,Operations,Firewall_Rule_Exception,Business requirement for compliance,2025-11-17,2026-07-20,119,Jason Lee,Expiring_Soon,High,False
+EXC00272,Shruti Fischer,shruti.fischer@company.com,Operations,Data_Export_Exception,Business requirement for maintenance,2025-10-31,2026-08-01,253,Brian Reilly,Expired,Low,False
+EXC00273,Shruti Pillai,shruti.pillai@company.com,Finance,MFA_Exemption,Business requirement for development,2025-11-16,2026-09-18,336,Leila Sun,Pending_Review,Medium,True
+EXC00274,Leila Kelly,leila.kelly@company.com,Sales,MFA_Exemption,Business requirement for compliance,2025-06-04,2027-02-09,179,Edward Huang,Revoked,Low,False
+EXC00275,Yuki Becker,yuki.becker@company.com,Finance,Password_Policy_Exception,Business requirement for compliance,2025-12-24,2027-03-28,291,Elena Chen,Active,Medium,False
+EXC00276,Karan Wagner,karan.wagner@company.com,Sales,Access_Exception,Business requirement for development,2025-08-07,2026-04-20,185,Amara Bianchi,Pending_Review,Low,False
+EXC00277,William Singh,william.singh@company.com,IT,Access_Exception,Business requirement for maintenance,2025-11-07,2026-08-23,145,Sophia Martin,Expiring_Soon,Medium,False
+EXC00278,Pooja Choi,pooja.choi@company.com,Operations,MFA_Exemption,Business requirement for development,2025-06-06,2027-01-29,41,Kevin Schmidt,Revoked,Medium,False
+EXC00279,David Wilson,david.wilson@company.com,HR,Access_Exception,Business requirement for development,2025-08-12,2027-01-11,91,Paul Schneider,Pending_Review,High,False
+EXC00280,Rohan Huang,rohan.huang@company.com,IT,Data_Export_Exception,Business requirement for compliance,2026-02-14,2027-02-09,353,Charles Martin,Active,Medium,False
+EXC00281,Charles Nair,charles.nair@company.com,Finance,Access_Exception,Business requirement for development,2025-12-29,2027-02-11,156,Shruti Schneider,Active,Low,True
+EXC00282,Thomas Reilly,thomas.reilly@company.com,Security,Access_Exception,Business requirement for development,2025-07-31,2026-08-25,201,Michael Young,Active,Low,False
+EXC00283,Vikram Schmidt,vikram.schmidt@company.com,IT,Firewall_Rule_Exception,Business requirement for development,2026-01-16,2026-11-01,183,Deepika Gupta,Active,Medium,False
+EXC00284,Anthony Jang,anthony.jang@company.com,HR,Password_Policy_Exception,Business requirement for compliance,2026-02-01,2026-09-14,287,Amara Reddy,Revoked,High,False
+EXC00285,Riya Ghosh,riya.ghosh@company.com,Sales,Data_Export_Exception,Business requirement for troubleshooting,2025-07-03,2027-04-05,57,Pooja Anderson,Expiring_Soon,Low,False
+EXC00286,Jonathan Harris,jonathan.harris@company.com,Sales,Data_Export_Exception,Business requirement for development,2025-08-14,2027-02-16,150,Richard Garcia,Active,Low,True
+EXC00287,Akshay Yang,akshay.yang@company.com,Sales,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-06-30,2027-03-31,149,Thomas Durand,Expired,Low,True
+EXC00288,Amitabh Burke,amitabh.burke@company.com,IT,MFA_Exemption,Business requirement for maintenance,2025-10-24,2026-03-27,356,Donald Jang,Expired,High,True
+EXC00289,Paul Hernandez,paul.hernandez@company.com,Sales,Password_Policy_Exception,Business requirement for testing,2025-08-30,2027-02-05,39,Amitabh Lee,Expiring_Soon,Medium,False
+EXC00290,Vikram Petit,vikram.petit@company.com,HR,Encryption_Waiver,Business requirement for development,2026-02-09,2026-05-04,41,Nadia Liu,Pending_Review,Low,False
+EXC00291,Anthony Becker,anthony.becker@company.com,IT,MFA_Exemption,Business requirement for development,2025-09-08,2026-05-20,70,Christopher Reddy,Active,Low,False
+EXC00292,Karan Johnson,karan.johnson@company.com,Security,Password_Policy_Exception,Business requirement for testing,2025-11-18,2026-08-18,269,Sanjana Park,Revoked,Medium,False
+EXC00293,Stephen Young,stephen.young@company.com,Sales,Encryption_Waiver,Business requirement for maintenance,2026-01-16,2026-04-09,184,Deepika Sharma,Active,Low,False
+EXC00294,Pooja Patel,pooja.patel@company.com,IT,Encryption_Waiver,Business requirement for maintenance,2025-11-30,2026-08-24,146,Elena Sharma,Expired,High,True
+EXC00295,Raja Clark,raja.clark@company.com,Security,Password_Policy_Exception,Business requirement for testing,2025-06-04,2026-12-31,321,Ronald Martinez,Pending_Review,Medium,False
+EXC00296,Thomas Harris,thomas.harris@company.com,IT,Encryption_Waiver,Business requirement for development,2025-07-15,2026-03-30,123,George Pillai,Active,Medium,False
+EXC00297,Meera Lee,meera.lee@company.com,Finance,MFA_Exemption,Business requirement for troubleshooting,2026-01-29,2026-05-28,320,George Sanchez,Revoked,Medium,True
+EXC00298,Isha Lim,isha.lim@company.com,IT,Access_Exception,Business requirement for maintenance,2025-05-09,2026-07-07,268,Edward Muller,Pending_Review,High,False
+EXC00299,Varun Liu,varun.liu@company.com,IT,Data_Export_Exception,Business requirement for maintenance,2025-07-17,2026-08-04,190,Andrew Williams,Expired,High,False
+EXC00300,James Clark,james.clark@company.com,IT,Password_Policy_Exception,Business requirement for troubleshooting,2025-11-23,2026-12-22,10,Charles Choi,Expiring_Soon,Low,True
+EXC00301,Joseph Sharma,joseph.sharma@company.com,HR,Firewall_Rule_Exception,Business requirement for compliance,2025-12-11,2026-06-27,172,Zainab Jackson,Active,Medium,True
+EXC00302,Pooja Yang,pooja.yang@company.com,Operations,Access_Exception,Business requirement for development,2025-04-26,2026-08-31,69,Anthony Hoffmann,Revoked,Low,False
+EXC00303,Aditya Weber,aditya.weber@company.com,Sales,MFA_Exemption,Business requirement for testing,2026-01-08,2026-12-24,270,Deepika Sun,Revoked,Low,False
+EXC00304,Vikram Jo,vikram.jo@company.com,Security,Data_Export_Exception,Business requirement for maintenance,2025-05-11,2026-06-08,345,Andrew Rossi,Active,Medium,False
+EXC00305,Rohan Durand,rohan.durand@company.com,Security,Data_Export_Exception,Business requirement for testing,2025-12-09,2026-09-21,46,Shruti Young,Expired,Medium,False
+EXC00306,Elena Guo,elena.guo@company.com,Operations,Data_Export_Exception,Business requirement for compliance,2025-05-15,2026-11-17,334,Nadia Choi,Expired,Medium,False
+EXC00307,Harsh Smith,harsh.smith@company.com,Operations,Firewall_Rule_Exception,Business requirement for maintenance,2025-12-06,2026-08-12,360,Donald Lim,Pending_Review,Low,True
+EXC00308,Ronald Nair,ronald.nair@company.com,Finance,Data_Export_Exception,Business requirement for development,2026-02-06,2026-04-22,282,Aisha Reddy,Expiring_Soon,Low,True
+EXC00309,David Yang,david.yang@company.com,HR,Password_Policy_Exception,Business requirement for maintenance,2026-04-19,2026-06-04,356,Arjun Sun,Expired,Low,False
+EXC00310,Akshay Miller,akshay.miller@company.com,IT,Firewall_Rule_Exception,Business requirement for troubleshooting,2026-02-24,2026-05-27,83,Daniel Verma,Expiring_Soon,High,False
+EXC00311,Joseph Mishra,joseph.mishra@company.com,Operations,Password_Policy_Exception,Business requirement for maintenance,2025-06-23,2026-08-14,302,Arjun Reddy,Expiring_Soon,Medium,True
+EXC00312,Leila Sanchez,leila.sanchez@company.com,Security,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-12-13,2027-04-14,94,Michael Guo,Pending_Review,Low,False
+EXC00313,Nicholas Kelly,nicholas.kelly@company.com,Security,Data_Export_Exception,Business requirement for troubleshooting,2025-10-07,2027-02-04,359,James Xu,Revoked,High,False
+EXC00314,Meera Kelly,meera.kelly@company.com,Security,Firewall_Rule_Exception,Business requirement for development,2025-11-24,2026-09-29,335,Aisha Wilson,Pending_Review,Critical,True
+EXC00315,Xiulan Jo,xiulan.jo@company.com,IT,MFA_Exemption,Business requirement for compliance,2025-09-22,2026-11-12,160,Christopher O'Brien,Active,Critical,True
+EXC00316,Deepika Jang,deepika.jang@company.com,Sales,MFA_Exemption,Business requirement for development,2025-10-15,2026-06-20,220,Kenneth Huang,Revoked,Low,False
+EXC00317,Anthony Jo,anthony.jo@company.com,Finance,Access_Exception,Business requirement for troubleshooting,2025-07-10,2026-09-28,154,Nisha Gonzalez,Revoked,Medium,False
+EXC00318,James Thomas,james.thomas@company.com,IT,MFA_Exemption,Business requirement for compliance,2025-11-30,2026-05-01,248,Arjun Jang,Active,Low,True
+EXC00319,Andrew Muller,andrew.muller@company.com,Security,Data_Export_Exception,Business requirement for troubleshooting,2026-03-31,2026-10-19,210,George Burke,Expired,Low,False
+EXC00320,Anthony Gonzalez,anthony.gonzalez@company.com,Finance,Data_Export_Exception,Business requirement for testing,2025-11-27,2026-05-02,182,Xiulan Jackson,Pending_Review,High,False
+EXC00321,Donald Johnson,donald.johnson@company.com,Operations,Firewall_Rule_Exception,Business requirement for maintenance,2025-11-18,2026-04-17,29,Jason Reddy,Pending_Review,Low,False
+EXC00322,Nadia Singh,nadia.singh@company.com,Operations,Data_Export_Exception,Business requirement for maintenance,2025-06-17,2026-04-03,203,Raja Jang,Expired,Low,False
+EXC00323,Harsh Quinn,harsh.quinn@company.com,IT,Firewall_Rule_Exception,Business requirement for maintenance,2025-10-25,2026-11-06,304,George Brown,Pending_Review,Medium,True
+EXC00324,Edward Sun,edward.sun@company.com,Sales,Data_Export_Exception,Business requirement for troubleshooting,2025-06-13,2027-01-29,342,Kenneth Thomas,Pending_Review,Low,True
+EXC00325,Anjali Becker,anjali.becker@company.com,Sales,Password_Policy_Exception,Business requirement for development,2025-12-22,2027-03-02,322,Leila White,Expired,Low,False
+EXC00326,David O'Brien,david.o'brien@company.com,Sales,Firewall_Rule_Exception,Business requirement for testing,2025-12-22,2027-01-28,132,Christopher Rossi,Expiring_Soon,Low,False
+EXC00327,Anthony Clark,anthony.clark@company.com,IT,Encryption_Waiver,Business requirement for maintenance,2026-01-24,2026-04-13,106,Joshua Brown,Expired,Medium,False
+EXC00328,Jason Smith,jason.smith@company.com,HR,Encryption_Waiver,Business requirement for testing,2026-02-20,2026-06-10,133,Jeffrey Han,Expiring_Soon,High,True
+EXC00329,Jonathan Quinn,jonathan.quinn@company.com,Security,Encryption_Waiver,Business requirement for troubleshooting,2025-11-14,2026-11-08,265,Rohan Das,Pending_Review,Medium,False
+EXC00330,Fatima Ramirez,fatima.ramirez@company.com,Finance,Encryption_Waiver,Business requirement for development,2026-01-29,2026-08-31,212,Akshay Miller,Expiring_Soon,Low,False
+EXC00331,Yuki Perez,yuki.perez@company.com,Finance,Encryption_Waiver,Business requirement for compliance,2026-03-06,2027-04-09,108,Diya Ramirez,Expired,Low,False
+EXC00332,Yuki Connor,yuki.connor@company.com,IT,Data_Export_Exception,Business requirement for compliance,2025-07-11,2026-08-29,286,Riya Durand,Expired,Medium,False
+EXC00333,Michael Jones,michael.jones@company.com,Sales,MFA_Exemption,Business requirement for development,2026-01-26,2026-10-07,42,Karan He,Pending_Review,Low,True
+EXC00334,Michael Anderson,michael.anderson@company.com,Security,Encryption_Waiver,Business requirement for maintenance,2026-02-07,2027-01-16,39,Sanjana Anderson,Active,Low,False
+EXC00335,Aisha Sun,aisha.sun@company.com,Sales,Firewall_Rule_Exception,Business requirement for maintenance,2025-11-08,2026-07-30,278,Thomas Miller,Pending_Review,Low,False
+EXC00336,Andrew Gupta,andrew.gupta@company.com,IT,Data_Export_Exception,Business requirement for testing,2026-01-17,2027-02-18,158,Isha Martinez,Expired,Low,False
+EXC00337,Kenneth White,kenneth.white@company.com,Sales,Firewall_Rule_Exception,Business requirement for compliance,2025-12-17,2026-08-28,224,Leila Schmidt,Expired,Critical,False
+EXC00338,Rohan Robinson,rohan.robinson@company.com,Security,Data_Export_Exception,Business requirement for troubleshooting,2025-06-10,2026-05-18,308,Amitabh Liu,Pending_Review,Critical,False
+EXC00339,Ryan Xu,ryan.xu@company.com,IT,Firewall_Rule_Exception,Business requirement for compliance,2025-07-08,2027-03-04,333,Richard Sullivan,Expired,Low,False
+EXC00340,Nadia Thompson,nadia.thompson@company.com,Finance,Firewall_Rule_Exception,Business requirement for maintenance,2025-12-14,2027-02-09,293,Edward Verma,Expired,Medium,False
+EXC00341,Daniel Wang,daniel.wang@company.com,Operations,Password_Policy_Exception,Business requirement for compliance,2025-12-14,2027-01-25,47,Isha Sullivan,Revoked,Medium,True
+EXC00342,Nikhil Fischer,nikhil.fischer@company.com,Security,Access_Exception,Business requirement for compliance,2025-04-28,2026-09-19,60,Deepika Rao,Expired,High,True
+EXC00343,Andrew Wang,andrew.wang@company.com,Sales,MFA_Exemption,Business requirement for troubleshooting,2025-11-11,2026-10-31,221,Edward Hernandez,Active,Low,False
+EXC00344,Deepika Lee,deepika.lee@company.com,Sales,Access_Exception,Business requirement for development,2026-03-02,2027-02-01,152,Steven Menon,Revoked,Low,True
+EXC00345,Matthew Harris,matthew.harris@company.com,Security,Access_Exception,Business requirement for maintenance,2025-08-24,2026-11-22,300,David Martin,Active,Low,False
+EXC00346,Rajesh Meyer,rajesh.meyer@company.com,HR,MFA_Exemption,Business requirement for troubleshooting,2025-08-16,2026-06-15,314,Amara Sun,Expiring_Soon,Low,True
+EXC00347,Leila Park,leila.park@company.com,Finance,Encryption_Waiver,Business requirement for maintenance,2025-09-30,2026-04-30,36,Nisha Rao,Pending_Review,Low,False
+EXC00348,Nicholas Lim,nicholas.lim@company.com,Finance,Firewall_Rule_Exception,Business requirement for compliance,2025-04-23,2027-03-12,152,Priya Kang,Revoked,Low,False
+EXC00349,Raja Hernandez,raja.hernandez@company.com,HR,MFA_Exemption,Business requirement for maintenance,2025-11-13,2026-05-09,242,Nadia Hoffmann,Expiring_Soon,Low,False
+EXC00350,Sofia Pillai,sofia.pillai@company.com,Security,Firewall_Rule_Exception,Business requirement for compliance,2026-01-21,2026-11-15,72,Rajesh Liu,Expired,Low,True
+EXC00351,Aisha Williams,aisha.williams@company.com,Operations,MFA_Exemption,Business requirement for troubleshooting,2026-03-24,2026-10-13,195,Ronald Schneider,Active,Low,False
+EXC00352,Harsh Clark,harsh.clark@company.com,Sales,Data_Export_Exception,Business requirement for maintenance,2025-08-01,2026-09-11,178,Sophia Weber,Active,Low,False
+EXC00353,Eric Clark,eric.clark@company.com,Finance,Encryption_Waiver,Business requirement for troubleshooting,2025-05-12,2026-03-31,264,David Johnson,Revoked,High,False
+EXC00354,Rajesh Anderson,rajesh.anderson@company.com,Finance,Encryption_Waiver,Business requirement for troubleshooting,2025-09-16,2026-07-21,357,Thomas Burke,Expired,Medium,True
+EXC00355,Steven Martinez,steven.martinez@company.com,IT,Data_Export_Exception,Business requirement for compliance,2025-08-02,2026-07-05,263,Robert Gupta,Expiring_Soon,Medium,False
+EXC00356,Shruti Schmidt,shruti.schmidt@company.com,Finance,Data_Export_Exception,Business requirement for development,2026-04-09,2026-08-28,54,Michael White,Revoked,Medium,False
+EXC00357,Xiulan Moore,xiulan.moore@company.com,HR,Encryption_Waiver,Business requirement for maintenance,2025-06-15,2027-04-15,354,Jeffrey Brown,Expired,Critical,False
+EXC00358,Edward Schulz,edward.schulz@company.com,Operations,Data_Export_Exception,Business requirement for development,2026-04-02,2026-05-16,326,Charles O'Brien,Pending_Review,Medium,False
+EXC00359,Paul Ferrari,paul.ferrari@company.com,Operations,Firewall_Rule_Exception,Business requirement for development,2025-11-14,2026-11-04,174,Karan Wilson,Revoked,Low,True
+EXC00360,Kenneth Dubois,kenneth.dubois@company.com,Sales,Data_Export_Exception,Business requirement for troubleshooting,2026-01-01,2026-04-25,283,Michael Ramirez,Pending_Review,Low,False
+EXC00361,Maria Martinez,maria.martinez@company.com,HR,Encryption_Waiver,Business requirement for compliance,2025-06-11,2026-07-10,303,Neha Bernard,Expired,High,True
+EXC00362,Raja Verma,raja.verma@company.com,Finance,Access_Exception,Business requirement for compliance,2025-05-28,2026-09-12,186,Gary Chen,Active,Medium,False
+EXC00363,Akshay Lee,akshay.lee@company.com,HR,Password_Policy_Exception,Business requirement for testing,2025-05-22,2027-01-09,235,Varun Wilson,Revoked,Low,True
+EXC00364,Amitabh Quinn,amitabh.quinn@company.com,HR,Firewall_Rule_Exception,Business requirement for development,2025-12-14,2026-08-19,58,Neha Verma,Active,Medium,False
+EXC00365,Aisha Martinez,aisha.martinez@company.com,Sales,MFA_Exemption,Business requirement for compliance,2025-08-11,2027-01-30,363,Isha Durand,Revoked,Medium,True
+EXC00366,Richard Miller,richard.miller@company.com,Operations,MFA_Exemption,Business requirement for testing,2025-09-10,2026-06-11,252,George Schmidt,Pending_Review,High,True
+EXC00367,Rajesh Martinez,rajesh.martinez@company.com,Sales,MFA_Exemption,Business requirement for testing,2025-05-22,2027-03-03,354,Jason White,Expiring_Soon,Low,False
+EXC00368,Joshua Clark,joshua.clark@company.com,Operations,Encryption_Waiver,Business requirement for maintenance,2025-10-22,2026-12-14,362,Riya Meyer,Expired,Low,False
+EXC00369,Riya Kim,riya.kim@company.com,Sales,Data_Export_Exception,Business requirement for development,2026-03-29,2026-03-29,131,Maria Perez,Revoked,Medium,True
+EXC00370,Aisha Russo,aisha.russo@company.com,Finance,Firewall_Rule_Exception,Business requirement for troubleshooting,2026-02-18,2027-04-16,178,Isha Rodriguez,Expired,Medium,False
+EXC00371,Xiulan Thomas,xiulan.thomas@company.com,Security,Password_Policy_Exception,Business requirement for testing,2025-08-23,2026-06-30,343,Gary Li,Revoked,Low,True
+EXC00372,Priya Harris,priya.harris@company.com,Finance,MFA_Exemption,Business requirement for troubleshooting,2025-08-20,2027-02-11,99,Mark Romano,Expired,Medium,True
+EXC00373,Maria Taylor,maria.taylor@company.com,IT,Data_Export_Exception,Business requirement for maintenance,2025-07-08,2026-05-04,307,Anthony Menon,Pending_Review,Low,False
+EXC00374,Maria He,maria.he@company.com,Sales,Encryption_Waiver,Business requirement for testing,2026-01-18,2026-06-03,313,Edward Esposito,Pending_Review,High,False
+EXC00375,Timothy Kang,timothy.kang@company.com,Operations,Password_Policy_Exception,Business requirement for compliance,2025-06-20,2026-06-03,18,Joseph Jones,Expired,Medium,False
+EXC00376,Brian Esposito,brian.esposito@company.com,Finance,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-07-02,2026-05-06,221,Larry Sun,Expired,Low,True
+EXC00377,Nisha Colombo,nisha.colombo@company.com,Finance,Password_Policy_Exception,Business requirement for development,2026-03-30,2026-07-29,186,Harsh Singh,Revoked,Low,False
+EXC00378,Diya Das,diya.das@company.com,Operations,Data_Export_Exception,Business requirement for testing,2026-03-08,2026-12-02,109,Riya Young,Expiring_Soon,Low,False
+EXC00379,Anjali Jo,anjali.jo@company.com,HR,Encryption_Waiver,Business requirement for maintenance,2026-02-02,2027-02-28,127,Jason Lewis,Active,High,False
+EXC00380,Raja Bernard,raja.bernard@company.com,IT,Data_Export_Exception,Business requirement for development,2025-09-08,2026-04-28,15,Pooja Young,Pending_Review,Low,False
+EXC00381,Raja Bernard,raja.bernard@company.com,HR,Password_Policy_Exception,Business requirement for maintenance,2025-12-08,2027-03-08,64,Jonathan Mishra,Expired,Low,False
+EXC00382,Amitabh Sharma,amitabh.sharma@company.com,Security,Encryption_Waiver,Business requirement for development,2025-10-31,2026-07-26,159,Rohan Lewis,Active,High,False
+EXC00383,Xiulan Huang,xiulan.huang@company.com,IT,Password_Policy_Exception,Business requirement for troubleshooting,2025-07-16,2027-02-24,213,Aisha Dubois,Active,Low,False
+EXC00384,Priya Russo,priya.russo@company.com,HR,Encryption_Waiver,Business requirement for development,2025-12-25,2026-04-12,26,Aisha Harris,Active,High,False
+EXC00385,Sophia Park,sophia.park@company.com,Finance,Firewall_Rule_Exception,Business requirement for troubleshooting,2025-07-02,2027-02-17,191,Harsh Taylor,Expiring_Soon,Low,False
+EXC00386,Andrew Weber,andrew.weber@company.com,HR,Firewall_Rule_Exception,Business requirement for development,2026-02-21,2026-10-15,165,Yuki Jang,Revoked,High,False
+EXC00387,Neha Thomas,neha.thomas@company.com,Sales,Access_Exception,Business requirement for troubleshooting,2025-06-20,2027-03-21,142,Matthew Das,Revoked,High,False
+EXC00388,James Garcia,james.garcia@company.com,Sales,MFA_Exemption,Business requirement for testing,2025-12-13,2026-12-28,192,Xiulan Burke,Expired,Low,False
+EXC00389,Paul Russo,paul.russo@company.com,Operations,MFA_Exemption,Business requirement for maintenance,2025-06-20,2026-04-08,7,Isha Guo,Pending_Review,Critical,False
+EXC00390,Jonathan Rao,jonathan.rao@company.com,Sales,Firewall_Rule_Exception,Business requirement for compliance,2025-05-19,2027-03-15,102,Amitabh Martinez,Expiring_Soon,Medium,False
+EXC00391,Isha Park,isha.park@company.com,Finance,Data_Export_Exception,Business requirement for troubleshooting,2025-12-13,2026-11-06,150,Nadia Xu,Pending_Review,Medium,True
+EXC00392,Kevin Pillai,kevin.pillai@company.com,IT,Data_Export_Exception,Business requirement for compliance,2026-03-23,2026-11-02,268,Sofia Esposito,Pending_Review,Medium,True
+EXC00393,Karan Petit,karan.petit@company.com,IT,Firewall_Rule_Exception,Business requirement for compliance,2025-11-10,2026-09-02,59,Brian Schneider,Expiring_Soon,High,False
+EXC00394,David Moore,david.moore@company.com,Security,Data_Export_Exception,Business requirement for compliance,2026-01-27,2026-06-18,44,Nicholas Thomas,Pending_Review,Medium,False
+EXC00395,Varun Ghosh,varun.ghosh@company.com,Sales,Encryption_Waiver,Business requirement for maintenance,2025-06-13,2026-08-18,339,Larry Schulz,Expired,Low,False
+EXC00396,William Dubois,william.dubois@company.com,Operations,Firewall_Rule_Exception,Business requirement for development,2025-10-12,2026-04-25,302,David Gupta,Revoked,Critical,False
+EXC00397,Jonathan Fischer,jonathan.fischer@company.com,Security,Data_Export_Exception,Business requirement for testing,2025-06-06,2027-03-12,102,Kenneth Fischer,Revoked,Medium,False
+EXC00398,Michael Rossi,michael.rossi@company.com,Finance,Firewall_Rule_Exception,Business requirement for maintenance,2026-02-24,2026-12-03,358,Sophia Xu,Active,High,False
+EXC00399,Isha Sanchez,isha.sanchez@company.com,Finance,Access_Exception,Business requirement for troubleshooting,2025-10-29,2027-02-18,316,Matthew Bhat,Pending_Review,High,False
+EXC00400,James Reilly,james.reilly@company.com,Sales,Access_Exception,Emergency operational need,2025-12-05,2026-11-05,335,Jonathan Becker,Pending_Review,Medium,true
+EXC00401,Anjali Sanchez,anjali.sanchez@company.com,Operations,Firewall_Rule_Exception,Emergency operational need,2025-11-09,2026-04-23,165,Donald Ramirez,Pending_Review,High,false
+EXC00402,Varun Reddy,varun.reddy@company.com,Sales,Password_Policy_Exception,Business requirement for maintenance window,2025-05-21,2025-07-20,60,Aisha Gonzalez,Pending_Review,Medium,false
+EXC00403,Zainab Wilson,zainab.wilson@company.com,Sales,MFA_Exemption,Compliance testing exception,2025-06-11,2025-07-19,38,Matthew Ramirez,Expiring_Soon,Medium,false
+EXC00404,Nisha Iyer,nisha.iyer@company.com,HR,Encryption_Waiver,Vendor integration requirement,2025-07-21,2026-02-05,199,Jonathan Yang,Expired,Medium,true
+EXC00405,Pooja Schneider,pooja.schneider@company.com,IT,MFA_Exemption,Business requirement for maintenance window,2025-10-06,2025-12-24,79,Jonathan White,Revoked,Medium,false
+EXC00406,Leila Connor,leila.connor@company.com,Finance,Data_Export_Exception,Business requirement for maintenance window,2025-08-03,2025-10-09,67,Priya Gonzalez,Expiring_Soon,High,false
+EXC00407,Nikhil Martin,nikhil.martin@company.com,IT,Encryption_Waiver,Vendor integration requirement,2025-11-25,2026-08-24,272,Amara Brown,Expired,Medium,true
+EXC00408,Eric Rao,eric.rao@company.com,HR,Access_Exception,Emergency operational need,2025-06-16,2026-05-26,344,Steven Sanchez,Expired,Medium,false
+EXC00409,Matthew Wang,matthew.wang@company.com,Finance,MFA_Exemption,Third-party audit access,2025-11-28,2026-02-04,68,George Jackson,Expired,Medium,true
+EXC00410,James Brown,james.brown@company.com,Finance,Firewall_Rule_Exception,Vendor integration requirement,2025-09-16,2026-04-17,213,David Anderson,Expiring_Soon,High,false
+EXC00411,Mark Liu,mark.liu@company.com,Finance,Password_Policy_Exception,Legacy system incompatibility,2025-09-29,2026-09-21,357,Akshay Hernandez,Revoked,Medium,true
+EXC00412,Harsh Patel,harsh.patel@company.com,IT,Data_Export_Exception,Legacy system incompatibility,2025-12-23,2026-03-17,84,Thomas Miller,Revoked,Medium,true
+EXC00413,Brian Rao,brian.rao@company.com,Operations,MFA_Exemption,Business requirement for maintenance window,2025-06-02,2026-04-24,326,Rohan Davis,Revoked,High,false
+EXC00414,Deepika Kumar,deepika.kumar@company.com,Finance,Encryption_Waiver,Compliance testing exception,2025-12-16,2026-08-10,237,Elena Kim,Expired,Medium,false
+EXC00415,Thomas Murphy,thomas.murphy@company.com,Sales,Password_Policy_Exception,Business requirement for maintenance window,2025-11-12,2026-05-25,194,Ronald Jang,Expiring_Soon,Medium,false
+EXC00416,Timothy White,timothy.white@company.com,Sales,MFA_Exemption,Legacy system incompatibility,2025-06-04,2025-06-12,8,David Fischer,Expiring_Soon,High,true
+EXC00417,James Perez,james.perez@company.com,Sales,Encryption_Waiver,Emergency operational need,2025-10-20,2026-06-28,251,Kenneth Pillai,Revoked,High,true
+EXC00418,Matthew Gonzalez,matthew.gonzalez@company.com,IT,MFA_Exemption,Vendor integration requirement,2025-11-26,2026-06-14,200,Jacob Wang,Active,Low,false
+EXC00419,Mark Liu,mark.liu@company.com,Security,Access_Exception,Business requirement for maintenance window,2025-11-22,2025-12-24,32,Sanjana Perez,Pending_Review,High,true
+EXC00420,Matthew Iyer,matthew.iyer@company.com,Operations,Data_Export_Exception,Business requirement for maintenance window,2025-05-28,2025-09-24,119,Sophia Nair,Pending_Review,Medium,true
+EXC00421,Richard Fischer,richard.fischer@company.com,Finance,Encryption_Waiver,Vendor integration requirement,2025-05-03,2026-04-30,362,Maria Lim,Expired,Low,false
+EXC00422,Joseph Wilson,joseph.wilson@company.com,Operations,Access_Exception,Business requirement for maintenance window,2025-08-21,2026-04-28,250,Jeffrey Anderson,Revoked,Medium,false
+EXC00423,Meera Nair,meera.nair@company.com,Finance,Firewall_Rule_Exception,Compliance testing exception,2025-10-19,2026-04-06,169,Aisha Young,Revoked,High,false
+EXC00424,Riya Guo,riya.guo@company.com,Operations,Firewall_Rule_Exception,Emergency operational need,2025-10-19,2026-06-08,232,Edward Anderson,Expired,Critical,false
+EXC00425,Arjun Xu,arjun.xu@company.com,IT,Data_Export_Exception,Emergency operational need,2025-07-27,2026-01-15,172,Ryan Rodriguez,Revoked,Low,false
+EXC00426,Sofia Brown,sofia.brown@company.com,HR,Encryption_Waiver,Compliance testing exception,2025-07-26,2026-02-20,209,Rohan Bhat,Revoked,Low,false
+EXC00427,James Bhat,james.bhat@company.com,Security,Data_Export_Exception,Compliance testing exception,2025-04-24,2025-07-11,78,Matthew Fischer,Expiring_Soon,Medium,false
+EXC00428,Thomas Hernandez,thomas.hernandez@company.com,Operations,Encryption_Waiver,Legacy system incompatibility,2025-12-21,2026-09-26,279,Zainab Clark,Revoked,Low,false
+EXC00429,Sofia Schneider,sofia.schneider@company.com,Finance,Firewall_Rule_Exception,Business requirement for maintenance window,2025-08-11,2026-06-26,319,Eric Chen,Pending_Review,High,true
+EXC00430,Elena Liu,elena.liu@company.com,Finance,Firewall_Rule_Exception,Emergency operational need,2026-01-10,2026-06-28,169,Donald Williams,Active,Medium,false
+EXC00431,Jonathan Sharma,jonathan.sharma@company.com,IT,Firewall_Rule_Exception,Legacy system incompatibility,2025-08-18,2025-10-28,71,Pooja Wang,Revoked,High,false
+EXC00432,Matthew Sullivan,matthew.sullivan@company.com,IT,Password_Policy_Exception,Vendor integration requirement,2025-06-02,2025-09-24,114,Rajesh Bhat,Revoked,High,true
+EXC00433,Thomas Lopez,thomas.lopez@company.com,Finance,Password_Policy_Exception,Emergency operational need,2025-12-01,2026-04-09,129,Shruti Jo,Revoked,High,true
+EXC00434,Aisha Williams,aisha.williams@company.com,IT,Encryption_Waiver,Emergency operational need,2025-12-08,2026-07-07,211,Richard Martinez,Active,Medium,false
+EXC00435,Michael Jackson,michael.jackson@company.com,HR,Access_Exception,Legacy system incompatibility,2025-06-19,2026-03-16,270,Harsh Chen,Expired,Low,false
+EXC00436,Aisha Huang,aisha.huang@company.com,Finance,Encryption_Waiver,Vendor integration requirement,2025-08-23,2025-08-30,7,Zainab Jang,Revoked,High,false
+EXC00437,Rohan O'Brien,rohan.o'brien@company.com,Sales,MFA_Exemption,Emergency operational need,2025-07-04,2026-01-11,191,Raja Liu,Expiring_Soon,Critical,true
+EXC00438,Jonathan Kelly,jonathan.kelly@company.com,IT,Firewall_Rule_Exception,Legacy system incompatibility,2025-07-02,2025-09-25,85,Jason O'Brien,Expiring_Soon,Medium,false
+EXC00439,Aisha Harris,aisha.harris@company.com,IT,Access_Exception,Emergency operational need,2025-08-21,2026-03-21,212,Xiulan Verma,Revoked,High,true
+EXC00440,Stephen Weber,stephen.weber@company.com,Security,Firewall_Rule_Exception,Emergency operational need,2025-10-23,2026-04-03,162,Deepika Jo,Pending_Review,High,false
+EXC00441,Kevin Guo,kevin.guo@company.com,HR,Firewall_Rule_Exception,Emergency operational need,2025-10-06,2026-01-12,98,Amitabh Garcia,Revoked,Low,false
+EXC00442,Priya Hernandez,priya.hernandez@company.com,Security,Data_Export_Exception,Emergency operational need,2025-09-09,2026-08-26,351,Xiulan Becker,Revoked,Medium,true
+EXC00443,Harsh Hernandez,harsh.hernandez@company.com,Operations,Encryption_Waiver,Vendor integration requirement,2025-06-26,2025-07-25,29,Kevin Burke,Expired,Medium,true
+EXC00444,Yuki Hwang,yuki.hwang@company.com,Operations,Firewall_Rule_Exception,Vendor integration requirement,2025-06-19,2026-01-12,207,Michael Sanchez,Expired,Medium,false
+EXC00445,Robert Li,robert.li@company.com,Finance,MFA_Exemption,Business requirement for maintenance window,2025-12-13,2026-07-04,203,Priya Park,Expiring_Soon,Medium,true
+EXC00446,Amitabh Schmidt,amitabh.schmidt@company.com,Operations,Firewall_Rule_Exception,Vendor integration requirement,2025-09-06,2025-12-11,96,Neha Taylor,Expired,Medium,false
+EXC00447,Andrew Mishra,andrew.mishra@company.com,Finance,Access_Exception,Vendor integration requirement,2025-11-26,2025-12-22,26,Riya Miller,Active,High,true
+EXC00448,Ronald Murphy,ronald.murphy@company.com,Finance,Encryption_Waiver,Compliance testing exception,2025-08-02,2026-04-07,248,William Robinson,Active,High,false
+EXC00449,Paul Lim,paul.lim@company.com,Security,Firewall_Rule_Exception,Business requirement for maintenance window,2025-12-15,2026-07-14,211,Xiulan Kelly,Pending_Review,Medium,true
+EXC00450,Charles Fischer,charles.fischer@company.com,Sales,Access_Exception,Business requirement for maintenance window,2025-07-01,2025-11-12,134,Rajesh Jones,Expired,Critical,false
+EXC00451,Matthew Kumar,matthew.kumar@company.com,Sales,Password_Policy_Exception,Legacy system incompatibility,2025-12-19,2026-06-08,171,Anjali Murphy,Pending_Review,Medium,false
+EXC00452,Jason Jo,jason.jo@company.com,Sales,Firewall_Rule_Exception,Third-party audit access,2025-09-09,2026-04-08,211,Nicholas Park,Active,High,false
+EXC00453,Isha Williams,isha.williams@company.com,IT,Firewall_Rule_Exception,Compliance testing exception,2026-01-18,2026-04-14,86,Michael Moore,Pending_Review,Medium,false
+EXC00454,Andrew Verma,andrew.verma@company.com,HR,Encryption_Waiver,Emergency operational need,2025-06-16,2025-07-26,40,David Li,Active,Low,false
+EXC00455,Edward Garcia,edward.garcia@company.com,Finance,Data_Export_Exception,Third-party audit access,2026-01-01,2026-09-09,251,Leila Huang,Revoked,Low,false
+EXC00456,Timothy Brown,timothy.brown@company.com,HR,Encryption_Waiver,Business requirement for maintenance window,2025-10-23,2026-05-13,202,Stephen Nair,Active,Low,false
+EXC00457,Anjali Reddy,anjali.reddy@company.com,IT,Firewall_Rule_Exception,Vendor integration requirement,2025-10-13,2025-12-20,68,Isha Patel,Expiring_Soon,Low,false
+EXC00458,Kenneth Harris,kenneth.harris@company.com,Sales,Password_Policy_Exception,Compliance testing exception,2025-07-06,2026-05-06,304,Harsh Yang,Revoked,Medium,true
+EXC00459,Steven Choi,steven.choi@company.com,Operations,Firewall_Rule_Exception,Legacy system incompatibility,2025-11-22,2026-03-29,127,Kevin Thomas,Expired,Low,true
+EXC00460,Nisha Wilson,nisha.wilson@company.com,Security,Firewall_Rule_Exception,Third-party audit access,2025-08-20,2026-01-17,150,Gary Wilson,Active,Critical,false
+EXC00461,Larry Taylor,larry.taylor@company.com,HR,Data_Export_Exception,Compliance testing exception,2025-08-30,2026-03-25,207,Sophia Nair,Active,Low,true
+EXC00462,Charles Jang,charles.jang@company.com,HR,Data_Export_Exception,Business requirement for maintenance window,2025-07-24,2025-11-10,109,Harsh Iyer,Expiring_Soon,Low,false
+EXC00463,Sophia Rao,sophia.rao@company.com,HR,MFA_Exemption,Business requirement for maintenance window,2025-04-27,2026-04-14,352,Thomas Harris,Pending_Review,Medium,false
+EXC00464,Brian Singh,brian.singh@company.com,HR,Password_Policy_Exception,Emergency operational need,2025-12-04,2026-04-24,141,Jeffrey Quinn,Expiring_Soon,Low,false
+EXC00465,Timothy Li,timothy.li@company.com,Finance,Data_Export_Exception,Legacy system incompatibility,2025-11-20,2026-09-27,311,Ronald Martin,Expiring_Soon,Medium,false
+EXC00466,Nisha Choi,nisha.choi@company.com,Security,Firewall_Rule_Exception,Business requirement for maintenance window,2025-07-28,2026-05-27,303,Shruti Connor,Pending_Review,High,true
+EXC00467,Priya Nair,priya.nair@company.com,Finance,Data_Export_Exception,Third-party audit access,2025-11-28,2026-01-13,46,Harsh Sharma,Revoked,Low,false
+EXC00468,Amitabh Harris,amitabh.harris@company.com,IT,Data_Export_Exception,Emergency operational need,2025-05-09,2026-02-20,287,David Wagner,Revoked,Low,false
+EXC00469,James Schneider,james.schneider@company.com,IT,Encryption_Waiver,Legacy system incompatibility,2025-12-29,2026-07-08,191,Pooja Pillai,Pending_Review,Low,false
+EXC00470,Priya Jo,priya.jo@company.com,HR,Data_Export_Exception,Compliance testing exception,2025-10-02,2026-02-09,130,Joshua Bhat,Revoked,Critical,false
+EXC00471,Edward Kim,edward.kim@company.com,IT,Password_Policy_Exception,Compliance testing exception,2025-07-12,2026-06-07,330,Kevin Guo,Pending_Review,Medium,false
+EXC00472,William Connor,william.connor@company.com,HR,Encryption_Waiver,Emergency operational need,2025-11-11,2026-02-05,86,Meera Perez,Pending_Review,Medium,false
+EXC00473,Steven Moore,steven.moore@company.com,Operations,MFA_Exemption,Third-party audit access,2025-12-23,2026-08-23,243,David Liu,Revoked,High,true
+EXC00474,Nadia Sharma,nadia.sharma@company.com,Security,Access_Exception,Vendor integration requirement,2025-06-26,2026-03-03,250,Kenneth Thompson,Active,High,false
+EXC00475,Steven Verma,steven.verma@company.com,Security,Password_Policy_Exception,Third-party audit access,2025-10-06,2025-11-18,43,Nadia Nair,Expiring_Soon,Low,false
+EXC00476,Steven Wang,steven.wang@company.com,Sales,Encryption_Waiver,Third-party audit access,2025-11-19,2026-02-05,78,Daniel Lim,Expired,Medium,true
+EXC00477,Kevin Thompson,kevin.thompson@company.com,IT,Encryption_Waiver,Vendor integration requirement,2025-12-03,2026-03-12,99,Jacob Young,Active,Low,false
+EXC00478,Anjali Kim,anjali.kim@company.com,IT,MFA_Exemption,Vendor integration requirement,2025-09-11,2026-03-11,181,Robert Li,Expired,High,false
+EXC00479,Ronald Williams,ronald.williams@company.com,Finance,MFA_Exemption,Vendor integration requirement,2025-10-11,2026-07-26,288,Pooja Thompson,Revoked,Medium,true
+EXC00480,Diya Schneider,diya.schneider@company.com,Security,Password_Policy_Exception,Compliance testing exception,2025-06-30,2025-11-18,141,Anjali Wagner,Revoked,High,true
+EXC00481,Gary Reilly,gary.reilly@company.com,IT,Data_Export_Exception,Business requirement for maintenance window,2025-05-15,2026-02-02,263,Rajesh Miller,Pending_Review,High,false
+EXC00482,Robert Liu,robert.liu@company.com,Security,Data_Export_Exception,Vendor integration requirement,2025-10-17,2026-01-03,78,Brian White,Expiring_Soon,Low,false
+EXC00483,Diya Reilly,diya.reilly@company.com,Sales,Access_Exception,Vendor integration requirement,2025-09-21,2026-02-05,137,Brian Jang,Revoked,Medium,false
+EXC00484,Deepika Davis,deepika.davis@company.com,Operations,Firewall_Rule_Exception,Emergency operational need,2025-11-12,2026-05-02,171,Rajesh Patel,Expiring_Soon,Medium,false
+EXC00485,Fatima Guo,fatima.guo@company.com,Security,Data_Export_Exception,Emergency operational need,2025-04-27,2025-08-29,124,Mark Jones,Active,Low,false
+EXC00486,Nicholas Martin,nicholas.martin@company.com,HR,Password_Policy_Exception,Legacy system incompatibility,2025-11-03,2025-12-06,33,Charles Sharma,Expiring_Soon,High,false
+EXC00487,Raja Jang,raja.jang@company.com,Security,Data_Export_Exception,Vendor integration requirement,2025-09-05,2025-12-08,94,Raja Park,Active,High,true
+EXC00488,James Nair,james.nair@company.com,HR,Access_Exception,Compliance testing exception,2026-01-08,2026-02-22,45,Pooja Martinez,Pending_Review,Medium,false
+EXC00489,Riya Connor,riya.connor@company.com,Security,MFA_Exemption,Emergency operational need,2025-09-11,2026-08-14,337,Sophia Rao,Active,High,false
+EXC00490,Larry Patel,larry.patel@company.com,HR,Access_Exception,Emergency operational need,2025-08-17,2025-09-27,41,Stephen Garcia,Active,High,false
+EXC00491,Kenneth White,kenneth.white@company.com,HR,Password_Policy_Exception,Compliance testing exception,2025-08-26,2025-09-29,34,Gary He,Expiring_Soon,High,false
+EXC00492,Sanjana Garcia,sanjana.garcia@company.com,IT,MFA_Exemption,Business requirement for maintenance window,2025-05-22,2026-03-11,293,Daniel Burke,Expiring_Soon,High,false
+EXC00493,Maria Martin,maria.martin@company.com,Security,Password_Policy_Exception,Legacy system incompatibility,2025-05-31,2025-07-31,61,Nicholas Brown,Expiring_Soon,Medium,false
+EXC00494,Brian Iyer,brian.iyer@company.com,Sales,Access_Exception,Third-party audit access,2025-12-25,2026-07-11,198,Riya Williams,Revoked,High,false
+EXC00495,Donald Kim,donald.kim@company.com,Sales,Data_Export_Exception,Compliance testing exception,2025-06-26,2025-07-07,11,Anthony Kim,Expired,Medium,false
+EXC00496,Eric Choi,eric.choi@company.com,Sales,MFA_Exemption,Legacy system incompatibility,2025-12-10,2026-06-22,194,Vikram Lopez,Pending_Review,Medium,false
+EXC00497,Sanjana Jones,sanjana.jones@company.com,HR,Password_Policy_Exception,Business requirement for maintenance window,2025-11-29,2026-02-18,81,Zainab Anderson,Expiring_Soon,High,false
+EXC00498,Karan Wilson,karan.wilson@company.com,IT,Encryption_Waiver,Third-party audit access,2025-06-09,2026-04-09,304,Thomas Han,Expiring_Soon,High,false
+EXC00499,Amara Connor,amara.connor@company.com,IT,Data_Export_Exception,Emergency operational need,2025-09-14,2026-05-05,233,Michael Becker,Revoked,High,true
+EXC00500,Nicholas Das,nicholas.das@company.com,HR,Data_Export_Exception,Emergency operational need,2025-10-25,2026-08-20,299,Christopher Lewis,Expired,Medium,false
+EXC00501,Anthony Lee,anthony.lee@company.com,Security,Encryption_Waiver,Vendor integration requirement,2025-11-22,2026-06-25,215,Neha Liu,Expiring_Soon,High,true
+EXC00502,Daniel Lee,daniel.lee@company.com,Finance,Access_Exception,Compliance testing exception,2025-11-01,2026-10-25,358,Aisha Martin,Revoked,Low,false
+EXC00503,Michael Singh,michael.singh@company.com,Operations,Encryption_Waiver,Emergency operational need,2025-08-24,2026-07-30,340,Donald Sharma,Expiring_Soon,Critical,false
+EXC00504,Rohan Lewis,rohan.lewis@company.com,IT,Encryption_Waiver,Vendor integration requirement,2025-06-13,2025-07-20,37,Brian Kang,Active,Critical,true
+EXC00505,Anthony Guo,anthony.guo@company.com,Security,Data_Export_Exception,Emergency operational need,2025-05-09,2025-10-08,152,Kevin Iyer,Active,Medium,true
+EXC00506,Elena Sullivan,elena.sullivan@company.com,Finance,Encryption_Waiver,Emergency operational need,2025-07-25,2026-01-01,160,Richard Martin,Pending_Review,High,false
+EXC00507,Joseph Mishra,joseph.mishra@company.com,HR,Password_Policy_Exception,Legacy system incompatibility,2025-06-02,2026-04-03,305,Robert Martinez,Expired,Medium,false
+EXC00508,Aditya Pillai,aditya.pillai@company.com,HR,Password_Policy_Exception,Third-party audit access,2025-11-16,2026-05-23,188,Leila Muller,Expired,Critical,false
+EXC00509,Kevin Chen,kevin.chen@company.com,HR,Access_Exception,Third-party audit access,2025-09-30,2025-12-17,78,Arjun Wilson,Pending_Review,Medium,false
+EXC00510,Andrew Wagner,andrew.wagner@company.com,Finance,Data_Export_Exception,Business requirement for maintenance window,2025-12-09,2026-03-30,111,Maria Thompson,Expiring_Soon,High,true
+EXC00511,Christopher Moore,christopher.moore@company.com,Security,Access_Exception,Third-party audit access,2025-09-24,2026-02-28,157,Thomas Williams,Expiring_Soon,Medium,false
+EXC00512,Donald O'Brien,donald.o'brien@company.com,Operations,Access_Exception,Business requirement for maintenance window,2025-06-26,2025-07-06,10,Aditya Taylor,Pending_Review,Medium,false
+EXC00513,Jeffrey Garcia,jeffrey.garcia@company.com,Finance,MFA_Exemption,Vendor integration requirement,2025-09-19,2026-01-10,113,Stephen Davis,Active,High,true
+EXC00514,Sophia Choi,sophia.choi@company.com,Security,MFA_Exemption,Emergency operational need,2025-08-07,2026-06-21,318,Jonathan Jo,Pending_Review,Low,false
+EXC00515,Ronald Huang,ronald.huang@company.com,Security,Password_Policy_Exception,Legacy system incompatibility,2025-12-27,2026-09-06,253,Larry Burke,Expired,Medium,false
+EXC00516,Akshay Gupta,akshay.gupta@company.com,HR,Encryption_Waiver,Legacy system incompatibility,2025-06-26,2025-10-16,112,Rohan Martinez,Pending_Review,High,true
+EXC00517,Donald Quinn,donald.quinn@company.com,Finance,Access_Exception,Third-party audit access,2025-05-08,2025-10-28,173,Brian Jackson,Revoked,High,false
+EXC00518,Diya Park,diya.park@company.com,Operations,MFA_Exemption,Emergency operational need,2025-12-06,2026-06-14,190,Pooja Ramirez,Expiring_Soon,High,false
+EXC00519,Leila Garcia,leila.garcia@company.com,Finance,Encryption_Waiver,Compliance testing exception,2025-10-01,2026-03-12,162,Amara Gupta,Revoked,Medium,false
+EXC00520,Donald Jones,donald.jones@company.com,Security,Encryption_Waiver,Compliance testing exception,2025-07-26,2026-03-28,245,Harsh Muller,Expiring_Soon,Critical,false
+EXC00521,Jason Kelly,jason.kelly@company.com,Operations,Access_Exception,Compliance testing exception,2025-07-17,2025-10-25,100,Larry Huang,Expiring_Soon,High,true
+EXC00522,Larry Li,larry.li@company.com,Security,Firewall_Rule_Exception,Vendor integration requirement,2025-10-28,2026-09-04,311,Kevin Wagner,Expired,High,true
+EXC00523,Jacob Singh,jacob.singh@company.com,Finance,Data_Export_Exception,Vendor integration requirement,2025-12-16,2026-08-17,244,Robert Sullivan,Active,Medium,true
+EXC00524,Raja Ghosh,raja.ghosh@company.com,Sales,MFA_Exemption,Vendor integration requirement,2025-06-16,2025-09-27,103,Meera Patel,Revoked,High,false
+EXC00525,James Das,james.das@company.com,Security,MFA_Exemption,Third-party audit access,2025-12-04,2026-03-26,112,Elena Johnson,Expiring_Soon,Medium,false
+EXC00526,Vikram Williams,vikram.williams@company.com,Operations,Access_Exception,Third-party audit access,2025-08-13,2026-01-13,153,Fatima Brown,Active,Low,false
+EXC00527,George Mishra,george.mishra@company.com,Operations,Data_Export_Exception,Legacy system incompatibility,2025-11-29,2026-02-25,88,Fatima Reilly,Revoked,Low,true
+EXC00528,Nadia Li,nadia.li@company.com,IT,MFA_Exemption,Emergency operational need,2025-10-19,2026-08-07,292,Nadia Sun,Expiring_Soon,Low,false
+EXC00529,Ryan Jones,ryan.jones@company.com,Security,Firewall_Rule_Exception,Vendor integration requirement,2026-01-03,2026-09-15,255,Donald Singh,Pending_Review,High,false
+EXC00530,Rohan Choi,rohan.choi@company.com,IT,MFA_Exemption,Business requirement for maintenance window,2025-08-25,2025-12-22,119,Mark Becker,Revoked,Low,false
+EXC00531,Ronald Han,ronald.han@company.com,IT,Password_Policy_Exception,Third-party audit access,2025-11-15,2026-01-09,55,Riya Chen,Revoked,Critical,false
+EXC00532,Yuki Jang,yuki.jang@company.com,Operations,Access_Exception,Business requirement for maintenance window,2025-12-09,2026-04-12,124,Zainab Burke,Revoked,High,true
+EXC00533,Nikhil Williams,nikhil.williams@company.com,IT,MFA_Exemption,Business requirement for maintenance window,2025-11-17,2025-12-28,41,Andrew Kang,Expired,High,false
+EXC00534,Daniel Pillai,daniel.pillai@company.com,Finance,Password_Policy_Exception,Business requirement for maintenance window,2025-05-25,2025-10-11,139,Joseph Schneider,Expiring_Soon,Medium,false
+EXC00535,Edward Fischer,edward.fischer@company.com,HR,MFA_Exemption,Business requirement for maintenance window,2025-12-26,2026-01-17,22,Maria Iyer,Pending_Review,Medium,true
+EXC00536,Ryan Mishra,ryan.mishra@company.com,IT,Access_Exception,Third-party audit access,2025-11-29,2026-03-13,104,Aditya Bhat,Active,Low,true
+EXC00537,Andrew Kelly,andrew.kelly@company.com,Security,Encryption_Waiver,Compliance testing exception,2025-06-11,2025-09-15,96,Deepika Moore,Pending_Review,Low,false
+EXC00538,Larry Reilly,larry.reilly@company.com,Sales,Password_Policy_Exception,Third-party audit access,2025-05-08,2025-11-14,190,Donald Burke,Expiring_Soon,High,false
+EXC00539,Sanjana Bhat,sanjana.bhat@company.com,Security,Firewall_Rule_Exception,Vendor integration requirement,2025-10-16,2026-01-24,100,Paul O'Brien,Pending_Review,Medium,false
+EXC00540,Ronald Rao,ronald.rao@company.com,Sales,Password_Policy_Exception,Emergency operational need,2025-07-12,2026-06-25,348,William Young,Active,High,true
+EXC00541,James Rao,james.rao@company.com,Security,Firewall_Rule_Exception,Business requirement for maintenance window,2025-08-09,2026-05-03,267,Isha Wang,Expiring_Soon,Medium,false
+EXC00542,James Becker,james.becker@company.com,Security,Password_Policy_Exception,Business requirement for maintenance window,2025-11-28,2026-10-10,316,Jason Hernandez,Expiring_Soon,High,false
+EXC00543,Jacob Lewis,jacob.lewis@company.com,Sales,Data_Export_Exception,Vendor integration requirement,2025-05-06,2025-10-07,154,Aisha Thompson,Active,High,true
+EXC00544,Brian Perez,brian.perez@company.com,Security,Access_Exception,Vendor integration requirement,2025-10-09,2026-03-20,162,Shruti Hernandez,Pending_Review,High,false
+EXC00545,George Moore,george.moore@company.com,Finance,Encryption_Waiver,Vendor integration requirement,2025-10-18,2026-10-13,360,Matthew Lee,Active,Low,false
+EXC00546,Christopher Guo,christopher.guo@company.com,Sales,Encryption_Waiver,Business requirement for maintenance window,2025-05-07,2025-07-11,65,Sanjana Quinn,Pending_Review,Medium,false
+EXC00547,Joshua Martin,joshua.martin@company.com,Operations,Password_Policy_Exception,Business requirement for maintenance window,2025-05-11,2025-05-21,10,Jason Huang,Revoked,Medium,false
+EXC00548,Steven Jones,steven.jones@company.com,IT,Data_Export_Exception,Vendor integration requirement,2025-10-13,2026-03-03,141,Amitabh Thomas,Active,High,false
+EXC00549,Joseph Wang,joseph.wang@company.com,Security,Data_Export_Exception,Emergency operational need,2025-04-23,2025-07-15,83,Sophia Kim,Expiring_Soon,Critical,true
+EXC00550,Ryan Ramirez,ryan.ramirez@company.com,Finance,MFA_Exemption,Emergency operational need,2025-12-03,2026-08-13,253,Brian Williams,Active,Medium,false
+EXC00551,Raja Gonzalez,raja.gonzalez@company.com,HR,Password_Policy_Exception,Compliance testing exception,2025-06-21,2026-04-23,306,Deepika Huang,Active,High,false
+EXC00552,Thomas Sharma,thomas.sharma@company.com,Operations,Firewall_Rule_Exception,Third-party audit access,2025-06-13,2026-05-17,338,Amitabh Patel,Pending_Review,Low,false
+EXC00553,Gary Xu,gary.xu@company.com,Sales,Encryption_Waiver,Compliance testing exception,2025-10-06,2026-02-21,138,Rajesh Lopez,Expiring_Soon,High,true
+EXC00554,Arjun Pillai,arjun.pillai@company.com,Finance,MFA_Exemption,Legacy system incompatibility,2025-06-24,2025-10-30,128,Michael Jo,Expiring_Soon,High,false
+EXC00555,Jacob Becker,jacob.becker@company.com,HR,Firewall_Rule_Exception,Compliance testing exception,2025-09-04,2026-09-01,362,Fatima Lopez,Active,Medium,true
+EXC00556,Kenneth Williams,kenneth.williams@company.com,Operations,Password_Policy_Exception,Business requirement for maintenance window,2025-07-05,2026-05-17,316,Robert Wang,Expired,Medium,true
+EXC00557,Jason White,jason.white@company.com,Finance,Firewall_Rule_Exception,Business requirement for maintenance window,2025-12-12,2026-02-16,66,Priya Sanchez,Expiring_Soon,Medium,false
+EXC00558,James Reilly,james.reilly@company.com,Finance,Password_Policy_Exception,Emergency operational need,2025-10-02,2026-09-26,359,Pooja Johnson,Expiring_Soon,Medium,false
+EXC00559,Neha Meyer,neha.meyer@company.com,Finance,Encryption_Waiver,Third-party audit access,2025-06-21,2026-02-21,245,Charles Connor,Revoked,High,false
+EXC00560,William Huang,william.huang@company.com,HR,Access_Exception,Legacy system incompatibility,2025-10-25,2026-08-02,281,Isha Singh,Pending_Review,High,false
+EXC00561,Isha Huang,isha.huang@company.com,IT,Firewall_Rule_Exception,Business requirement for maintenance window,2025-10-26,2026-04-16,172,William Kim,Active,Medium,false
+EXC00562,David Fischer,david.fischer@company.com,Security,Password_Policy_Exception,Business requirement for maintenance window,2026-01-05,2026-07-06,182,Timothy Weber,Expiring_Soon,Medium,false
+EXC00563,George Meyer,george.meyer@company.com,HR,Data_Export_Exception,Emergency operational need,2025-10-13,2026-09-21,343,Sophia Ghosh,Pending_Review,Medium,false
+EXC00564,Brian Gupta,brian.gupta@company.com,IT,Data_Export_Exception,Compliance testing exception,2025-04-24,2026-01-19,270,Joseph Burke,Pending_Review,Low,false
+EXC00565,Kevin Choi,kevin.choi@company.com,IT,Data_Export_Exception,Business requirement for maintenance window,2025-05-03,2025-07-16,74,Anthony Choi,Expiring_Soon,High,false
+EXC00566,David Taylor,david.taylor@company.com,HR,Access_Exception,Third-party audit access,2025-04-30,2025-06-09,40,Akshay Kang,Pending_Review,Medium,false
+EXC00567,Sanjana Yang,sanjana.yang@company.com,Operations,Firewall_Rule_Exception,Third-party audit access,2025-07-04,2026-02-05,216,Anjali Iyer,Expired,Low,true
+EXC00568,Ronald Clark,ronald.clark@company.com,Sales,Data_Export_Exception,Business requirement for maintenance window,2025-08-18,2026-07-24,340,Pooja Taylor,Pending_Review,Critical,false
+EXC00569,George Connor,george.connor@company.com,HR,Firewall_Rule_Exception,Third-party audit access,2025-05-12,2026-04-06,329,Pooja Rodriguez,Expiring_Soon,Medium,true
+EXC00570,Harsh Perez,harsh.perez@company.com,Operations,Encryption_Waiver,Third-party audit access,2025-05-01,2025-08-22,113,Diya Muller,Expired,High,false
+EXC00571,Anjali Hernandez,anjali.hernandez@company.com,IT,Password_Policy_Exception,Vendor integration requirement,2025-10-11,2026-03-23,163,David Robinson,Expired,High,false
+EXC00572,Zainab Patel,zainab.patel@company.com,Operations,Firewall_Rule_Exception,Emergency operational need,2026-01-18,2026-03-26,67,Jonathan Fischer,Expired,High,false
+EXC00573,Ronald Harris,ronald.harris@company.com,Sales,Password_Policy_Exception,Compliance testing exception,2025-10-20,2025-12-25,66,Edward Davis,Active,Low,false
+EXC00574,Eric Jackson,eric.jackson@company.com,IT,Password_Policy_Exception,Emergency operational need,2025-09-11,2025-10-17,36,Steven Jackson,Expired,High,false
+EXC00575,Nisha Sun,nisha.sun@company.com,Security,Firewall_Rule_Exception,Third-party audit access,2025-06-27,2025-07-15,18,Kenneth Quinn,Revoked,Low,false
+EXC00576,Anthony Reddy,anthony.reddy@company.com,Sales,Firewall_Rule_Exception,Emergency operational need,2025-06-09,2025-10-07,120,Joshua Kim,Expiring_Soon,Medium,false
+EXC00577,Xiulan Quinn,xiulan.quinn@company.com,Finance,Firewall_Rule_Exception,Compliance testing exception,2025-05-09,2026-02-16,283,Riya Verma,Active,Medium,false
+EXC00578,Jason Robinson,jason.robinson@company.com,Operations,Access_Exception,Compliance testing exception,2025-10-09,2026-04-21,194,Nikhil Sharma,Pending_Review,High,false
+EXC00579,Kevin Hwang,kevin.hwang@company.com,Operations,MFA_Exemption,Compliance testing exception,2025-12-29,2026-01-25,27,Jonathan Schneider,Expired,High,true
+EXC00580,Amara Johnson,amara.johnson@company.com,Operations,Password_Policy_Exception,Emergency operational need,2025-08-01,2025-11-29,120,Arjun Gupta,Expiring_Soon,High,false
+EXC00581,Anthony Rodriguez,anthony.rodriguez@company.com,Operations,Data_Export_Exception,Legacy system incompatibility,2025-04-28,2025-08-17,111,Matthew Chen,Expired,Medium,false
+EXC00582,David Hwang,david.hwang@company.com,Sales,Encryption_Waiver,Business requirement for maintenance window,2025-07-29,2026-05-21,296,Donald Garcia,Expired,High,true
+EXC00583,Ryan Burke,ryan.burke@company.com,IT,Access_Exception,Compliance testing exception,2025-09-18,2026-01-11,115,Sophia Rao,Active,Low,false
+EXC00584,Nisha Jones,nisha.jones@company.com,HR,MFA_Exemption,Business requirement for maintenance window,2025-11-23,2026-06-24,213,Pooja Lim,Expiring_Soon,Low,true
+EXC00585,Stephen Garcia,stephen.garcia@company.com,HR,Data_Export_Exception,Business requirement for maintenance window,2025-07-24,2025-12-23,152,Mark Gupta,Pending_Review,Medium,false
+EXC00586,Shruti Choi,shruti.choi@company.com,IT,Password_Policy_Exception,Compliance testing exception,2025-07-23,2026-01-16,177,Fatima Jang,Active,Critical,false
+EXC00587,David Smith,david.smith@company.com,HR,Access_Exception,Vendor integration requirement,2025-05-11,2025-10-17,159,Joseph Johnson,Expired,High,false
+EXC00588,Varun Yang,varun.yang@company.com,HR,Encryption_Waiver,Vendor integration requirement,2025-06-20,2025-11-25,158,Amara Smith,Active,Low,false
+EXC00589,Jeffrey Xu,jeffrey.xu@company.com,Operations,Access_Exception,Business requirement for maintenance window,2025-10-20,2026-09-12,327,Jason Huang,Revoked,Medium,false
+EXC00590,Sophia Lewis,sophia.lewis@company.com,Security,Firewall_Rule_Exception,Third-party audit access,2026-01-02,2026-03-05,62,Meera Ghosh,Expired,High,true
+EXC00591,Maria Moore,maria.moore@company.com,IT,Encryption_Waiver,Legacy system incompatibility,2025-10-23,2026-03-23,151,Akshay Kelly,Expiring_Soon,Medium,false
+EXC00592,Karan Connor,karan.connor@company.com,Security,MFA_Exemption,Vendor integration requirement,2025-05-11,2025-08-07,88,Steven Lee,Pending_Review,Medium,false
+EXC00593,Meera Rao,meera.rao@company.com,Finance,Encryption_Waiver,Compliance testing exception,2025-10-20,2026-02-11,114,James Patel,Expired,Low,true
+EXC00594,Ryan Smith,ryan.smith@company.com,IT,Firewall_Rule_Exception,Third-party audit access,2025-05-18,2025-08-16,90,Aditya Pillai,Expired,Low,true
+EXC00595,Eric He,eric.he@company.com,HR,Access_Exception,Legacy system incompatibility,2025-10-06,2026-07-27,294,Arjun Xu,Expiring_Soon,Low,true
+EXC00596,Nisha Han,nisha.han@company.com,HR,Data_Export_Exception,Third-party audit access,2025-12-30,2026-04-14,105,Meera Liu,Active,High,false
+EXC00597,Priya Connor,priya.connor@company.com,Finance,Access_Exception,Third-party audit access,2025-06-16,2025-12-28,195,Brian Das,Pending_Review,Medium,false
+EXC00598,Richard Han,richard.han@company.com,Sales,Access_Exception,Legacy system incompatibility,2025-09-10,2025-11-22,73,William Robinson,Expiring_Soon,High,false
+EXC00599,Elena Connor,elena.connor@company.com,Operations,Encryption_Waiver,Emergency operational need,2025-06-15,2026-02-09,239,Mark Jang,Expiring_Soon,Medium,false

@@ -111,6 +111,10 @@ class RiskEngine:
         is_expired = False
         
         if not is_missing_lifecycle:
+            if start_dt > end_dt:
+                alerts.append("INVALID_DATE_RANGE: Start Date is after End Date")
+                current_risk = "CRITICAL"
+                recommendation = "REVOKE IMMEDIATELY - Invalid date range configuration."
             days_active = (self.current_date - start_dt).days
             days_since_expiry = (self.current_date - end_dt).days
             is_expired = days_since_expiry > 0
