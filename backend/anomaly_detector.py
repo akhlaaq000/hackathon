@@ -46,7 +46,7 @@ def check_vague_justification(justification_str: str) -> (bool, str):
     if bool(TICKET_REGEX.search(just)):
         return False, ""
         
-    found_vague = [kw for kw in VAGUE_KEYWORDS if kw in just_lower]
+    found_vague = [kw for kw in VAGUE_KEYWORDS if re.search(r'\b' + re.escape(kw) + r'\b', just_lower)]
     
     if len(just) < 20:
         return True, f"Justification too short ({len(just)} chars). Minimum 20 required or ITSM ticket."
