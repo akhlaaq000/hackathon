@@ -1,0 +1,201 @@
+exception_id,type,requester,approver,justification,start_date,end_date,status,risk_level,renewal_count
+EXC-1001,ADMIN_ACCESS,alice.smith,ciso.manager,Emergency database rollback,2025-10-01,2025-10-15,ACTIVE,CRITICAL,0
+EXC-1002,FIREWALL_RULE_OPEN,bob.jones,network.lead,Partner API integration,2025-12-01,2026-08-30,ACTIVE,MEDIUM,0
+EXC-1003,ROOT_ACCESS,charlie.dev,eng.manager,Production core debugging,2024-01-15,2024-02-15,ACTIVE,CRITICAL,0
+EXC-1004,DATA_EXPORT,vendor.user,data.manager,Quarterly tax audit export,2026-05-01,2026-07-01,ACTIVE,HIGH,1
+EXC-1005,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Training sandbox setup,2026-06-01,2026-08-01,ACTIVE,LOW,0
+EXC-1006,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Old mainframe compatibility,2022-06-01,2023-06-01,ACTIVE,HIGH,0
+EXC-1007,ADMIN_ACCESS,alice.smith,eng.manager,Secondary server patching,2026-01-10,2026-02-10,ACTIVE,HIGH,0
+EXC-1008,FIREWALL_RULE_OPEN,network.ops,network.lead,Temporary VPN routing,2025-08-01,2025-09-01,ACTIVE,MEDIUM,0
+EXC-1009,ROOT_ACCESS,alice.smith,ciso.manager,Critical vulnerability patch,2026-04-01,2026-04-15,ACTIVE,CRITICAL,0
+EXC-1010,DATA_EXPORT,vendor.user,data.manager,Marketing analytics pull,2026-03-01,2026-04-01,EXPIRED,HIGH,0
+EXC-1011,ADMIN_ACCESS,david.ops,ciso.manager,Cloud migration phase 1,2026-05-15,2026-07-15,ACTIVE,HIGH,0
+EXC-1012,FIREWALL_RULE_OPEN,bob.jones,network.lead,Legacy billing port open,2025-11-01,2026-07-01,ACTIVE,MEDIUM,0
+EXC-1013,ENCRYPTION_WAIVER,app.owner,security.lead,Testing new cipher suite,2026-01-01,2026-03-01,ACTIVE,HIGH,0
+EXC-1014,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Mobile app build server,2026-06-10,2026-12-10,ACTIVE,LOW,0
+EXC-1015,DATA_EXPORT,vendor.user,data.manager,HR compliance reporting,2026-02-15,2026-03-15,ACTIVE,HIGH,0
+EXC-1016,ROOT_ACCESS,bob.jones,ciso.manager,Emergency node restart,2025-05-01,2025-05-02,ACTIVE,CRITICAL,0
+EXC-1017,FIREWALL_RULE_OPEN,network.ops,network.lead,Vendor webhook testing,2026-05-20,2026-07-20,ACTIVE,MEDIUM,0
+EXC-1018,ADMIN_ACCESS,alice.smith,eng.manager,User directory sync,2026-06-15,2026-07-15,ACTIVE,HIGH,0
+EXC-1019,DATA_EXPORT,data.scientist,data.manager,ML model training batch,2026-04-10,2026-05-10,REVOKED,Resolved,0
+EXC-1020,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Database transit waiver,2023-01-01,2024-01-01,ACTIVE,HIGH,0
+EXC-1021,ROOT_ACCESS,charlie.dev,ciso.manager,DB indexing job,2026-01-05,2026-01-10,EXPIRED,CRITICAL,0
+EXC-1022,FIREWALL_RULE_OPEN,bob.jones,network.lead,External monitoring IP,2025-09-15,2026-09-15,ACTIVE,MEDIUM,2
+EXC-1023,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Local docker registry,2026-05-01,2026-08-01,ACTIVE,LOW,0
+EXC-1024,ADMIN_ACCESS,david.ops,eng.manager,DNS configuration,2026-06-01,2026-06-05,EXPIRED,HIGH,0
+EXC-1025,DATA_EXPORT,vendor.user,data.manager,Weekly metric dump,2026-01-01,2026-12-31,ACTIVE,HIGH,0
+EXC-1026,COMPLIANCE_WAIVER,alice.smith,security.lead,Bypass MFA for service account,2024-06-01,2024-12-01,ACTIVE,CRITICAL,0
+EXC-1027,ENCRYPTION_WAIVER,sarah.dev,security.lead,Local dev db unencrypted,2026-02-01,2026-08-01,ACTIVE,MEDIUM,0
+EXC-1028,ADMIN_ACCESS,network.ops,eng.manager,Switch firmware upgrade,2026-03-15,2026-03-20,REVOKED,Resolved,0
+EXC-1029,ROOT_ACCESS,alice.smith,ciso.manager,SSL cert renewal root task,2026-06-19,2026-06-22,ACTIVE,CRITICAL,0
+EXC-1030,FIREWALL_RULE_OPEN,vendor.api,network.lead,Incoming payload testing,2025-10-10,2025-11-10,ACTIVE,MEDIUM,0
+EXC-1031,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Access to staging DB,2026-06-15,2026-09-15,ACTIVE,LOW,0
+EXC-1032,DATA_EXPORT,data.scientist,data.manager,Q1 User behavior export,2026-04-01,2026-04-07,EXPIRED,HIGH,0
+EXC-1033,ADMIN_ACCESS,bob.jones,ciso.manager,AD group restructuring,2026-05-20,2026-06-20,ACTIVE,HIGH,1
+EXC-1034,ENCRYPTION_WAIVER,legacy.app,security.lead,Internal network traffic,2021-01-01,2022-01-01,ACTIVE,HIGH,0
+EXC-1035,ROOT_ACCESS,david.ops,ciso.manager,Kernel panic recovery,2026-02-14,2026-02-15,REVOKED,Resolved,0
+EXC-1036,FIREWALL_RULE_OPEN,network.ops,network.lead,Office IP whitelisting,2026-01-01,2026-12-31,ACTIVE,LOW,0
+EXC-1037,DATA_EXPORT,vendor.api,data.manager,Nightly sync job,2026-06-01,2026-12-01,ACTIVE,MEDIUM,0
+EXC-1038,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Beta environment tests,2026-05-10,2026-07-10,ACTIVE,LOW,0
+EXC-1039,ADMIN_ACCESS,alice.smith,eng.manager,Jira admin plugin install,2026-06-18,2026-06-25,ACTIVE,MEDIUM,0
+EXC-1040,COMPLIANCE_WAIVER,app.owner,security.lead,Password rotation bypass,2025-01-01,2025-06-01,ACTIVE,CRITICAL,0
+EXC-1041,ROOT_ACCESS,charlie.dev,ciso.manager,Log rotation fix,2026-03-01,2026-03-05,EXPIRED,CRITICAL,0
+EXC-1042,FIREWALL_RULE_OPEN,bob.jones,network.lead,Stripe webhook ingress,2026-02-01,2027-02-01,ACTIVE,MEDIUM,1
+EXC-1043,DATA_EXPORT,data.scientist,data.manager,Anomaly detection training,2026-06-05,2026-07-05,ACTIVE,HIGH,0
+EXC-1044,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,QA test pipeline,2026-06-20,2026-08-20,ACTIVE,LOW,0
+EXC-1045,ADMIN_ACCESS,david.ops,eng.manager,IAM role creation,2026-04-10,2026-04-12,REVOKED,Resolved,0
+EXC-1046,ENCRYPTION_WAIVER,vendor.api,security.lead,Legacy SOAP endpoint,2024-05-01,2025-05-01,ACTIVE,HIGH,0
+EXC-1047,FIREWALL_RULE_OPEN,alice.smith,network.lead,New branch office VPN,2026-05-01,2026-11-01,ACTIVE,MEDIUM,0
+EXC-1048,ROOT_ACCESS,network.ops,ciso.manager,Core router diagnostic,2025-11-15,2025-11-16,ACTIVE,CRITICAL,0
+EXC-1049,DATA_EXPORT,vendor.user,data.manager,End of year financial sync,2025-12-20,2025-12-31,EXPIRED,HIGH,0
+EXC-1050,COMPLIANCE_WAIVER,bob.jones,security.lead,Unsigned macro execution,2026-01-10,2026-02-10,ACTIVE,HIGH,0
+EXC-1051,ADMIN_ACCESS,sarah.dev,eng.manager,GitLab runner setup,2026-06-15,2026-07-15,ACTIVE,MEDIUM,0
+EXC-1052,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Frontend mock server,2026-06-01,2026-09-01,ACTIVE,LOW,0
+EXC-1053,FIREWALL_RULE_OPEN,network.ops,network.lead,AWS Direct Connect test,2026-06-10,2026-06-24,ACTIVE,MEDIUM,0
+EXC-1054,ROOT_ACCESS,alice.smith,ciso.manager,Emergency container prune,2026-05-25,2026-05-26,REVOKED,Resolved,0
+EXC-1055,DATA_EXPORT,data.scientist,data.manager,Customer churn dataset,2026-03-15,2026-03-30,EXPIRED,HIGH,0
+EXC-1056,ENCRYPTION_WAIVER,app.owner,security.lead,IoT sensor legacy protocol,2025-08-01,2026-08-01,ACTIVE,MEDIUM,1
+EXC-1057,ADMIN_ACCESS,david.ops,eng.manager,Okta sync troubleshooting,2026-06-19,2026-06-26,ACTIVE,HIGH,0
+EXC-1058,FIREWALL_RULE_OPEN,vendor.api,network.lead,SFTP batch upload port,2025-03-01,2026-03-01,ACTIVE,MEDIUM,0
+EXC-1059,COMPLIANCE_WAIVER,legacy.app,ciso.manager,TLS 1.0 acceptance,2022-01-01,2023-01-01,ACTIVE,CRITICAL,0
+EXC-1060,ROOT_ACCESS,bob.jones,ciso.manager,Database cluster expansion,2026-04-20,2026-04-25,EXPIRED,CRITICAL,0
+EXC-1061,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,UAT deployment rights,2026-06-05,2026-08-05,ACTIVE,LOW,0
+EXC-1062,DATA_EXPORT,vendor.user,data.manager,Partner inventory extract,2026-06-01,2026-09-01,ACTIVE,MEDIUM,0
+EXC-1063,ADMIN_ACCESS,alice.smith,eng.manager,Slack enterprise admin,2026-01-01,2026-12-31,ACTIVE,LOW,0
+EXC-1064,FIREWALL_RULE_OPEN,network.ops,network.lead,Temporary RDP access,2025-12-25,2025-12-26,ACTIVE,HIGH,0
+EXC-1065,ROOT_ACCESS,charlie.dev,ciso.manager,Memory leak dump,2026-05-10,2026-05-11,REVOKED,Resolved,0
+EXC-1066,ENCRYPTION_WAIVER,sarah.dev,security.lead,Debug traffic unencrypted,2026-06-20,2026-06-22,ACTIVE,MEDIUM,0
+EXC-1067,DATA_EXPORT,data.scientist,data.manager,Sales forecast model data,2026-02-01,2026-02-14,EXPIRED,HIGH,0
+EXC-1068,COMPLIANCE_WAIVER,david.ops,security.lead,BYOD device enrollment,2026-05-01,2026-08-01,ACTIVE,MEDIUM,0
+EXC-1069,ADMIN_ACCESS,bob.jones,eng.manager,Zoom admin dashboard,2026-03-01,2026-09-01,ACTIVE,LOW,0
+EXC-1070,FIREWALL_RULE_OPEN,vendor.api,network.lead,Zendesk ticket sync,2026-01-15,2027-01-15,ACTIVE,LOW,0
+EXC-1071,ROOT_ACCESS,alice.smith,ciso.manager,NFS mount fix,2026-01-20,2026-01-21,EXPIRED,CRITICAL,0
+EXC-1072,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Grafana dashboard edit,2026-06-10,2026-09-10,ACTIVE,LOW,0
+EXC-1073,DATA_EXPORT,vendor.user,data.manager,Audit log pull for SOC2,2026-04-15,2026-04-30,EXPIRED,HIGH,0
+EXC-1074,ENCRYPTION_WAIVER,legacy.app,security.lead,Internal cache sync,2024-11-01,2025-11-01,ACTIVE,MEDIUM,0
+EXC-1075,ADMIN_ACCESS,david.ops,eng.manager,GitHub org owner,2026-06-01,2026-12-01,ACTIVE,HIGH,0
+EXC-1076,FIREWALL_RULE_OPEN,network.ops,network.lead,Pingdom monitoring,2026-05-01,2027-05-01,ACTIVE,LOW,0
+EXC-1077,ROOT_ACCESS,charlie.dev,ciso.manager,Crontab emergency edit,2026-06-18,2026-06-19,ACTIVE,CRITICAL,0
+EXC-1078,COMPLIANCE_WAIVER,app.owner,security.lead,Skip static code analysis,2026-06-15,2026-06-29,ACTIVE,HIGH,0
+EXC-1079,DATA_EXPORT,data.scientist,data.manager,NLP training corpus,2026-01-10,2026-02-10,REVOKED,Resolved,0
+EXC-1080,ADMIN_ACCESS,alice.smith,eng.manager,AWS billing access,2026-02-01,2026-08-01,ACTIVE,MEDIUM,1
+EXC-1081,FIREWALL_RULE_OPEN,bob.jones,network.lead,Azure DevOps runner IP,2026-04-01,2026-10-01,ACTIVE,MEDIUM,0
+EXC-1082,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Readonly prod logs,2026-06-01,2026-08-01,ACTIVE,LOW,0
+EXC-1083,ROOT_ACCESS,david.ops,ciso.manager,Elasticsearch heap resize,2026-03-20,2026-03-21,EXPIRED,CRITICAL,0
+EXC-1084,ENCRYPTION_WAIVER,vendor.api,security.lead,FTP legacy drop,2023-06-01,2024-06-01,ACTIVE,HIGH,0
+EXC-1085,DATA_EXPORT,vendor.user,data.manager,Monthly billing CSV,2026-06-01,2026-06-05,EXPIRED,MEDIUM,0
+EXC-1086,ADMIN_ACCESS,sarah.dev,eng.manager,SonarQube admin,2026-05-15,2026-11-15,ACTIVE,LOW,0
+EXC-1087,FIREWALL_RULE_OPEN,network.ops,network.lead,SNMP trap receiver,2025-07-01,2026-07-01,ACTIVE,MEDIUM,2
+EXC-1088,COMPLIANCE_WAIVER,alice.smith,security.lead,Root login over SSH,2025-12-01,2025-12-02,ACTIVE,CRITICAL,0
+EXC-1089,ROOT_ACCESS,bob.jones,ciso.manager,Redis cache flush,2026-06-20,2026-06-21,ACTIVE,CRITICAL,0
+EXC-1090,DATA_EXPORT,data.scientist,data.manager,Graph DB relationship export,2026-05-01,2026-05-15,REVOKED,Resolved,0
+EXC-1091,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,VPN split tunneling,2026-06-10,2026-09-10,ACTIVE,MEDIUM,0
+EXC-1092,ADMIN_ACCESS,david.ops,eng.manager,VMware vCenter access,2026-01-01,2026-07-01,ACTIVE,HIGH,1
+EXC-1093,FIREWALL_RULE_OPEN,vendor.api,network.lead,Mailgun SMTP port,2026-02-15,2027-02-15,ACTIVE,LOW,0
+EXC-1094,ENCRYPTION_WAIVER,legacy.app,security.lead,Telnet switch access,2021-05-01,2022-05-01,ACTIVE,CRITICAL,0
+EXC-1095,ROOT_ACCESS,alice.smith,ciso.manager,Kubelet certificate rotate,2026-04-10,2026-04-11,EXPIRED,CRITICAL,0
+EXC-1096,DATA_EXPORT,vendor.user,data.manager,Support ticket history,2026-06-15,2026-06-22,ACTIVE,MEDIUM,0
+EXC-1097,COMPLIANCE_WAIVER,charlie.dev,security.lead,Disable SELinux temporarily,2026-05-20,2026-05-27,EXPIRED,HIGH,0
+EXC-1098,ADMIN_ACCESS,bob.jones,eng.manager,1Password vault recovery,2026-06-18,2026-06-19,ACTIVE,CRITICAL,0
+EXC-1099,FIREWALL_RULE_OPEN,network.ops,network.lead,NTP server sync,2026-01-01,2026-12-31,ACTIVE,LOW,0
+EXC-1100,ROOT_ACCESS,david.ops,ciso.manager,Postgres vacuum full,2026-06-01,2026-06-02,REVOKED,Resolved,0
+EXC-1101,ADMIN_ACCESS,alice.smith,ciso.manager,Production troubleshooting,2026-05-01,2026-05-15,ACTIVE,CRITICAL,0
+EXC-1102,FIREWALL_RULE_OPEN,bob.jones,network.lead,Partner integration,2025-10-01,2026-04-30,ACTIVE,MEDIUM,0
+EXC-1103,ROOT_ACCESS,charlie.dev,eng.manager,Core debugging,2024-03-15,2024-04-15,ACTIVE,CRITICAL,0
+EXC-1104,DATA_EXPORT,vendor.user,data.manager,Tax audit export,2026-04-01,2026-06-01,ACTIVE,HIGH,1
+EXC-1105,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Sandbox setup,2026-06-05,2026-08-05,ACTIVE,LOW,0
+EXC-1106,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Mainframe compatibility,2022-08-01,2023-08-01,ACTIVE,HIGH,0
+EXC-1107,ADMIN_ACCESS,alice.smith,eng.manager,Server patching,2026-02-10,2026-03-10,ACTIVE,HIGH,0
+EXC-1108,FIREWALL_RULE_OPEN,network.ops,network.lead,VPN routing,2025-09-01,2025-10-01,ACTIVE,MEDIUM,0
+EXC-1109,ROOT_ACCESS,alice.smith,ciso.manager,Vulnerability patch,2026-05-01,2026-05-15,ACTIVE,CRITICAL,0
+EXC-1110,DATA_EXPORT,vendor.user,data.manager,Marketing analytics,2026-04-01,2026-05-01,EXPIRED,HIGH,0
+EXC-1111,ADMIN_ACCESS,david.ops,ciso.manager,Migration phase 1,2026-06-15,2026-08-15,ACTIVE,HIGH,0
+EXC-1112,FIREWALL_RULE_OPEN,bob.jones,network.lead,Billing port open,2025-12-01,2026-08-01,ACTIVE,MEDIUM,0
+EXC-1113,ENCRYPTION_WAIVER,app.owner,security.lead,Cipher suite testing,2026-02-01,2026-04-01,ACTIVE,HIGH,0
+EXC-1114,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Build server,2026-06-15,2026-12-15,ACTIVE,LOW,0
+EXC-1115,DATA_EXPORT,vendor.user,data.manager,Compliance reporting,2026-03-15,2026-04-15,ACTIVE,HIGH,0
+EXC-1116,ROOT_ACCESS,bob.jones,ciso.manager,Node restart,2025-06-01,2025-06-02,ACTIVE,CRITICAL,0
+EXC-1117,FIREWALL_RULE_OPEN,network.ops,network.lead,Webhook testing,2026-06-20,2026-08-20,ACTIVE,MEDIUM,0
+EXC-1118,ADMIN_ACCESS,alice.smith,eng.manager,Directory sync,2026-06-18,2026-07-18,ACTIVE,HIGH,0
+EXC-1119,DATA_EXPORT,data.scientist,data.manager,Model training,2026-05-10,2026-06-10,REVOKED,Resolved,0
+EXC-1120,ENCRYPTION_WAIVER,legacy.app,ciso.manager,Transit waiver,2023-02-01,2024-02-01,ACTIVE,HIGH,0
+EXC-1121,ROOT_ACCESS,charlie.dev,ciso.manager,Indexing job,2026-02-05,2026-02-10,EXPIRED,CRITICAL,0
+EXC-1122,FIREWALL_RULE_OPEN,bob.jones,network.lead,Monitoring IP,2025-10-15,2026-10-15,ACTIVE,MEDIUM,2
+EXC-1123,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Docker registry,2026-06-01,2026-09-01,ACTIVE,LOW,0
+EXC-1124,ADMIN_ACCESS,david.ops,eng.manager,DNS config,2026-06-05,2026-06-10,EXPIRED,HIGH,0
+EXC-1125,DATA_EXPORT,vendor.user,data.manager,Metric dump,2026-02-01,2027-01-31,ACTIVE,HIGH,0
+EXC-1126,COMPLIANCE_WAIVER,alice.smith,security.lead,Bypass MFA,2024-07-01,2025-01-01,ACTIVE,CRITICAL,0
+EXC-1127,ENCRYPTION_WAIVER,sarah.dev,security.lead,Local unencrypted,2026-03-01,2026-09-01,ACTIVE,MEDIUM,0
+EXC-1128,ADMIN_ACCESS,network.ops,eng.manager,Firmware upgrade,2026-04-15,2026-04-20,REVOKED,Resolved,0
+EXC-1129,ROOT_ACCESS,alice.smith,ciso.manager,SSL renewal,2026-06-18,2026-06-21,ACTIVE,CRITICAL,0
+EXC-1130,FIREWALL_RULE_OPEN,vendor.api,network.lead,Payload testing,2025-11-10,2025-12-10,ACTIVE,MEDIUM,0
+EXC-1131,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Staging DB,2026-06-18,2026-09-18,ACTIVE,LOW,0
+EXC-1132,DATA_EXPORT,data.scientist,data.manager,User behavior,2026-05-01,2026-05-07,EXPIRED,HIGH,0
+EXC-1133,ADMIN_ACCESS,bob.jones,ciso.manager,AD restructuring,2026-06-20,2026-07-20,ACTIVE,HIGH,1
+EXC-1134,ENCRYPTION_WAIVER,legacy.app,security.lead,Network traffic,2021-02-01,2022-02-01,ACTIVE,HIGH,0
+EXC-1135,ROOT_ACCESS,david.ops,ciso.manager,Panic recovery,2026-03-14,2026-03-15,REVOKED,Resolved,0
+EXC-1136,FIREWALL_RULE_OPEN,network.ops,network.lead,IP whitelisting,2026-02-01,2027-01-31,ACTIVE,LOW,0
+EXC-1137,DATA_EXPORT,vendor.api,data.manager,Sync job,2026-06-10,2026-12-10,ACTIVE,MEDIUM,0
+EXC-1138,DEV_ENVIRONMENT_ACCESS,sarah.dev,eng.manager,Beta tests,2026-06-10,2026-08-10,ACTIVE,LOW,0
+EXC-1139,ADMIN_ACCESS,alice.smith,eng.manager,Jira plugin,2026-06-19,2026-06-26,ACTIVE,MEDIUM,0
+EXC-1140,COMPLIANCE_WAIVER,app.owner,security.lead,Password rotation,2025-02-01,2025-07-01,ACTIVE,CRITICAL,0
+EXC-1141,ROOT_ACCESS,charlie.dev,ciso.manager,Log fix,2026-04-01,2026-04-05,EXPIRED,CRITICAL,0
+EXC-1142,FIREWALL_RULE_OPEN,bob.jones,network.lead,Webhook ingress,2026-03-01,2027-03-01,ACTIVE,MEDIUM,1
+EXC-1143,DATA_EXPORT,data.scientist,data.manager,Anomaly training,2026-06-15,2026-07-15,ACTIVE,HIGH,0
+EXC-1144,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,QA pipeline,2026-06-18,2026-08-18,ACTIVE,LOW,0
+EXC-1145,ADMIN_ACCESS,david.ops,eng.manager,IAM creation,2026-05-10,2026-05-12,REVOKED,Resolved,0
+EXC-1146,ENCRYPTION_WAIVER,vendor.api,security.lead,SOAP endpoint,2024-06-01,2025-06-01,ACTIVE,HIGH,0
+EXC-1147,FIREWALL_RULE_OPEN,alice.smith,network.lead,Branch VPN,2026-06-01,2026-12-01,ACTIVE,MEDIUM,0
+EXC-1148,ROOT_ACCESS,network.ops,ciso.manager,Router diagnostic,2025-12-15,2025-12-16,ACTIVE,CRITICAL,0
+EXC-1149,DATA_EXPORT,vendor.user,data.manager,Financial sync,2025-12-25,2025-12-31,EXPIRED,HIGH,0
+EXC-1150,COMPLIANCE_WAIVER,bob.jones,security.lead,Macro execution,2026-02-10,2026-03-10,ACTIVE,HIGH,0
+EXC-1151,ADMIN_ACCESS,sarah.dev,eng.manager,GitLab setup,2026-06-18,2026-07-18,ACTIVE,MEDIUM,0
+EXC-1152,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Mock server,2026-06-10,2026-09-10,ACTIVE,LOW,0
+EXC-1153,FIREWALL_RULE_OPEN,network.ops,network.lead,Direct Connect test,2026-06-15,2026-06-29,ACTIVE,MEDIUM,0
+EXC-1154,ROOT_ACCESS,alice.smith,ciso.manager,Container prune,2026-06-10,2026-06-11,REVOKED,Resolved,0
+EXC-1155,DATA_EXPORT,data.scientist,data.manager,Churn dataset,2026-04-15,2026-04-30,EXPIRED,HIGH,0
+EXC-1156,ENCRYPTION_WAIVER,app.owner,security.lead,IoT legacy,2025-09-01,2026-09-01,ACTIVE,MEDIUM,1
+EXC-1157,ADMIN_ACCESS,david.ops,eng.manager,Okta sync,2026-06-20,2026-06-27,ACTIVE,HIGH,0
+EXC-1158,FIREWALL_RULE_OPEN,vendor.api,network.lead,SFTP batch,2025-04-01,2026-04-01,ACTIVE,MEDIUM,0
+EXC-1159,COMPLIANCE_WAIVER,legacy.app,ciso.manager,TLS 1.0,2022-02-01,2023-02-01,ACTIVE,CRITICAL,0
+EXC-1160,ROOT_ACCESS,bob.jones,ciso.manager,Cluster expansion,2026-05-20,2026-05-25,EXPIRED,CRITICAL,0
+EXC-1161,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,UAT rights,2026-06-10,2026-08-10,ACTIVE,LOW,0
+EXC-1162,DATA_EXPORT,vendor.user,data.manager,Inventory extract,2026-06-15,2026-09-15,ACTIVE,MEDIUM,0
+EXC-1163,ADMIN_ACCESS,alice.smith,eng.manager,Slack admin,2026-02-01,2027-01-31,ACTIVE,LOW,0
+EXC-1164,FIREWALL_RULE_OPEN,network.ops,network.lead,RDP access,2025-12-28,2025-12-29,ACTIVE,HIGH,0
+EXC-1165,ROOT_ACCESS,charlie.dev,ciso.manager,Memory dump,2026-06-10,2026-06-11,REVOKED,Resolved,0
+EXC-1166,ENCRYPTION_WAIVER,sarah.dev,security.lead,Debug traffic,2026-06-21,2026-06-23,ACTIVE,MEDIUM,0
+EXC-1167,DATA_EXPORT,data.scientist,data.manager,Forecast model,2026-03-01,2026-03-14,EXPIRED,HIGH,0
+EXC-1168,COMPLIANCE_WAIVER,david.ops,security.lead,BYOD enrollment,2026-06-01,2026-09-01,ACTIVE,MEDIUM,0
+EXC-1169,ADMIN_ACCESS,bob.jones,eng.manager,Zoom admin,2026-04-01,2026-10-01,ACTIVE,LOW,0
+EXC-1170,FIREWALL_RULE_OPEN,vendor.api,network.lead,Zendesk sync,2026-02-15,2027-02-15,ACTIVE,LOW,0
+EXC-1171,ROOT_ACCESS,alice.smith,ciso.manager,NFS fix,2026-02-20,2026-02-21,EXPIRED,CRITICAL,0
+EXC-1172,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,Grafana edit,2026-06-15,2026-09-15,ACTIVE,LOW,0
+EXC-1173,DATA_EXPORT,vendor.user,data.manager,SOC2 pull,2026-05-15,2026-05-30,EXPIRED,HIGH,0
+EXC-1174,ENCRYPTION_WAIVER,legacy.app,security.lead,Cache sync,2024-12-01,2025-12-01,ACTIVE,MEDIUM,0
+EXC-1175,ADMIN_ACCESS,david.ops,eng.manager,GitHub owner,2026-06-15,2026-12-15,ACTIVE,HIGH,0
+EXC-1176,FIREWALL_RULE_OPEN,network.ops,network.lead,Pingdom monitor,2026-06-01,2027-06-01,ACTIVE,LOW,0
+EXC-1177,ROOT_ACCESS,charlie.dev,ciso.manager,Crontab edit,2026-06-19,2026-06-20,ACTIVE,CRITICAL,0
+EXC-1178,COMPLIANCE_WAIVER,app.owner,security.lead,Skip static code,2026-06-18,2026-07-02,ACTIVE,HIGH,0
+EXC-1179,DATA_EXPORT,data.scientist,data.manager,NLP corpus,2026-02-10,2026-03-10,REVOKED,Resolved,0
+EXC-1180,ADMIN_ACCESS,alice.smith,eng.manager,AWS billing,2026-03-01,2026-09-01,ACTIVE,MEDIUM,1
+EXC-1181,FIREWALL_RULE_OPEN,bob.jones,network.lead,Azure DevOps IP,2026-05-01,2026-11-01,ACTIVE,MEDIUM,0
+EXC-1182,DEV_ENVIRONMENT_ACCESS,intern.joe,eng.manager,Prod logs,2026-06-10,2026-08-10,ACTIVE,LOW,0
+EXC-1183,ROOT_ACCESS,david.ops,ciso.manager,Elasticsearch resize,2026-04-20,2026-04-21,EXPIRED,CRITICAL,0
+EXC-1184,ENCRYPTION_WAIVER,vendor.api,security.lead,FTP drop,2023-07-01,2024-07-01,ACTIVE,HIGH,0
+EXC-1185,DATA_EXPORT,vendor.user,data.manager,Monthly billing,2026-06-10,2026-06-15,EXPIRED,MEDIUM,0
+EXC-1186,ADMIN_ACCESS,sarah.dev,eng.manager,SonarQube,2026-06-15,2026-12-15,ACTIVE,LOW,0
+EXC-1187,FIREWALL_RULE_OPEN,network.ops,network.lead,SNMP receiver,2025-08-01,2026-08-01,ACTIVE,MEDIUM,2
+EXC-1188,COMPLIANCE_WAIVER,alice.smith,security.lead,SSH Root login,2026-01-01,2026-01-02,ACTIVE,CRITICAL,0
+EXC-1189,ROOT_ACCESS,bob.jones,ciso.manager,Redis flush,2026-06-21,2026-06-22,ACTIVE,CRITICAL,0
+EXC-1190,DATA_EXPORT,data.scientist,data.manager,Graph DB export,2026-06-01,2026-06-15,REVOKED,Resolved,0
+EXC-1191,DEV_ENVIRONMENT_ACCESS,intern.sam,eng.manager,VPN split,2026-06-15,2026-09-15,ACTIVE,MEDIUM,0
+EXC-1192,ADMIN_ACCESS,david.ops,eng.manager,VMware vCenter,2026-02-01,2026-08-01,ACTIVE,HIGH,1
+EXC-1193,FIREWALL_RULE_OPEN,vendor.api,network.lead,Mailgun SMTP,2026-03-15,2027-03-15,ACTIVE,LOW,0
+EXC-1194,ENCRYPTION_WAIVER,legacy.app,security.lead,Telnet access,2021-06-01,2022-06-01,ACTIVE,CRITICAL,0
+EXC-1195,ROOT_ACCESS,alice.smith,ciso.manager,Kubelet rotate,2026-05-10,2026-05-11,EXPIRED,CRITICAL,0
+EXC-1196,DATA_EXPORT,vendor.user,data.manager,Ticket history,2026-06-18,2026-06-25,ACTIVE,MEDIUM,0
+EXC-1197,COMPLIANCE_WAIVER,charlie.dev,security.lead,Disable SELinux,2026-06-15,2026-06-22,ACTIVE,HIGH,0
+EXC-1198,ADMIN_ACCESS,bob.jones,eng.manager,1Password recovery,2026-06-19,2026-06-20,ACTIVE,CRITICAL,0
+EXC-1199,FIREWALL_RULE_OPEN,network.ops,network.lead,NTP sync,2026-02-01,2027-01-31,ACTIVE,LOW,0
+EXC-1200,ROOT_ACCESS,david.ops,ciso.manager,Vacuum full,2026-06-10,2026-06-11,REVOKED,Resolved,0

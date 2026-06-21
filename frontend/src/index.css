@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Ensure native date picker calendar icon is visible and styled properly across modern browsers */
+input[type="date"] {
+    position: relative;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+/* Custom Webkit / Blink calendar picker indicator override */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block !important;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.65;
+    transition: opacity 0.15s ease-in-out;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
