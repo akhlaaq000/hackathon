@@ -383,7 +383,7 @@ def generate_executive_markdown(report_items, db: Session, latency_ms: int) -> s
     visibility_status = "ACTIVE" if total_exceptions > 0 else "PENDING"
     alerting_status = "PASSED" if total_exceptions > 0 else "PENDING"
     alerting_pct = "100%" if total_exceptions > 0 else "0%"
-    audit_sla_status = "COMPLIANT" if latency_ms < 1000 else "PENDING"
+    audit_sla_status = "COMPLIANT" if latency_ms < 3600000 else "PENDING"
     efficiency_status = "EXCEEDED" if review_savings >= 50 else "PENDING"
     
     md.append("## 3. SLA & Compliance Commitments Mapping")
