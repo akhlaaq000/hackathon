@@ -50,7 +50,7 @@ export const CSVUpload: React.FC<CSVUploadProps> = ({ onUploadSuccess }) => {
             <div>
                 <h2 className="text-xl font-semibold mb-1 text-gray-900 font-sans">Import Exceptions via CSV</h2>
                 <p className="text-xs text-gray-500 mb-4 leading-normal">
-                    Ingest bulk waivers. Required headers: <code className="bg-gray-100 px-1 py-0.5 rounded text-gray-800 text-[10px] font-mono break-all font-bold">exception_id,type,requester,approver,justification,start_date,end_date,status,risk_level,renewal_count</code>
+                    Ingest bulk waivers. Required headers: <code className="bg-gray-100 px-1 py-0.5 rounded text-gray-800 text-[10px] font-mono break-all font-bold">exception_id,requester_name,requester_email,department,exception_type,justification,request_date,expiry_date,duration_days,approver_name,status,risk_level,is_renewed</code>
                 </p>
                 
                 <form onSubmit={handleUpload} className="space-y-4">

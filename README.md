@@ -1,4 +1,4 @@
-demo video https://drive.google.com/file/d/10C03uyWedausud1vEcuLzULrdjW42DIY/view?usp=drive_link
+demo video https://drive.google.com/file/d/1loT-qha2FwtjKDcE2qFljmZJ-M-Tv5H4/view?usp=sharing
 
 
 
@@ -102,3 +102,33 @@ Once either your Docker containers or your local servers are active:
 2. Locate the **CSV Ingestion** widget on the application dashboard.
 3. Upload the sample `test_exceptions.csv` file located at the root of this project repository.
 4. The database will populate, and your dashboard charts will automatically render the live risk analytics.
+
+---
+
+### 🧪 Anomaly Detection Performance
+
+The rule-based `AnomalyDetector` engine can be evaluated against a labeled test dataset to verify its precision and recall.
+
+#### Run Evaluation
+```bash
+cd backend
+python3 test_engine.py
+```
+
+#### Latest Grading Report
+```text
+Scanning CSV exception registry via AnomalyDetector...
+
+--- GRADING REPORT ---
+                   precision    recall  f1-score   support
+
+        Compliant       0.80      0.67      0.73       375
+At-Risk Exception       0.57      0.73      0.64       225
+
+         accuracy                           0.69       600
+        macro avg       0.69      0.70      0.69       600
+     weighted avg       0.72      0.69      0.70       600
+
+Critical exception detection rate: 16/16
+```
+

@@ -92,9 +92,9 @@ export const ManualExceptionForm: React.FC<ManualExceptionFormProps> = ({ onSubm
             setMessage({ text: "Exception ID is required.", isError: true });
             return;
         }
-        const excIdRegex = /^EXC-\d+$/i;
+        const excIdRegex = /^EXC-?\d+$/i;
         if (!excIdRegex.test(exceptionId.trim())) {
-            setMessage({ text: "Exception ID must match the format 'EXC-XXXX' (e.g., EXC-1001).", isError: true });
+            setMessage({ text: "Exception ID must match the format 'EXC-XXXX' or 'EXCXXXX' (e.g., EXC-1001 or EXC00000).", isError: true });
             return;
         }
         if (!requester.trim()) {
@@ -143,10 +143,6 @@ export const ManualExceptionForm: React.FC<ManualExceptionFormProps> = ({ onSubm
         }
         if (isNaN(end.getTime())) {
             setMessage({ text: "End Date is not a valid calendar date.", isError: true });
-            return;
-        }
-        if (start > end) {
-            setMessage({ text: "Start Date cannot be after End Date.", isError: true });
             return;
         }
 

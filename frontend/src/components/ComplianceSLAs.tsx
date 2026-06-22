@@ -27,8 +27,8 @@ export const ComplianceSLAs: React.FC<ComplianceSLAsProps> = ({ metrics, latency
     if (latency !== null) {
         latencyText = `${latency.toFixed(0)} ms`;
     }
-    const auditSlaStatus = latency !== null && latency < 1000 ? "COMPLIANT" : "PENDING";
-    const auditSlaStatusClass = latency !== null && latency < 1000 
+    const auditSlaStatus = latency !== null && latency < 3600000 ? "COMPLIANT" : "PENDING";
+    const auditSlaStatusClass = latency !== null && latency < 3600000 
         ? "bg-green-100 text-green-800 text-[10px] font-bold rounded-full" 
         : "bg-yellow-100 text-yellow-800 text-[10px] font-bold rounded-full";
 
